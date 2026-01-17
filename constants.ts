@@ -16,24 +16,40 @@ export const PRODUCTS: Product[] = [
     name: 'Boccale da Birra Personalizatto',
     description: `🍺 Il tuo boccale, il tuo stile!
 
-Dai carattere ai tuoi brindisi con un boccale da birra personalizzato da 500 ml.
-Con foto, frasi o loghi, è perfetto per:
+Dai carattere ai tuoi brindisi con un boccale da birra satinato da 500 ml.
+
+Puoi scegliere tra:
+✨ Design esclusivi già pronti come quelli mostrati in foto
+📸 Personalizzazione con foto, frasi o loghi
+
+Perfetto per:
 🎁 Regali originali
 🎉 Eventi speciali
 🏢 Aziende, locali, birrerie
 🍻 Serate tra amici
 
 ✅ Vetro smerigliato di alta qualità
-✅ Stampa resistente, non scolorisce
+✅ Stampa brillante e resistente
 ✅ Lavabile a mano e in lavastoviglie
+✅ Confezionato con etichetta DeoStampa
 ✅ Spedizione gratuita in tutta Italia
 
 💡 Ordini singoli o grandi quantità con prezzi personalizzati!
 
-👉 Crea il tuo boccale adesso e brinda con personalità!. Perfetto per regali originali. Venduto e protetto tramite eBay.`,
+👉 Scegli il tuo design preferito o crea il tuo boccale personalizzato e brinda con personalità!. Perfetto per regali originali. 
+Venduto e protetto tramite eBay.`,
     price: 19.90,
     category: 'Casa',
-    image: 'https://images.unsplash.com/photo-1576618148400-f54bed99fcfd?auto=format&fit=crop&w=800&q=80',
+    image: [
+    '/images/boccale-01.jpg',
+    '/images/boccale-02.jpg',
+    '/images/boccale-03.jpg',
+    '/images/boccale-04.jpg',
+    '/images/boccale-05.jpg',
+    '/images/boccale-06.jpg',
+    '/images/boccale-07.jpg',
+    '/images/boccale-08.jpg'
+  ],
     ebayUrl: `https://www.ebay.it/sch/i.html?_ssn=${SELLER_ID}&_nkw=boccale`,
     isCustomizable: true
   },
