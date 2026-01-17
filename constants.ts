@@ -13,8 +13,24 @@ export const EBAY_STORE_URL = `https://www.ebay.it/usr/${SELLER_ID}`;
 export const PRODUCTS: Product[] = [
   {
     id: 'ds-casa-beer-mug',
-    name: 'Boccale da Birra Artigianale',
-    description: `🍺 Il tuo boccale, il tuo stile! 500ml di pura personalità. Vetro smerigliato di alta qualità. Perfetto per regali originali. Venduto e protetto tramite eBay.`,
+    name: 'Boccale da Birra Personalizatto',
+    description: `🍺 Il tuo boccale, il tuo stile!
+
+Dai carattere ai tuoi brindisi con un boccale da birra personalizzato da 500 ml.
+Con foto, frasi o loghi, è perfetto per:
+🎁 Regali originali
+🎉 Eventi speciali
+🏢 Aziende, locali, birrerie
+🍻 Serate tra amici
+
+✅ Vetro smerigliato di alta qualità
+✅ Stampa resistente, non scolorisce
+✅ Lavabile a mano e in lavastoviglie
+✅ Spedizione gratuita in tutta Italia
+
+💡 Ordini singoli o grandi quantità con prezzi personalizzati!
+
+👉 Crea il tuo boccale adesso e brinda con personalità!. Perfetto per regali originali. Venduto e protetto tramite eBay.`,
     price: 19.90,
     category: 'Casa',
     image: 'https://images.unsplash.com/photo-1576618148400-f54bed99fcfd?auto=format&fit=crop&w=800&q=80',
