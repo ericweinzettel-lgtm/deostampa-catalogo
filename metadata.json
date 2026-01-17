@@ -1,0 +1,8 @@
+
+{
+  "name": "DeoStampa - Prodotti Personalizzati",
+  "description": "Una piattaforma elegante per l'acquisto di prodotti personalizzati di alta qualità.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}
