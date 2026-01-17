@@ -40,15 +40,8 @@ Perfetto per:
 Venduto e protetto tramite eBay.`,
     price: 19.90,
     category: 'Casa',
-    image: 
-    '/images/boccale-01.jpg',
-    '/images/boccale-02.jpg',
-    '/images/boccale-03.jpg',
-    '/images/boccale-04.jpg',
-    '/images/boccale-05.jpg',
-    '/images/boccale-06.jpg',
-    '/images/boccale-07.jpg',
-    '/images/boccale-08.jpg',
+    image: "/images/boccale-01.jpg",
+
     ebayUrl: `https://www.ebay.it/sch/i.html?_ssn=${SELLER_ID}&_nkw=boccale`,
     isCustomizable: true
   },
