@@ -1,2 +1,38 @@
 /* DeoStampa catalogo - base styles */
-html,body{margin:0;padding:0;}
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Evita desplazamientos laterales accidentales */
+}
+
+/* 1. ELIMINAR CURSOR DE TEXTO Y SELECCIÓN EN TODA LA WEB */
+html, body, #root {
+  cursor: default;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+/* 2. ASEGURAR QUE LOS ELEMENTOS CLICKEABLES TENGAN LA MANITO */
+button, 
+a, 
+.swiper-button-next, 
+.swiper-button-prev, 
+.swiper-pagination-bullet,
+.cursor-pointer,
+[role="button"] {
+  cursor: pointer !important;
+}
+
+/* 3. PERMITIR TEXTO SOLO DONDE SEA NECESARIO (si añades un formulario luego) */
+input, textarea {
+  cursor: text;
+  user-select: text;
+  -webkit-user-select: text;
+}
+
+/* 4. MEJORA PARA LAS IMÁGENES */
+img {
+  -webkit-user-drag: none; /* Evita que las imágenes se puedan arrastrar azuladas */
+}
