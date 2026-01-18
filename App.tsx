@@ -125,7 +125,37 @@ const App: React.FC = () => {
     </div>
   </div>
 );
-  
+
+  const renderContactForm = () => (
+  <section className="py-24 bg-stone-50">
+    <div className="max-w-3xl mx-auto px-6">
+      <div className="text-center mb-16 space-y-4">
+        <h2 className="text-4xl font-serif italic text-stone-900">Progetti Speciali</h2>
+        <p className="text-stone-500 uppercase tracking-[0.2em] text-xs font-bold">Hai un'idea particolare? Creiamola insieme.</p>
+      </div>
+      
+      <form className="grid grid-cols-1 gap-8" onSubmit={(e) => e.preventDefault()}>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="space-y-2 text-left">
+            <label className="text-[10px] uppercase tracking-widest font-bold text-stone-400 ml-2">Nome</label>
+            <input type="text" className="w-full bg-white border border-stone-200 p-4 rounded-xl focus:outline-none focus:border-[#C5B08B] transition-colors text-stone-900" placeholder="Il tuo nome" />
+          </div>
+          <div className="space-y-2 text-left">
+            <label className="text-[10px] uppercase tracking-widest font-bold text-stone-400 ml-2">Email</label>
+            <input type="email" className="w-full bg-white border border-stone-200 p-4 rounded-xl focus:outline-none focus:border-[#C5B08B] transition-colors text-stone-900" placeholder="la-tua@email.com" />
+          </div>
+        </div>
+        <div className="space-y-2 text-left">
+          <label className="text-[10px] uppercase tracking-widest font-bold text-stone-400 ml-2">Messaggio / Idea</label>
+          <textarea rows={4} className="w-full bg-white border border-stone-200 p-4 rounded-xl focus:outline-none focus:border-[#C5B08B] transition-colors text-stone-900 resize-none" placeholder="Descrivi il tuo progetto personalizzato..."></textarea>
+        </div>
+        <button className="bg-stone-900 text-white py-5 rounded-2xl font-bold uppercase text-xs tracking-[0.2em] hover:bg-black transition-all shadow-xl">
+          Invia Richiesta
+        </button>
+      </form>
+    </div>
+  </section>
+);
   const renderFeatures = () => (
   <section className="bg-white py-24 border-y border-stone-100">
     <div className="max-w-7xl mx-auto px-6">
@@ -255,6 +285,7 @@ const renderReviews = () => (
         </div>
       ))}
     </div>
+    {renderContactForm()}
   </div>
 );
 
@@ -290,44 +321,56 @@ const renderReviews = () => (
             <div className="bg-white rounded-[3rem] p-10 shadow-2xl space-y-8">
               <span className="text-5xl font-serif text-[#C5B08B] font-black block">€{selectedProduct.price.toFixed(2)}</span>
               <div className="space-y-4">
-                <a 
-  href={selectedProduct.ebayUrl} 
-  target="_blank" 
-  className="btn-shine block w-full bg-stone-900 text-white text-center py-5 rounded-2xl font-bold text-lg uppercase transition-transform active:scale-95"
->
-  Acquista su eBay
-</a>
+ {/* --- COPIA DESDE AQUÍ --- */}
+<div className="flex flex-col gap-4 mt-8">
+  {/* Opción eBay: Confiable y oficial */}
+  <a 
+    href={selectedProduct.ebayUrl} 
+    target="_blank" 
+    rel="noopener noreferrer"
+    className="group relative flex items-center justify-center gap-3 bg-stone-900 text-white py-5 rounded-2xl font-bold uppercase text-[11px] tracking-[0.2em] transition-all hover:bg-black hover:shadow-lg active:scale-95"
+  >
+    <span>Acquista su eBay Store</span>
+    <span className="transition-transform group-hover:translate-x-1">→</span>
+  </a>
 
-<a 
-  href={getWhatsAppLink(selectedProduct.name)} 
-  target="_blank" 
-  className="block w-full bg-[#C5B08B] text-white text-center py-5 rounded-2xl font-bold text-lg uppercase hover:bg-[#b39d76] transition-colors"
->
-  Personalizza via WhatsApp
-</a>
-              </div>
-            </div>
-            <p className="text-stone-600 leading-relaxed text-lg whitespace-pre-line">{selectedProduct.description}</p>
-          </div>
+  {/* Opción WhatsApp: Personalización y lujo */}
+  <a 
+    href={getWhatsAppLink(selectedProduct.name)} 
+    target="_blank" 
+    rel="noopener noreferrer"
+    className="flex items-center justify-center gap-3 border-2 border-[#C5B08B] text-[#C5B08B] py-5 rounded-2xl font-bold uppercase text-[11px] tracking-[0.2em] transition-all hover:bg-[#C5B08B] hover:text-white active:scale-95"
+  >
+    <span>Personalizza via WhatsApp</span>
+  </a>
+  
+  <p className="text-[10px] text-stone-400 text-center uppercase tracking-[0.15em] mt-4 font-medium">
+    Servizio Clienti Attivo • Anteprime Digitali Gratuite
+  </p>
+</div>
+{/* --- HASTA AQUÍ --- */}
         </div>
       </div>
     );
   };
 
   const renderContent = () => {
-    switch (currentPage) {
-      case Page.HOME: return renderHome();
-      case Page.PRODUCTS: return renderProducts();
-      case Page.PRODUCT_DETAIL: return renderProductDetail();
-      case Page.ABOUT: return (
-        <div className="max-w-4xl mx-auto px-6 py-24 text-center">
-          <h1 className="text-6xl font-serif mb-12">Chi Siamo</h1>
-          <p className="text-2xl font-serif italic text-stone-700 leading-relaxed">{ABOUT_TEXT}</p>
-        </div>
-      );
-      default: return renderHome();
-    }
-  };
+  switch (currentPage) {
+    case Page.HOME: return renderHome();
+    case Page.PRODUCTS: return renderProducts();
+    case Page.PRODUCT_DETAIL: return renderProductDetail();
+    case Page.ABOUT: return (
+      <div className="max-w-4xl mx-auto px-6 py-24 text-center animate-fade-in-up">
+        <h1 className="text-6xl font-serif mb-12">Chi Siamo</h1>
+        <p className="text-2xl font-serif italic text-stone-700 leading-relaxed">{ABOUT_TEXT}</p>
+      </div>
+    );
+    // ESTA ES LA LÍNEA QUE ESTAMOS AGREGANDO:
+    case Page.CONTACT: return renderContactPage(); 
+    
+    default: return renderHome();
+  }
+};
 
   return (
     <div className="min-h-screen flex flex-col bg-[#FAF9F6]">
@@ -342,4 +385,38 @@ const renderReviews = () => (
   );
 };
 
+            const renderContactPage = () => (
+  <div className="animate-fade-in-up">
+    {/* Cabecera elegante para la página de contacto */}
+    <section className="bg-white py-20 border-b border-stone-100">
+      <div className="max-w-7xl mx-auto px-6 text-center">
+        <h1 className="text-5xl md:text-7xl font-serif italic text-stone-900 tracking-tighter hero-title-shadow">
+          Contattaci
+        </h1>
+        <p className="mt-6 text-stone-500 uppercase tracking-[0.3em] text-xs font-bold">
+          Siamo qui per dare vita alle tue idee
+        </p>
+      </div>
+    </section>
+
+    {/* Información de contacto directo (Opcional pero recomendado) */}
+    <section className="py-12 bg-white">
+      <div className="max-w-4xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 text-center">
+        <div className="p-8 rounded-3xl bg-stone-50 border border-stone-100">
+          <span className="text-2xl mb-4 block">💬</span>
+          <h3 className="font-bold uppercase text-[10px] tracking-widest text-stone-400 mb-2">WhatsApp Diretto</h3>
+          <p className="text-stone-900 font-bold italic">Risposta rapida per anteprime</p>
+        </div>
+        <div className="p-8 rounded-3xl bg-stone-50 border border-stone-100">
+          <span className="text-2xl mb-4 block">📦</span>
+          <h3 className="font-bold uppercase text-[10px] tracking-widest text-stone-400 mb-2">Ordini eBay</h3>
+          <p className="text-stone-900 font-bold italic">Assistenza acquisti e spedizioni</p>
+        </div>
+      </div>
+    </section>
+
+    {/* EL FORMULARIO */}
+    {renderContactForm()}
+  </div>
+);
 export default App;
