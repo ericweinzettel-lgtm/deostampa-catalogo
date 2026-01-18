@@ -5,13 +5,13 @@ import WhatsAppButton from './components/WhatsAppButton';
 import { Page, Product, VisitorInfo } from './types';
 import { PRODUCTS, ABOUT_TEXT, PRIVACY_POLICY, TERMS_AND_CONDITIONS, REFUND_POLICY, SHIPPING_POLICY, EBAY_STORE_URL } from './constants';
 
-// --- NUEVAS IMPORTACIONES PARA EL CARRUSEL ---
+// --- IMPORTACIONES DE SWIPER ---
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-// ---------------------------------------------
+// ------------------------------
 
 const App: React.FC = () => {
   const [currentPage, setCurrentPage] = useState<Page>(Page.HOME);
@@ -92,7 +92,7 @@ const App: React.FC = () => {
       <section className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-12">
         {[
           { title: "Design Unico", desc: "Ogni prodotto viene creato per essere unico e irripetibile.", icon: "🎨" },
-          { title: "Qualità Premium", desc: "Utilizziamo solo materiales di altissima scelta per i nostri clienti.", icon: "💎" },
+          { title: "Qualità Premium", desc: "Utilizziamo solo materiali di altissima scelta per i nostri clienti.", icon: "💎" },
           { title: "Acquisto Sicuro", desc: "Tutte le transazioni sono protette dalla garanzia eBay.", icon: "🛡️" }
         ].map((item, i) => (
           <div key={i} className="group p-10 rounded-[2.5rem] bg-white border border-stone-100 hover:shadow-2xl hover:border-[#C5B08B]/20 transition-all duration-500">
@@ -120,11 +120,10 @@ const App: React.FC = () => {
               className="relative aspect-square overflow-hidden rounded-[2.2rem] bg-stone-100 cursor-pointer" 
               onClick={() => { setSelectedProduct(product); setCurrentPage(Page.PRODUCT_DETAIL); window.scrollTo(0,0); }}
             >
-              {/* Carrusel pequeño en la lista de productos */}
               <Swiper
                 modules={[Autoplay, Pagination]}
                 pagination={{ clickable: true }}
-                autoplay={{ delay: 3000 }}
+                autoplay={{ delay: 3500 }}
                 className="w-full h-full"
               >
                 {product.images.map((img, idx) => (
@@ -133,7 +132,7 @@ const App: React.FC = () => {
                   </SwiperSlide>
                 ))}
               </Swiper>
-              <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center backdrop-blur-[2px] z-10">
+              <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center backdrop-blur-[2px] z-10 pointer-events-none">
                  <div className="bg-white text-stone-900 px-10 py-4 rounded-full font-bold shadow-2xl transform translate-y-6 group-hover:translate-y-0 transition-all duration-500 text-xs uppercase tracking-widest">Dettagli</div>
               </div>
             </div>
@@ -183,7 +182,6 @@ const App: React.FC = () => {
         </button>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-start">
-          {/* --- AQUÍ ESTÁ EL CARRUSEL PRINCIPAL --- */}
           <div className="aspect-square rounded-[3.5rem] overflow-hidden shadow-2xl bg-white border-8 border-white">
             <Swiper
               modules={[Navigation, Pagination]}
@@ -302,7 +300,7 @@ const App: React.FC = () => {
               <input type="text" placeholder="Prodotto di interesse" className="bg-stone-50 border-none p-5 rounded-2xl outline-none focus:ring-2 focus:ring-[#C5B08B]/20 transition-all text-sm font-medium" required />
               <input type="number" placeholder="Quantità stimata" className="bg-stone-50 border-none p-5 rounded-2xl outline-none focus:ring-2 focus:ring-[#C5B08B]/20 transition-all text-sm font-medium" required />
             </div>
-            <textarea placeholder="Dettagli del progetto..." rows={4} className="w-full bg-stone-50 border-none p-5 rounded-2xl outline-none focus:ring-2 focus:ring-[#C5B08B]/20 transition-all text-sm font-medium" required></textarea>
+            <textarea placeholder="Dettagli del proyecto..." rows={4} className="w-full bg-stone-50 border-none p-5 rounded-2xl outline-none focus:ring-2 focus:ring-[#C5B08B]/20 transition-all text-sm font-medium" required></textarea>
             <button 
               type="submit" 
               disabled={formStatus !== 'idle'}
