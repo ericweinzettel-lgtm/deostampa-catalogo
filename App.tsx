@@ -70,7 +70,7 @@ const App: React.FC = () => {
         </div>
         <div className="relative z-10 max-w-7xl mx-auto px-6 w-full">
           <div className="max-w-5xl space-y-10 animate-in fade-in slide-in-from-bottom-8 duration-1000">
-            <h1 className="text-5xl md:text-7xl lg:text-9xl font-serif text-stone-900 leading-[0.9] tracking-tighter">
+            <h1 className="text-5xl md:text-7xl lg:text-9xl font-serif text-stone-900 leading-[0.9] tracking-tighter hero-title-shadow"> 
   DeoStampa: <br/>
   <span className="italic text-[#C5B08B] font-normal tracking-tight">L'Emozione</span> <br/>
   <span className="font-black uppercase">Personalizzata.</span>
