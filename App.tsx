@@ -153,8 +153,21 @@ const App: React.FC = () => {
             <div className="bg-white rounded-[3rem] p-10 shadow-2xl space-y-8">
               <span className="text-5xl font-serif text-[#C5B08B] font-black block">€{selectedProduct.price.toFixed(2)}</span>
               <div className="space-y-4">
-                <a href={selectedProduct.ebayUrl} target="_blank" className="block w-full bg-stone-900 text-white text-center py-5 rounded-2xl font-bold text-lg uppercase">Acquista su eBay</a>
-                <a href={getWhatsAppLink(selectedProduct.name)} target="_blank" className="block w-full bg-[#C5B08B] text-white text-center py-5 rounded-2xl font-bold text-lg uppercase">Personalizza via WhatsApp</a>
+                <a 
+  href={selectedProduct.ebayUrl} 
+  target="_blank" 
+  className="btn-shine block w-full bg-stone-900 text-white text-center py-5 rounded-2xl font-bold text-lg uppercase transition-transform active:scale-95"
+>
+  Acquista su eBay
+</a>
+
+<a 
+  href={getWhatsAppLink(selectedProduct.name)} 
+  target="_blank" 
+  className="block w-full bg-[#C5B08B] text-white text-center py-5 rounded-2xl font-bold text-lg uppercase hover:bg-[#b39d76] transition-colors"
+>
+  Personalizza via WhatsApp
+</a>
               </div>
             </div>
             <p className="text-stone-600 leading-relaxed text-lg whitespace-pre-line">{selectedProduct.description}</p>
