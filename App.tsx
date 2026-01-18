@@ -106,7 +106,7 @@ const App: React.FC = () => {
   );
 
   const renderProducts = () => (
-    <div className="max-w-7xl mx-auto px-6 py-24 space-y-16">
+    <div id="products" className="max-w-7xl mx-auto px-6 py-24 space-y-16">
       <div className="text-center space-y-4">
         <h1 className="text-5xl md:text-7xl font-serif text-stone-900 tracking-tight font-bold">Le Nostre Creazioni</h1>
         <p className="text-stone-400 max-w-2xl mx-auto font-medium text-lg italic">Ogni pezzo è unico, come te.</p>
@@ -126,13 +126,13 @@ const App: React.FC = () => {
                 autoplay={{ delay: 3500 }}
                 className="w-full h-full"
               >
-                {product.images.map((img, idx) => (
+                {(product.images || [product.image]).map((img, idx) => (
                   <SwiperSlide key={idx}>
                     <img 
-  src={`/${img}`} 
-  alt={`${selectedProduct.name} ${index}`} 
-  className="w-full h-full object-cover" 
-/>
+                      src={`/${img}`} 
+                      alt={`${product.name} ${idx}`} 
+                      className="w-full h-full object-cover" 
+                    />
                   </SwiperSlide>
                 ))}
               </Swiper>
@@ -197,9 +197,9 @@ const App: React.FC = () => {
                 "--swiper-pagination-color": "#C5B08B",
               } as React.CSSProperties}
             >
-              {selectedProduct.images.map((img, index) => (
+              {(selectedProduct.images || [selectedProduct.image]).map((img, index) => (
                 <SwiperSlide key={index}>
-                  <img src={img} alt={`${selectedProduct.name} ${index}`} className="w-full h-full object-cover" />
+                  <img src={`/${img}`} alt={`${selectedProduct.name} ${index}`} className="w-full h-full object-cover" />
                 </SwiperSlide>
               ))}
             </Swiper>
@@ -430,7 +430,7 @@ const App: React.FC = () => {
       <main className="flex-1">
         {renderContent()}
       </main>
-      <Footer onPageChange={(p) => setCurrentPage(p)} />
+      <Footer onPageChange={(p) => { setCurrentPage(p); window.scrollTo(0,0); }} />
       <WhatsAppButton />
     </div>
   );
