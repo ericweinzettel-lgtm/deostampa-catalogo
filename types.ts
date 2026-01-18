@@ -6,7 +6,7 @@ export interface Product {
   price: number;
   category: string;
   image: string;
-  gallery?: string[];
+  images: string[];
   isCustomizable: boolean;
   ebayUrl: string; // Link diretto all'inserzione eBay
 }
