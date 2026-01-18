@@ -47,7 +47,7 @@ Venduto e protetto tramite eBay.`,
     "/images/boccale-04.jpg",
     "/images/boccale-05.jpg",
     "/images/boccale-06.jpg",
-    "/images/boccale-07.webp",
+    "/images/boccale-07.jpg",
     "/images/boccale-08.jpg",
     "/images/boccale-09.jpg",
     "/images/boccale-10.jpg"
