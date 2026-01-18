@@ -153,23 +153,66 @@ const App: React.FC = () => {
   );
 
   const renderProducts = () => (
-    <div className="flex flex-col">
-      <div className="max-w-7xl mx-auto px-6 py-24">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
-          {PRODUCTS.map((product) => (
-            <div key={product.id} className="bg-white p-6 rounded-[3rem] border border-stone-50 group hover:shadow-xl transition-all">
-              <div className="relative aspect-square overflow-hidden rounded-[2.2rem] bg-stone-100 cursor-pointer" onClick={() => { setSelectedProduct(product); setCurrentPage(Page.PRODUCT_DETAIL); window.scrollTo(0,0); }}>
-                <img src={`/${product.image}`} alt={product.name} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+  <div className="flex flex-col">
+    <div className="max-w-7xl mx-auto px-6 py-24">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+        {PRODUCTS.map((product) => (
+          <div key={product.id} className="bg-white p-6 rounded-[3rem] border border-stone-50 group hover:shadow-xl transition-all">
+            {/* Contenedor de Imagen con Swiper */}
+            <div className="relative aspect-square overflow-hidden rounded-[2.2rem] bg-stone-100 cursor-pointer">
+              
+              {/* Etiqueta Premium Calidad */}
+              <div className="absolute top-4 left-4 z-20 bg-stone-900/90 backdrop-blur-sm text-white px-3 py-1.5 rounded-lg shadow-xl border border-white/10">
+                <div className="flex items-center space-x-2">
+                  <span className="relative flex h-2 w-2">
+                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#C5B08B] opacity-75"></span>
+                    <span className="relative inline-flex rounded-full h-2 w-2 bg-[#C5B08B]"></span>
+                  </span>
+                  <span className="text-[10px] font-black uppercase tracking-[0.2em]">Premium Quality</span>
+                </div>
               </div>
-              <h3 className="mt-6 text-xl font-bold text-stone-900 uppercase tracking-tighter">{product.name}</h3>
-              <p className="text-[#C5B08B] font-black text-lg">€{product.price.toFixed(2)}</p>
+
+              {/* Carrusel Swiper */}
+              <Swiper
+                modules={[Autoplay, Pagination]}
+                pagination={{ clickable: true }}
+                autoplay={{ delay: 3000, disableOnInteraction: false }}
+                className="w-full h-full"
+              >
+                {(product.images || [product.image]).map((img, idx) => (
+                  <SwiperSlide key={idx} onClick={() => { setSelectedProduct(product); setCurrentPage(Page.PRODUCT_DETAIL); window.scrollTo(0,0); }}>
+                    <img 
+                      src={`/${img}`} 
+                      alt={product.name} 
+                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" 
+                    />
+                  </SwiperSlide>
+                ))}
+              </Swiper>
             </div>
-          ))}
-        </div>
+
+            {/* Info del Producto */}
+            <div className="mt-6 flex justify-between items-start">
+              <div>
+                <h3 className="text-xl font-bold text-stone-900 uppercase tracking-tighter">{product.name}</h3>
+                <p className="text-[#C5B08B] font-black text-lg">€{product.price.toFixed(2)}</p>
+              </div>
+              <button 
+                onClick={() => { setSelectedProduct(product); setCurrentPage(Page.PRODUCT_DETAIL); window.scrollTo(0,0); }}
+                className="bg-stone-50 p-3 rounded-full hover:bg-stone-900 hover:text-white transition-colors"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                </svg>
+              </button>
+            </div>
+          </div>
+        ))}
       </div>
-      {renderContactForm()}
     </div>
-  );
+    {renderContactForm()}
+  </div>
+);
 
   const renderProductDetail = () => {
     if (!selectedProduct) return null;
