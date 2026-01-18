@@ -385,7 +385,7 @@ const renderReviews = () => (
   );
 };
 
-            const renderContactPage = () => (
+   const renderContactPage = () => (
   <div className="animate-fade-in-up">
     {/* Cabecera elegante para la página de contacto */}
     <section className="bg-white py-20 border-b border-stone-100">
