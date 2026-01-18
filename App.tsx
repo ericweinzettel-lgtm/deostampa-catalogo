@@ -247,7 +247,9 @@ const App: React.FC = () => {
     <div className="min-h-screen flex flex-col bg-[#FAF9F6]">
       <ImageZoomModal />
       <Navbar currentPage={currentPage} onPageChange={(p) => { setCurrentPage(p); window.scrollTo(0,0); }} />
-      <main className="flex-1">{renderContent()}</main>
+      <main key={currentPage} className="flex-1 animate-fade-in-up">
+  {renderContent()}
+</main>
       <Footer onPageChange={(p) => { setCurrentPage(p); window.scrollTo(0,0); }} />
       <WhatsAppButton />
     </div>
