@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
@@ -6,11 +5,18 @@ import WhatsAppButton from './components/WhatsAppButton';
 import { Page, Product, VisitorInfo } from './types';
 import { PRODUCTS, ABOUT_TEXT, PRIVACY_POLICY, TERMS_AND_CONDITIONS, REFUND_POLICY, SHIPPING_POLICY, EBAY_STORE_URL } from './constants';
 
+// --- NUEVAS IMPORTACIONES PARA EL CARRUSEL ---
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Pagination, Autoplay } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+// ---------------------------------------------
+
 const App: React.FC = () => {
   const [currentPage, setCurrentPage] = useState<Page>(Page.HOME);
   const [visitorInfo, setVisitorInfo] = useState<VisitorInfo>({ ip: '...', count: 0, lastVisit: '' });
   const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
-  const [activeImage, setActiveImage] = useState<string>('');
   const [formStatus, setFormStatus] = useState<'idle' | 'sending' | 'success'>('idle');
 
   useEffect(() => {
@@ -86,7 +92,7 @@ const App: React.FC = () => {
       <section className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-12">
         {[
           { title: "Design Unico", desc: "Ogni prodotto viene creato per essere unico e irripetibile.", icon: "🎨" },
-          { title: "Qualità Premium", desc: "Utilizziamo solo materiali di altissima scelta per i nostri clienti.", icon: "💎" },
+          { title: "Qualità Premium", desc: "Utilizziamo solo materiales di altissima scelta per i nostri clienti.", icon: "💎" },
           { title: "Acquisto Sicuro", desc: "Tutte le transazioni sono protette dalla garanzia eBay.", icon: "🛡️" }
         ].map((item, i) => (
           <div key={i} className="group p-10 rounded-[2.5rem] bg-white border border-stone-100 hover:shadow-2xl hover:border-[#C5B08B]/20 transition-all duration-500">
@@ -112,10 +118,22 @@ const App: React.FC = () => {
           <div key={product.id} className="group bg-white p-6 rounded-[3rem] border border-stone-50 hover:shadow-3xl transition-all duration-500 hover:-translate-y-3 flex flex-col">
             <div 
               className="relative aspect-square overflow-hidden rounded-[2.2rem] bg-stone-100 cursor-pointer" 
-              onClick={() => { setSelectedProduct(product); setActiveImage(product.image); setCurrentPage(Page.PRODUCT_DETAIL); window.scrollTo(0,0); }}
+              onClick={() => { setSelectedProduct(product); setCurrentPage(Page.PRODUCT_DETAIL); window.scrollTo(0,0); }}
             >
-              <img src={product.image} alt={product.name} className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" />
-              <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center backdrop-blur-[2px]">
+              {/* Carrusel pequeño en la lista de productos */}
+              <Swiper
+                modules={[Autoplay, Pagination]}
+                pagination={{ clickable: true }}
+                autoplay={{ delay: 3000 }}
+                className="w-full h-full"
+              >
+                {product.images.map((img, idx) => (
+                  <SwiperSlide key={idx}>
+                    <img src={img} alt={product.name} className="w-full h-full object-cover" />
+                  </SwiperSlide>
+                ))}
+              </Swiper>
+              <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center backdrop-blur-[2px] z-10">
                  <div className="bg-white text-stone-900 px-10 py-4 rounded-full font-bold shadow-2xl transform translate-y-6 group-hover:translate-y-0 transition-all duration-500 text-xs uppercase tracking-widest">Dettagli</div>
               </div>
             </div>
@@ -165,8 +183,24 @@ const App: React.FC = () => {
         </button>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-start">
+          {/* --- AQUÍ ESTÁ EL CARRUSEL PRINCIPAL --- */}
           <div className="aspect-square rounded-[3.5rem] overflow-hidden shadow-2xl bg-white border-8 border-white">
-            <img src={activeImage} alt={selectedProduct.name} className="w-full h-full object-cover" />
+            <Swiper
+              modules={[Navigation, Pagination]}
+              navigation={true}
+              pagination={{ clickable: true }}
+              className="w-full h-full"
+              style={{
+                "--swiper-navigation-color": "#C5B08B",
+                "--swiper-pagination-color": "#C5B08B",
+              } as React.CSSProperties}
+            >
+              {selectedProduct.images.map((img, index) => (
+                <SwiperSlide key={index}>
+                  <img src={img} alt={`${selectedProduct.name} ${index}`} className="w-full h-full object-cover" />
+                </SwiperSlide>
+              ))}
+            </Swiper>
           </div>
 
           <div className="space-y-12 lg:sticky lg:top-32">
