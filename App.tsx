@@ -70,10 +70,11 @@ const App: React.FC = () => {
         </div>
         <div className="relative z-10 max-w-7xl mx-auto px-6 w-full">
           <div className="max-w-5xl space-y-10 animate-in fade-in slide-in-from-bottom-8 duration-1000">
-            <h1 className="text-5xl md:text-7xl lg:text-9xl font-serif text-stone-900 leading-[1] tracking-tighter">
-              DeoStampa: <br/><span className="italic text-[#C5B08B] font-normal">L'Emozione</span> <br/>
-              <span className="font-black">Personalizzata.</span>
-            </h1>
+            <h1 className="text-5xl md:text-7xl lg:text-9xl font-serif text-stone-900 leading-[0.9] tracking-tighter">
+  DeoStampa: <br/>
+  <span className="italic text-[#C5B08B] font-normal tracking-tight">L'Emozione</span> <br/>
+  <span className="font-black uppercase">Personalizzata.</span>
+</h1>
             <p className="text-lg md:text-2xl text-stone-600 border-l-4 border-[#C5B08B] pl-8 max-w-2xl">
               Creazioni uniche realizzate a mano con cura sartoriale. Ogni pezzo racconta una storia.
             </p>
