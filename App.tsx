@@ -128,9 +128,11 @@ const App: React.FC = () => {
               >
                 {product.images.map((img, idx) => (
                   <SwiperSlide key={idx}>
-                    <img src={img.startsWith('http') ? img : `${window.location.origin}${img}`} 
+                    <img 
+  src={`/${img}`} 
   alt={`${selectedProduct.name} ${index}`} 
-  className="w-full h-full object-cover" />
+  className="w-full h-full object-cover" 
+/>
                   </SwiperSlide>
                 ))}
               </Swiper>
