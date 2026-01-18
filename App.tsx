@@ -138,10 +138,18 @@ const App: React.FC = () => {
           style={{ animationDelay: `${index * 0.1}s` }} // Efecto cascada
         >
           <div className="relative aspect-square overflow-hidden rounded-[2.2rem] bg-stone-100 cursor-pointer">
-            {/* ETIQUETA PREMIUM */}
-            <div className="absolute top-4 left-4 z-20 bg-white/90 backdrop-blur-sm px-4 py-1 rounded-full shadow-sm">
-              <span className="text-[10px] font-bold uppercase tracking-widest text-[#C5B08B]">✨ Fatto a mano</span>
-            </div>
+            {/* SUSTITUYE LA ETIQUETA ANTERIOR POR ESTA VERSIÓN PREMIUM */}
+<div className="absolute top-4 left-4 z-20 bg-stone-900/90 backdrop-blur-sm text-white px-3 py-1.5 rounded-lg shadow-xl border border-white/10">
+  <div className="flex items-center space-x-2">
+    {/* Punto parpadeante tecnológico */}
+    <span className="relative flex h-2 w-2">
+      <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#C5B08B] opacity-75"></span>
+      <span className="relative inline-flex rounded-full h-2 w-2 bg-[#C5B08B]"></span>
+    </span>
+    {/* Texto de calidad */}
+    <span className="text-[10px] font-black uppercase tracking-[0.2em]">Premium Quality</span>
+  </div>
+</div>
 
             <Swiper
               modules={[Autoplay, Pagination]}
