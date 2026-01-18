@@ -87,37 +87,39 @@ const App: React.FC = () => {
   );
 
   const renderProducts = () => (
-    <div className="max-w-7xl mx-auto px-6 py-24 space-y-16">
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
-        {PRODUCTS.map(product => (
-          <div key={product.id} className="group bg-white p-6 rounded-[3rem] border border-stone-50 hover:shadow-3xl transition-all duration-500 hover:-translate-y-3">
-            <div className="relative aspect-square overflow-hidden rounded-[2.2rem] bg-stone-100 cursor-pointer">
-              <Swiper
-                modules={[Autoplay, Pagination]}
-                pagination={{ clickable: true }}
-                autoplay={{ delay: 3000, disableOnInteraction: false }}
-                className="w-full h-full"
-              >
-                {(product.images || [product.image]).map((img, idx) => (
-                  <SwiperSlide key={idx} onClick={() => { setSelectedProduct(product); setCurrentPage(Page.PRODUCT_DETAIL); window.scrollTo(0,0); }}>
-                    <img src={`/${img}`} alt={product.name} className="w-full h-full object-cover" />
-                  </SwiperSlide>
-                ))}
-              </Swiper>
+  <div className="max-w-7xl mx-auto px-6 py-24 space-y-16">
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+      {PRODUCTS.map((product, index) => (
+        <div 
+          key={product.id} 
+          className="product-card group bg-white p-6 rounded-[3rem] border border-stone-50 animate-fade-in-up"
+          style={{ animationDelay: `${index * 0.1}s` }} // Efecto cascada
+        >
+          <div className="relative aspect-square overflow-hidden rounded-[2.2rem] bg-stone-100 cursor-pointer">
+            {/* ETIQUETA PREMIUM */}
+            <div className="absolute top-4 left-4 z-20 bg-white/90 backdrop-blur-sm px-4 py-1 rounded-full shadow-sm">
+              <span className="text-[10px] font-bold uppercase tracking-widest text-[#C5B08B]">✨ Fatto a mano</span>
             </div>
-            <div className="mt-8 space-y-4">
-              <h3 className="font-serif font-bold text-2xl text-stone-900">{product.name}</h3>
-              <p className="text-stone-500 text-sm line-clamp-2">{product.description}</p>
-              <div className="flex justify-between items-center">
-                <span className="text-2xl font-serif text-[#C5B08B] font-black">€{product.price.toFixed(2)}</span>
-                <button onClick={() => { setSelectedProduct(product); setCurrentPage(Page.PRODUCT_DETAIL); window.scrollTo(0,0); }} className="text-[#C5B08B] font-bold text-sm uppercase tracking-widest">Vedi Dettagli</button>
-              </div>
-            </div>
+
+            <Swiper
+              modules={[Autoplay, Pagination]}
+              pagination={{ clickable: true }}
+              autoplay={{ delay: 3000, disableOnInteraction: false }}
+              className="w-full h-full"
+            >
+              {(product.images || [product.image]).map((img, idx) => (
+                <SwiperSlide key={idx} onClick={() => { setSelectedProduct(product); setCurrentPage(Page.PRODUCT_DETAIL); window.scrollTo(0,0); }}>
+                  <img src={`/${img}`} alt={product.name} className="w-full h-full object-cover" />
+                </SwiperSlide>
+              ))}
+            </Swiper>
           </div>
-        ))}
-      </div>
+          {/* ... resto del contenido igual ... */}
+        </div>
+      ))}
     </div>
-  );
+  </div>
+);
 
   const renderProductDetail = () => {
     if (!selectedProduct) return null;
