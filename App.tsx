@@ -83,9 +83,51 @@ const App: React.FC = () => {
           </div>
         </div>
       </section>
+      {renderFeatures()}
     </div>
   );
 
+  const renderFeatures = () => (
+  <section className="bg-white py-24 border-y border-stone-100">
+    <div className="max-w-7xl mx-auto px-6">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+        {/* Tarjeta 1 */}
+        <div className="p-10 rounded-[2rem] bg-stone-50 hover:bg-stone-900 hover:text-white transition-all duration-500 group">
+          <div className="mb-6 text-[#C5B08B] group-hover:text-white">
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04a11.352 11.352 0 00-1.23 6.257c0 4.423 2.522 8.243 6.236 10.122a11.954 11.954 0 007.382 0c3.714-1.879 6.236-5.599 6.236-10.122a11.352 11.352 0 00-1.23-6.257z" />
+            </svg>
+          </div>
+          <h3 className="text-xl font-bold mb-4 uppercase tracking-tighter">Stampa Ultra-HD</h3>
+          <p className="opacity-70 leading-relaxed text-sm">Tecnologie di sublimazione avanzate per colori vibranti e dettagli microscopici che durano nel tempo.</p>
+        </div>
+
+        {/* Tarjeta 2 */}
+        <div className="p-10 rounded-[2rem] bg-stone-50 hover:bg-stone-900 hover:text-white transition-all duration-500 group">
+          <div className="mb-6 text-[#C5B08B] group-hover:text-white">
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+          </div>
+          <h3 className="text-xl font-bold mb-4 uppercase tracking-tighter">Esecuzione Rapida</h3>
+          <p className="opacity-70 leading-relaxed text-sm">Produzione ottimizzata e gestione prioritaria per garantire la consegna in tempi record.</p>
+        </div>
+
+        {/* Tarjeta 3 */}
+        <div className="p-10 rounded-[2rem] bg-stone-50 hover:bg-stone-900 hover:text-white transition-all duration-500 group">
+          <div className="mb-6 text-[#C5B08B] group-hover:text-white">
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-7.714 2.143L11 21l-2.286-6.857L1 12l7.714-2.143L11 3z" />
+            </svg>
+          </div>
+          <h3 className="text-xl font-bold mb-4 uppercase tracking-tighter">Design Esclusivo</h3>
+          <p className="opacity-70 leading-relaxed text-sm">Layout grafici moderni progettati per massimizzare l'impatto visivo di ogni prodotto.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+);
+  
   const renderProducts = () => (
   <div className="max-w-7xl mx-auto px-6 py-24 space-y-16">
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
