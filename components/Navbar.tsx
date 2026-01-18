@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Page } from '../types';
 import Logo from './Logo';
@@ -6,17 +5,25 @@ import { EBAY_STORE_URL } from '../constants';
 
 interface NavbarProps {
   currentPage: Page;
-  onPageChange: (page: Page) => void;
+  setCurrentPage: (page: Page) => void; // Cambiado para coincidir con App.tsx
 }
 
-const Navbar: React.FC<NavbarProps> = ({ currentPage, onPageChange }) => {
+const Navbar: React.FC<NavbarProps> = ({ currentPage, setCurrentPage }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const handleNavClick = (page: Page) => {
-    onPageChange(page);
+    setCurrentPage(page);
     setIsMenuOpen(false);
     window.scrollTo(0, 0);
   };
+
+  // Definimos los items del menú asegurándonos de que Page.CONTACT y Page.PRODUCTS existan
+  const navItems = [
+    { id: Page.HOME, label: 'Home' },
+    { id: Page.PRODUCTS, label: 'Catalogo' },
+    { id: Page.ABOUT, label: 'Chi Siamo' },
+    { id: Page.CONTACT, label: 'Contatti' },
+  ];
 
   return (
     <div className="sticky top-0 z-50">
@@ -34,13 +41,7 @@ const Navbar: React.FC<NavbarProps> = ({ currentPage, onPageChange }) => {
           
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center space-x-8 text-sm font-medium uppercase tracking-widest text-stone-600">
-            {[
-              { id: Page.HOME, label: 'Home' },
-              { id: Page.PRODUCTS, label: 'Catalogo' },
-              { id: Page.ABOUT, label: 'Chi Siamo' },
-              { id: Page.CORPORATE, label: 'Business' },
-              { id: Page.CONTACT, label: 'Contatti' },
-            ].map((item) => (
+            {navItems.map((item) => (
               <button
                 key={item.id}
                 onClick={() => handleNavClick(item.id)}
@@ -73,6 +74,7 @@ const Navbar: React.FC<NavbarProps> = ({ currentPage, onPageChange }) => {
             <a 
               href={EBAY_STORE_URL}
               target="_blank" 
+              rel="noopener noreferrer"
               className="hidden md:block bg-stone-900 text-white px-6 py-2 rounded-full text-xs font-bold hover:bg-[#C5B08B] transition-colors"
             >
               VETRINA EBAY
@@ -85,13 +87,7 @@ const Navbar: React.FC<NavbarProps> = ({ currentPage, onPageChange }) => {
       {isMenuOpen && (
         <div className="fixed inset-0 top-[104px] bg-white z-40 md:hidden animate-in fade-in slide-in-from-top duration-300 border-t border-stone-100 shadow-2xl">
           <div className="flex flex-col p-8 space-y-6 text-xl font-serif text-stone-800">
-            {[
-              { id: Page.HOME, label: 'Home' },
-              { id: Page.PRODUCTS, label: 'Catalogo' },
-              { id: Page.ABOUT, label: 'Chi Siamo' },
-              { id: Page.CORPORATE, label: 'Business' },
-              { id: Page.CONTACT, label: 'Contatti' },
-            ].map((item) => (
+            {navItems.map((item) => (
               <button
                 key={item.id}
                 onClick={() => handleNavClick(item.id)}
@@ -105,6 +101,7 @@ const Navbar: React.FC<NavbarProps> = ({ currentPage, onPageChange }) => {
             <a 
               href={EBAY_STORE_URL}
               target="_blank"
+              rel="noopener noreferrer"
               className="bg-stone-900 text-white text-center py-4 rounded-xl font-bold"
             >
               VISITA EBAY
