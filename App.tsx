@@ -108,24 +108,6 @@ const App: React.FC = () => {
     </section>
   );
 
-  const renderContactForm = () => (
-    <section className="py-24 bg-stone-50">
-      <div className="max-w-3xl mx-auto px-6 text-center space-y-8">
-        <div className="space-y-2">
-          <h2 className="text-4xl font-serif italic text-stone-900">Progetti Speciali</h2>
-          <p className="text-stone-500 uppercase tracking-widest text-xs font-bold">Hai un'idea particolare? Creiamola insieme.</p>
-        </div>
-        <form className="grid grid-cols-1 gap-6 text-left" onSubmit={(e) => e.preventDefault()}>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <input type="text" className="w-full bg-white border border-stone-200 p-4 rounded-xl focus:outline-none focus:border-[#C5B08B]" placeholder="Nome" />
-            <input type="email" className="w-full bg-white border border-stone-200 p-4 rounded-xl focus:outline-none focus:border-[#C5B08B]" placeholder="Email" />
-          </div>
-          <textarea rows={4} className="w-full bg-white border border-stone-200 p-4 rounded-xl focus:outline-none focus:border-[#C5B08B]" placeholder="Descrivi il tuo progetto..."></textarea>
-          <button className="bg-stone-900 text-white py-5 rounded-2xl font-bold uppercase text-xs tracking-widest hover:bg-black transition-all shadow-lg">Invia Richiesta</button>
-        </form>
-      </div>
-    </section>
-  );
 
   // --- RENDER DE PÁGINAS ---
 
@@ -397,16 +379,6 @@ const renderHome = () => (
   );
 };
 
-  const renderContactPage = () => (
-    <div className="animate-fade-in">
-      <section className="bg-white py-24 text-center border-b border-stone-100">
-        <h1 className="text-6xl font-serif italic text-stone-900 tracking-tighter">Contattaci</h1>
-        <p className="text-stone-400 uppercase tracking-[0.3em] text-xs mt-6 font-bold">Siamo qui per dare vita alle tue idee</p>
-      </section>
-      {renderContactForm()}
-    </div>
-  );
-
   const renderContent = () => {
     switch (currentPage) {
       case Page.HOME: return renderHome();
@@ -418,7 +390,7 @@ const renderHome = () => (
           <p className="text-2xl font-serif italic text-stone-700 leading-relaxed">{ABOUT_TEXT}</p>
         </div>
       );
-      case Page.CONTACT: return renderContactPage();
+      case Page.CONTACT: return <Contact />;
       default: return renderHome();
     }
   };
