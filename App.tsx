@@ -130,92 +130,93 @@ const App: React.FC = () => {
 
 const renderHome = () => (
   <div className="flex flex-col bg-white">
-    {/* HERO: CHIARO, ELEGANTE E PROFESSIONALE */}
-    <section className="relative min-h-[85vh] flex items-center px-6 md:px-16 overflow-hidden bg-[#fafafa]">
+    {/* HERO SECTION: PULIZIA E CHIAREZZA */}
+    <section className="relative min-h-[85vh] flex items-center justify-center px-6 py-20 overflow-hidden bg-[#fafafa]">
       
-      {/* Elemento decorativo di sfondo */}
-      <div className="absolute top-0 right-0 w-1/3 h-full bg-stone-100 -skew-x-12 translate-x-24 z-0"></div>
+      {/* Sfondo decorativo sutil */}
+      <div className="absolute inset-0 z-0 opacity-40">
+        <div className="absolute top-0 right-0 w-1/2 h-full bg-stone-100 -skew-x-12 translate-x-24"></div>
+      </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-        
-        {/* LADO IZQUIERDO: MESSAGGIO DI VALORE */}
-        <div className="space-y-10">
-          <div className="space-y-6">
-            <div className="flex items-center gap-3">
-              <span className="w-10 h-[1px] bg-[#C5B08B]"></span>
-              <span className="text-[#C5B08B] text-[10px] font-black uppercase tracking-[0.4em]">Laboratorio di Personalizzazione</span>
-            </div>
-            
-            <h1 className="text-6xl md:text-7xl lg:text-8xl font-serif text-stone-900 leading-[0.95] tracking-tighter">
-              Le tue foto <br />
-              <span className="italic font-light text-stone-400 text-5xl md:text-6xl lg:text-7xl block mt-2">diventano realtà</span>
-              <span className="font-black uppercase">su ogni oggetto.</span>
-            </h1>
-            
-            <p className="text-stone-500 text-lg max-w-md font-light leading-relaxed">
-              Trasformiamo i tuoi ricordi più belli e le tue idee in oggetti unici. Dalle tazze ai calendari, stampiamo con qualità professionale su una vasta gamma di materiali.
-            </p>
-          </div>
-
-          <div className="flex flex-wrap items-center gap-6">
-            <button 
-              onClick={() => { setCurrentPage(Page.PRODUCTS); window.scrollTo(0,0); }} 
-              className="bg-stone-900 text-white px-12 py-5 text-[10px] font-black uppercase tracking-[0.3em] hover:bg-[#C5B08B] transition-all duration-500 shadow-xl rounded-sm"
-            >
-              Scopri il Catalogo
-            </button>
-            <button 
-               onClick={() => { setCurrentPage(Page.CONTACT); window.scrollTo(0,0); }}
-               className="text-stone-900 text-[10px] font-black uppercase tracking-[0.3em] border-b border-stone-300 hover:border-stone-900 pb-2 transition-all"
-            >
-              Richiedi Info
-            </button>
-          </div>
-        </div>
-
-        {/* LADO DERECHO: COMPOSIZIONE VISIVA (Variedad de productos) */}
-        <div className="relative">
-          <div className="relative z-10 aspect-[4/5] md:aspect-square overflow-hidden rounded-sm shadow-[0_40px_80px_-15px_rgba(0,0,0,0.1)] border-[12px] border-white">
-            {/* Imagen che evoca artigianalità e qualità */}
-            <img 
-              src="https://images.unsplash.com/photo-1572044162444-ad60f128bde3?q=80&w=2070&auto=format&fit=crop" 
-              alt="Personalizzazione Professionale" 
-              className="w-full h-full object-cover"
-            />
-            {/* Badge informativo */}
-            <div className="absolute top-6 right-6 bg-white/90 backdrop-blur-md px-6 py-4 shadow-sm border border-stone-50">
-              <p className="text-[9px] font-black uppercase tracking-widest text-[#C5B08B]">Qualità di Stampa</p>
-              <p className="text-[11px] font-bold text-stone-900 italic">Sublimazione Ultra HD</p>
-            </div>
-          </div>
+      <div className="relative z-10 max-w-7xl mx-auto w-full">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           
-          {/* Elenco Servizi (Per dare serietà e chiarezza) */}
-          <div className="absolute -bottom-6 -right-6 bg-stone-900 text-white p-10 hidden md:block shadow-2xl">
-            <p className="text-[10px] font-black uppercase tracking-[0.3em] text-[#C5B08B] mb-6 border-b border-[#C5B08B]/30 pb-2">Cosa Personalizziamo</p>
-            <ul className="text-[11px] font-bold uppercase tracking-[0.15em] space-y-3">
-              <li className="flex items-center gap-3"><span className="text-[#C5B08B] text-lg">•</span> Tazze & Boccali</li>
-              <li className="flex items-center gap-3"><span className="text-[#C5B08B] text-lg">•</span> Abbigliamento</li>
-              <li className="flex items-center gap-3"><span className="text-[#C5B08B] text-lg">•</span> Idee Regalo & Gadget</li>
-              <li className="flex items-center gap-3"><span className="text-[#C5B08B] text-lg">•</span> Foto & Calendari</li>
-            </ul>
+          {/* TESTO PRINCIPALE */}
+          <div className="space-y-10 text-center lg:text-left">
+            <div className="space-y-6">
+              <div className="flex items-center justify-center lg:justify-start gap-3">
+                <span className="w-10 h-[1px] bg-[#C5B08B]"></span>
+                <span className="text-[#C5B08B] text-[10px] font-black uppercase tracking-[0.4em]">Personalizzazione Professionale</span>
+              </div>
+              
+              <h1 className="text-5xl md:text-7xl lg:text-8xl font-serif text-stone-900 leading-[1.1] lg:leading-[0.95] tracking-tighter">
+                Le tue foto <br />
+                <span className="italic font-light text-stone-400">prendono vita</span> <br />
+                <span className="font-black uppercase">su ogni oggetto.</span>
+              </h1>
+              
+              <p className="text-stone-500 text-base md:text-lg max-w-md mx-auto lg:mx-0 font-light leading-relaxed">
+                Diamo valore ai tuoi ricordi stampandoli su ceramica, vetro, tessuti e gadget con la massima precisione cromatica.
+              </p>
+            </div>
+
+            <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-6 pt-4">
+              <button 
+                onClick={() => { setCurrentPage(Page.PRODUCTS); window.scrollTo(0,0); }} 
+                className="w-full sm:w-auto bg-stone-900 text-white px-12 py-5 text-[10px] font-black uppercase tracking-[0.3em] hover:bg-[#C5B08B] transition-all duration-500 rounded-sm shadow-xl"
+              >
+                Vai al Catalogo
+              </button>
+              <button 
+                 onClick={() => { setCurrentPage(Page.CONTACT); window.scrollTo(0,0); }}
+                 className="text-stone-900 text-[10px] font-black uppercase tracking-[0.3em] border-b border-stone-300 hover:border-stone-900 pb-2 transition-all"
+              >
+                Richiedi Preventivo
+              </button>
+            </div>
           </div>
+
+          {/* BOX COSA FACCIAMO (Sostituisce l'immagine del lapis) */}
+          <div className="relative">
+            <div className="bg-white p-2 shadow-2xl rounded-sm">
+              <div className="bg-stone-900 text-white p-10 md:p-16">
+                <p className="text-[#C5B08B] text-[10px] font-black uppercase tracking-[0.4em] mb-8 border-b border-white/10 pb-4">Il nostro Laboratorio</p>
+                <ul className="space-y-6">
+                  {[
+                    { t: "Tazze & Boccali", d: "Ceramica e vetro satinato" },
+                    { t: "Abbigliamento", d: "T-shirt e tessuti personalizzati" },
+                    { t: "Foto & Calendari", d: "Stampa alta fedeltà su carta" },
+                    { t: "Gadget & Regali", d: "Calamite, portachiavi e altro" }
+                  ].map((item, i) => (
+                    <li key={i} className="group">
+                      <p className="text-sm md:text-lg font-bold uppercase tracking-widest group-hover:text-[#C5B08B] transition-colors">{item.t}</p>
+                      <p className="text-[10px] text-stone-400 uppercase tracking-tighter mt-1">{item.d}</p>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+            {/* Decorazione esterna */}
+            <div className="absolute -top-4 -right-4 w-24 h-24 bg-[#C5B08B]/10 -z-10 rounded-full blur-2xl"></div>
+          </div>
+
         </div>
       </div>
     </section>
 
-    {/* BARRA DEI SERVIZI (Serietà professionale) */}
+    {/* BARRA DEI SERVIZI: PULITA E PROFESSIONALE */}
     <section className="py-16 bg-white border-y border-stone-100">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-12 text-center md:text-left">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 text-center lg:text-left">
           {[
-            { t: "Pezzi Unici", d: "Ordina anche una sola unità" },
-            { t: "Anteprima Gratuita", d: "Controlli il design prima di stampare" },
-            { t: "Spedizione Rapida", d: "Consegna in tutta Italia in 24/48 ore" },
-            { t: "Assistenza Diretta", d: "Parla subito con noi su WhatsApp" }
+            { t: "Pezzi Unici", d: "Nessun ordine minimo richiesto" },
+            { t: "Anteprima", d: "Revisione grafica gratuita inclusa" },
+            { t: "Spedizione", d: "Consegna rapida in tutta Italia" },
+            { t: "Supporto", d: "Consulenza diretta su WhatsApp" }
           ].map((item, i) => (
-            <div key={i} className="space-y-2">
-              <p className="text-[11px] font-black uppercase tracking-[0.2em] text-stone-900">{item.t}</p>
-              <p className="text-[10px] text-stone-400 uppercase tracking-tight leading-relaxed">{item.d}</p>
+            <div key={i} className="group">
+              <p className="text-[11px] font-black uppercase tracking-[0.2em] text-stone-900 group-hover:text-[#C5B08B] transition-colors">{item.t}</p>
+              <p className="text-[10px] text-stone-400 uppercase tracking-tight leading-relaxed mt-1">{item.d}</p>
             </div>
           ))}
         </div>
