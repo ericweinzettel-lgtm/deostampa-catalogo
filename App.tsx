@@ -130,11 +130,11 @@ const App: React.FC = () => {
 
 const renderHome = () => (
   <div className="flex flex-col bg-white">
-    {/* HERO SECTION: PULIZIA E CHIAREZZA */}
-    <section className="relative min-h-[85vh] flex items-center justify-center px-6 py-20 overflow-hidden bg-[#fafafa]">
+    {/* HERO SECTION */}
+    <section className="relative min-h-[85vh] flex items-center justify-center px-6 py-20 overflow-hidden bg-[#FCFAF7]">
       
-      {/* Sfondo decorativo sutil */}
-      <div className="absolute inset-0 z-0 opacity-40">
+      {/* Sfondo decorativo ancora più leggero */}
+      <div className="absolute inset-0 z-0 opacity-30">
         <div className="absolute top-0 right-0 w-1/2 h-full bg-stone-100 -skew-x-12 translate-x-24"></div>
       </div>
 
@@ -146,7 +146,7 @@ const renderHome = () => (
             <div className="space-y-6">
               <div className="flex items-center justify-center lg:justify-start gap-3">
                 <span className="w-10 h-[1px] bg-[#C5B08B]"></span>
-                <span className="text-[#C5B08B] text-[10px] font-black uppercase tracking-[0.4em]">Personalizzazione Professionale</span>
+                <span className="text-[#C5B08B] text-[10px] font-black uppercase tracking-[0.4em]">Personalizzazione d'Eccellenza</span>
               </div>
               
               <h1 className="text-5xl md:text-7xl lg:text-8xl font-serif text-stone-900 leading-[1.1] lg:leading-[0.95] tracking-tighter">
@@ -160,63 +160,67 @@ const renderHome = () => (
               </p>
             </div>
 
-            <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-6 pt-4">
+            <div className="flex justify-center lg:justify-start pt-4">
               <button 
                 onClick={() => { setCurrentPage(Page.PRODUCTS); window.scrollTo(0,0); }} 
-                className="w-full sm:w-auto bg-stone-900 text-white px-12 py-5 text-[10px] font-black uppercase tracking-[0.3em] hover:bg-[#C5B08B] transition-all duration-500 rounded-sm shadow-xl"
+                className="w-full sm:w-auto bg-stone-900 text-white px-16 py-6 text-[10px] font-black uppercase tracking-[0.3em] hover:bg-[#C5B08B] transition-all duration-500 rounded-sm shadow-2xl active:scale-95"
               >
                 Vai al Catalogo
-              </button>
-              <button 
-                 onClick={() => { setCurrentPage(Page.CONTACT); window.scrollTo(0,0); }}
-                 className="text-stone-900 text-[10px] font-black uppercase tracking-[0.3em] border-b border-stone-300 hover:border-stone-900 pb-2 transition-all"
-              >
-                Richiedi Preventivo
               </button>
             </div>
           </div>
 
-          {/* BOX COSA FACCIAMO (Sostituisce l'immagine del lapis) */}
+          {/* BOX COSA FACCIAMO - Versione Soft Stone */}
           <div className="relative">
-            <div className="bg-white p-2 shadow-2xl rounded-sm">
-              <div className="bg-stone-900 text-white p-10 md:p-16">
-                <p className="text-[#C5B08B] text-[10px] font-black uppercase tracking-[0.4em] mb-8 border-b border-white/10 pb-4">Il nostro Laboratorio</p>
-                <ul className="space-y-6">
+            {/* Cambiato il nero per un grigio pietra caldo e raffinato */}
+            <div className="bg-stone-50 p-3 shadow-[0_50px_100px_-20px_rgba(0,0,0,0.08)] rounded-sm border border-stone-100">
+              <div className="bg-[#1C1917] text-white p-10 md:p-16 relative overflow-hidden">
+                {/* Dettaglio decorativo interno sutil */}
+                <div className="absolute top-0 right-0 w-32 h-32 bg-[#C5B08B] opacity-10 rounded-full blur-3xl"></div>
+                
+                <p className="text-[#C5B08B] text-[10px] font-black uppercase tracking-[0.4em] mb-10 border-b border-white/5 pb-5">
+                  Laboratorio Artigianale
+                </p>
+                
+                <ul className="space-y-8">
                   {[
-                    { t: "Tazze & Boccali", d: "Ceramica e vetro satinato" },
-                    { t: "Abbigliamento", d: "T-shirt e tessuti personalizzati" },
-                    { t: "Foto & Calendari", d: "Stampa alta fedeltà su carta" },
-                    { t: "Gadget & Regali", d: "Calamite, portachiavi e altro" }
+                    { t: "Tazze & Boccali", d: "In ceramica e vetro satinato" },
+                    { t: "Abbigliamento", d: "T-shirt e tessuti di qualità" },
+                    { t: "Foto & Calendari", d: "Stampa professionale alta fedeltà" },
+                    { t: "Gadget & Regali", d: "Calamite, portachiavi e accessori" }
                   ].map((item, i) => (
-                    <li key={i} className="group">
-                      <p className="text-sm md:text-lg font-bold uppercase tracking-widest group-hover:text-[#C5B08B] transition-colors">{item.t}</p>
-                      <p className="text-[10px] text-stone-400 uppercase tracking-tighter mt-1">{item.d}</p>
+                    <li key={i} className="group cursor-default">
+                      <p className="text-sm md:text-lg font-bold uppercase tracking-widest group-hover:text-[#C5B08B] transition-colors">
+                        {item.t}
+                      </p>
+                      <p className="text-[9px] text-stone-500 uppercase tracking-[0.1em] mt-1">
+                        {item.d}
+                      </li>
                     </li>
                   ))}
                 </ul>
               </div>
             </div>
-            {/* Decorazione esterna */}
-            <div className="absolute -top-4 -right-4 w-24 h-24 bg-[#C5B08B]/10 -z-10 rounded-full blur-2xl"></div>
           </div>
 
         </div>
       </div>
     </section>
 
-    {/* BARRA DEI SERVIZI: PULITA E PROFESSIONALE */}
-    <section className="py-16 bg-white border-y border-stone-100">
+    {/* BARRA DEI SERVIZI */}
+    <section className="py-20 bg-white border-y border-stone-100">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 text-center lg:text-left">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-16 text-center lg:text-left">
           {[
             { t: "Pezzi Unici", d: "Nessun ordine minimo richiesto" },
             { t: "Anteprima", d: "Revisione grafica gratuita inclusa" },
             { t: "Spedizione", d: "Consegna rapida in tutta Italia" },
-            { t: "Supporto", d: "Consulenza diretta su WhatsApp" }
+            { t: "Supporto", d: "Consulenza diretta professionale" }
           ].map((item, i) => (
-            <div key={i} className="group">
-              <p className="text-[11px] font-black uppercase tracking-[0.2em] text-stone-900 group-hover:text-[#C5B08B] transition-colors">{item.t}</p>
-              <p className="text-[10px] text-stone-400 uppercase tracking-tight leading-relaxed mt-1">{item.d}</p>
+            <div key={i} className="space-y-3">
+              <p className="text-[11px] font-black uppercase tracking-[0.2em] text-stone-900">{item.t}</p>
+              <div className="w-8 h-[1px] bg-[#C5B08B] mx-auto lg:mx-0"></div>
+              <p className="text-[10px] text-stone-400 uppercase tracking-tight leading-relaxed">{item.d}</p>
             </div>
           ))}
         </div>
