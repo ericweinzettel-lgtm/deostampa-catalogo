@@ -5,6 +5,7 @@ import WhatsAppButton from './components/WhatsAppButton';
 import { Page, Product, VisitorInfo } from './types';
 import { PRODUCTS, ABOUT_TEXT } from './constants';
 import Contact from './components/Contact';
+import About from './components/About';
 
 // --- IMPORTACIONES DE SWIPER ---
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -384,12 +385,7 @@ const renderHome = () => (
       case Page.HOME: return renderHome();
       case Page.PRODUCTS: return renderProducts();
       case Page.PRODUCT_DETAIL: return renderProductDetail();
-      case Page.ABOUT: return (
-        <div className="max-w-4xl mx-auto px-6 py-32 text-center">
-          <h1 className="text-6xl font-serif mb-16 italic text-stone-900">Chi Siamo</h1>
-          <p className="text-2xl font-serif italic text-stone-700 leading-relaxed">{ABOUT_TEXT}</p>
-        </div>
-      );
+      case Page.ABOUT: return <About />;
       case Page.CONTACT: return <Contact />;
       default: return renderHome();
     }
