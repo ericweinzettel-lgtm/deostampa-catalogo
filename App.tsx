@@ -133,7 +133,7 @@ const renderHome = () => (
     {/* HERO SECTION */}
     <section className="relative min-h-[85vh] flex items-center justify-center px-6 py-20 overflow-hidden bg-[#FCFAF7]">
       
-      {/* Sfondo decorativo ancora più leggero */}
+      {/* Sfondo decorativo sutil */}
       <div className="absolute inset-0 z-0 opacity-30">
         <div className="absolute top-0 right-0 w-1/2 h-full bg-stone-100 -skew-x-12 translate-x-24"></div>
       </div>
@@ -170,12 +170,10 @@ const renderHome = () => (
             </div>
           </div>
 
-          {/* BOX COSA FACCIAMO - Versione Soft Stone */}
+          {/* BOX COSA FACCIAMO - Versione Soft Stone Corregida */}
           <div className="relative">
-            {/* Cambiato il nero per un grigio pietra caldo e raffinato */}
             <div className="bg-stone-50 p-3 shadow-[0_50px_100px_-20px_rgba(0,0,0,0.08)] rounded-sm border border-stone-100">
               <div className="bg-[#1C1917] text-white p-10 md:p-16 relative overflow-hidden">
-                {/* Dettaglio decorativo interno sutil */}
                 <div className="absolute top-0 right-0 w-32 h-32 bg-[#C5B08B] opacity-10 rounded-full blur-3xl"></div>
                 
                 <p className="text-[#C5B08B] text-[10px] font-black uppercase tracking-[0.4em] mb-10 border-b border-white/5 pb-5">
@@ -195,7 +193,7 @@ const renderHome = () => (
                       </p>
                       <p className="text-[9px] text-stone-500 uppercase tracking-[0.1em] mt-1">
                         {item.d}
-                      </li>
+                      </p>
                     </li>
                   ))}
                 </ul>
