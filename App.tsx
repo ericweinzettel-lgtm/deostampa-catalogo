@@ -128,88 +128,97 @@ const App: React.FC = () => {
 
   // --- RENDER DE PÁGINAS ---
 
-  const renderHome = () => (
-  <div className="flex flex-col bg-[#faf9f6]">
-    {/* HERO EDITORIAL */}
-    <section className="relative min-h-[85vh] flex items-center justify-center px-6">
+const renderHome = () => (
+  <div className="flex flex-col bg-[#FCFAF7]">
+    {/* SEZIONE HERO: ESTETICA MINIMALISTA E PROFESSIONALE */}
+    <section className="relative min-h-[90vh] flex items-center justify-center px-6 overflow-hidden">
       
-      {/* Fondo con textura sutil */}
-      <div className="absolute inset-0 opacity-[0.03] pointer-events-none" 
-           style={{ backgroundImage: `url('https://www.transparenttextures.com/patterns/paper-fibers.png')` }}>
+      {/* Background Decorativo: Gradiente radial sutil para dar profundidad */}
+      <div className="absolute inset-0 z-0">
+        <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-[#C5B08B]/5 rounded-full blur-[120px]"></div>
       </div>
 
-      <div className="max-w-6xl w-full grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
+      <div className="relative z-10 max-w-7xl w-full grid grid-cols-1 lg:grid-cols-12 gap-20 items-center">
         
-        {/* Lado Izquierdo: El Concepto */}
-        <div className="md:col-span-7 space-y-12 z-10">
-          <div className="space-y-2">
-            <p className="text-[#C5B08B] text-[10px] font-black uppercase tracking-[0.5em]">
-              Studio di Stampa Professionale
-            </p>
-            <h1 className="text-4xl md:text-6xl font-serif text-stone-900 tracking-tighter leading-tight">
-              L'eccellenza artigiana <br /> 
-              incontra il <span className="italic">design contemporaneo.</span>
+        {/* LADO IZQUIERDO: FILOSOFÍA DE MARCA */}
+        <div className="lg:col-span-6 space-y-12">
+          <div className="space-y-4">
+            <div className="flex items-center gap-4">
+              <div className="w-12 h-[1px] bg-[#C5B08B]"></div>
+              <span className="text-[#C5B08B] text-[10px] font-black uppercase tracking-[0.5em]">Studio Creativo</span>
+            </div>
+            <h1 className="text-5xl md:text-7xl font-serif text-stone-900 tracking-tighter leading-[1.1]">
+              L'eccellenza della <br /> 
+              <span className="italic font-light">stampa d'autore.</span>
             </h1>
           </div>
           
-          <div className="max-w-sm">
-            <p className="text-stone-500 text-sm leading-relaxed tracking-wide">
-              Specializzati nella creazione di oggetti unici attraverso processi di stampa ad alta fedeltà. 
-              Ogni pezzo è curato singolarmente per garantire uno standard qualitativo superiore.
+          <div className="max-w-md">
+            <p className="text-stone-500 text-sm leading-[1.8] tracking-wide font-light border-l border-stone-200 pl-6">
+              Trasformiamo visioni estetiche in realtà tangibili attraverso processi tecnologici avanzati e rigore artigianale. Ogni progetto è un dialogo tra materia e precisione.
             </p>
           </div>
 
-          <div className="pt-4">
+          <div className="pt-6">
             <button 
               onClick={() => { setCurrentPage(Page.PRODUCTS); window.scrollTo(0,0); }} 
-              className="border border-stone-900 text-stone-900 px-10 py-4 text-[10px] font-black uppercase tracking-[0.3em] hover:bg-stone-900 hover:text-white transition-all duration-500"
+              className="group relative inline-flex items-center gap-6 text-[10px] font-black uppercase tracking-[0.4em] text-stone-900 transition-all hover:gap-10"
             >
-              Vedi la Selezione
+              <span>Vedi la Collezione</span>
+              <span className="w-12 h-[1px] bg-stone-900 transition-all group-hover:w-20"></span>
             </button>
           </div>
         </div>
 
-        {/* Lado Derecho: Espacio Visual Profesional */}
-        <div className="md:col-span-5 relative">
-          <div className="aspect-[3/4] bg-stone-100 rounded-sm overflow-hidden relative group">
-            <div className="absolute inset-0 bg-[#C5B08B]/5 group-hover:bg-transparent transition-colors duration-700"></div>
-            {/* Aquí no ponemos un producto, sino algo que evoque calidad (ej. un detalle de textura o papel) 
-                Si prefieres nada, podemos dejar un bloque de color minimalista */}
+        {/* LADO DERECHO: ARTE VISUAL (Sustituye el cuadro gris) */}
+        <div className="lg:col-span-6 relative">
+          <div className="relative aspect-[4/5] md:aspect-[3/4] overflow-hidden rounded-sm shadow-[0_30px_60px_-15px_rgba(0,0,0,0.1)]">
+            {/* Imagen de textura profesional: Sugiere papel, tinta o material premium */}
             <img 
-              src="https://images.unsplash.com/photo-1586075010923-2dd4570fb338?q=80&w=1974&auto=format&fit=crop" 
-              alt="Design Detail" 
-              className="w-full h-full object-cover grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-1000"
+              src="https://images.unsplash.com/photo-1518133910546-b6c2fb7d79e3?q=80&w=2070&auto=format&fit=crop" 
+              alt="Artistic Texture" 
+              className="w-full h-full object-cover grayscale transition-all duration-1000 hover:grayscale-0 hover:scale-105"
             />
+            {/* Overlay sutil */}
+            <div className="absolute inset-0 bg-stone-900/5 pointer-events-none"></div>
           </div>
           
-          {/* Coordenadas o Sello Técnico decorativo */}
-          <div className="absolute -bottom-8 -right-8 hidden lg:block">
-            <div className="bg-white p-8 shadow-sm border border-stone-50">
-              <p className="text-[9px] font-mono text-stone-400 leading-tight">
-                SPEC: HIGH_RES_PRINT<br />
-                VAR: CUSTOM_DESIGN<br />
-                LOC: ITALY_2024
-              </p>
-            </div>
+          {/* Sello de autenticidad flotante (Elegancia máxima) */}
+          <div className="absolute -bottom-10 -left-10 bg-white/80 backdrop-blur-md p-10 border border-stone-100 hidden md:block">
+            <p className="text-[40px] font-serif italic text-stone-200 leading-none mb-2">01</p>
+            <p className="text-[9px] font-black uppercase tracking-widest text-stone-900 leading-tight">
+              Standard <br /> Qualitativo <br /> Superiore
+            </p>
           </div>
         </div>
 
       </div>
+
+      {/* Indicador de Scroll Minimalista */}
+      <div className="absolute bottom-10 left-6 flex flex-col items-center gap-4">
+        <span className="text-[8px] font-black uppercase tracking-[0.5em] rotate-180 [writing-mode:vertical-lr] text-stone-300">Scroll</span>
+        <div className="w-[1px] h-16 bg-gradient-to-b from-stone-200 to-transparent"></div>
+      </div>
     </section>
 
-    {/* SECCIÓN DE CIERRE DE HOME: Minimalista */}
-    <section className="py-20 border-t border-stone-100">
-      <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
-        <span className="text-[9px] text-stone-400 uppercase tracking-[0.4em]">DeoStampa © 2024</span>
-        <div className="flex gap-10">
-           <span className="text-[9px] text-stone-400 uppercase tracking-[0.4em]">Qualità</span>
-           <span className="text-[9px] text-stone-400 uppercase tracking-[0.4em]">Innovazione</span>
-           <span className="text-[9px] text-stone-400 uppercase tracking-[0.4em]">Rigore</span>
+    {/* SECCIÓN DE CIERRE (Mantenemos el footer visual que habiamos hecho) */}
+    <section className="py-24 border-t border-stone-50 bg-white">
+      <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-12 items-center">
+        <span className="text-[9px] text-stone-400 uppercase tracking-[0.4em] font-medium">DeoStampa Studio © 2026</span>
+        <div className="flex justify-center gap-2">
+          <div className="w-1.5 h-1.5 rounded-full bg-stone-200"></div>
+          <div className="w-1.5 h-1.5 rounded-full bg-[#C5B08B]"></div>
+          <div className="w-1.5 h-1.5 rounded-full bg-stone-200"></div>
+        </div>
+        <div className="flex justify-end gap-10">
+           <span className="text-[9px] text-stone-900 uppercase tracking-[0.4em] font-bold">Ingegno</span>
+           <span className="text-[9px] text-stone-900 uppercase tracking-[0.4em] font-bold">Materia</span>
         </div>
       </div>
     </section>
   </div>
 );
+  
   const renderProducts = () => (
   <div className="flex flex-col">
     <div className="max-w-7xl mx-auto px-6 py-24">
