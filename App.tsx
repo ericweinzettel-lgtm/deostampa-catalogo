@@ -285,7 +285,6 @@ const renderHome = () => (
         ))}
       </div>
     </div>
-    {renderContactForm()}
   </div>
 );
 
