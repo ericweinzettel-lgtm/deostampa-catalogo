@@ -1,115 +1,64 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Page } from '../types';
-import Logo from './Logo';
-import { EBAY_STORE_URL } from '../constants';
 
 interface NavbarProps {
   currentPage: Page;
-  setCurrentPage: (page: Page) => void; // Cambiado para coincidir con App.tsx
+  setCurrentPage: (page: Page) => void;
+  Page: typeof Page;
 }
 
-const Navbar: React.FC<NavbarProps> = ({ currentPage, setCurrentPage }) => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  const handleNavClick = (page: Page) => {
-    setCurrentPage(page);
-    setIsMenuOpen(false);
-    window.scrollTo(0, 0);
-  };
-
-  // Definimos los items del menú asegurándonos de que Page.CONTACT y Page.PRODUCTS existan
-  const navItems = [
-    { id: Page.HOME, label: 'Home' },
-    { id: Page.PRODUCTS, label: 'Catalogo' },
-    { id: Page.ABOUT, label: 'Chi Siamo' },
-    { id: Page.CONTACT, label: 'Contatti' },
-  ];
-
+const Navbar: React.FC<NavbarProps> = ({ currentPage, setCurrentPage, Page }) => {
   return (
-    <div className="sticky top-0 z-50">
-      <div className="bg-[#C5B08B] text-white text-[10px] md:text-xs py-2 text-center font-bold tracking-widest uppercase">
-        ✨ SCOPRI TUTTE LE NOSTRE CREAZIONI SU EBAY ✨
-      </div>
-      <nav className="bg-white/90 backdrop-blur-md border-b border-stone-100 px-6 py-4 relative z-50">
-        <div className="max-w-7xl mx-auto flex items-center justify-between">
-          <div 
-            className="cursor-pointer transition-transform hover:scale-105"
-            onClick={() => handleNavClick(Page.HOME)}
-          >
-            <Logo className="h-9" />
-          </div>
-          
-          {/* Desktop Menu */}
-          <div className="hidden md:flex items-center space-x-8 text-sm font-medium uppercase tracking-widest text-stone-600">
-            {navItems.map((item) => (
-              <button
-                key={item.id}
-                onClick={() => handleNavClick(item.id)}
-                className={`hover:text-[#C5B08B] transition-colors relative pb-1 ${
-                  currentPage === item.id 
-                  ? 'text-[#C5B08B] after:content-[""] after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-[#C5B08B]' 
-                  : ''
-                }`}
-              >
-                {item.label}
-              </button>
-            ))}
-          </div>
+    <nav className="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-md border-b border-stone-100">
+      <div className="max-w-7xl mx-auto px-8 h-20 flex items-center justify-between">
+        
+        {/* LOGO ARTESANAL */}
+        <div 
+          onClick={() => { setCurrentPage(Page.HOME); window.scrollTo(0,0); }} 
+          className="cursor-pointer group flex flex-col"
+        >
+          <span className="text-xl font-serif tracking-[0.3em] text-stone-900 group-hover:text-[#C5B08B] transition-colors uppercase">
+            DEOSTAMPA
+          </span>
+          <span className="text-[7px] tracking-[0.5em] uppercase text-stone-400 font-black -mt-1">
+            Atelier Creativo
+          </span>
+        </div>
 
-          <div className="flex items-center">
-            {/* Hamburger Toggle */}
-            <button 
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="md:hidden p-2 text-stone-600 hover:text-[#C5B08B] transition-colors"
+        {/* MENÚ DE NAVEGACIÓN - Estilo Boutique */}
+        <div className="hidden md:flex items-center gap-10">
+          {[
+            { name: 'Home', id: Page.HOME },
+            { name: 'Catalogo', id: Page.PRODUCTS },
+            { name: 'Chi Siamo', id: Page.ABOUT },
+            { name: 'Contatti', id: Page.CONTACT }
+          ].map((item) => (
+            <button
+              key={item.id}
+              onClick={() => { setCurrentPage(item.id); window.scrollTo(0,0); }}
+              className={`text-[10px] font-black uppercase tracking-[0.3em] transition-all pb-1 border-b ${
+                currentPage === item.id 
+                ? 'border-[#C5B08B] text-stone-900' 
+                : 'border-transparent text-stone-400 hover:text-stone-900'
+              }`}
             >
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
-                {isMenuOpen ? (
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
-                ) : (
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-                )}
-              </svg>
+              {item.name}
             </button>
-            
-            <a 
-              href={EBAY_STORE_URL}
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="hidden md:block bg-stone-900 text-white px-6 py-2 rounded-full text-xs font-bold hover:bg-[#C5B08B] transition-colors"
-            >
-              VETRINA EBAY
-            </a>
-          </div>
+          ))}
         </div>
-      </nav>
 
-      {/* Mobile Menu Dropdown */}
-      {isMenuOpen && (
-        <div className="fixed inset-0 top-[104px] bg-white z-40 md:hidden animate-in fade-in slide-in-from-top duration-300 border-t border-stone-100 shadow-2xl">
-          <div className="flex flex-col p-8 space-y-6 text-xl font-serif text-stone-800">
-            {navItems.map((item) => (
-              <button
-                key={item.id}
-                onClick={() => handleNavClick(item.id)}
-                className={`text-left hover:text-[#C5B08B] transition-colors border-b border-stone-50 pb-4 ${
-                  currentPage === item.id ? 'text-[#C5B08B] font-bold italic' : ''
-                }`}
-              >
-                {item.label}
-              </button>
-            ))}
-            <a 
-              href={EBAY_STORE_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-stone-900 text-white text-center py-4 rounded-xl font-bold"
-            >
-              VISITA EBAY
-            </a>
-          </div>
+        {/* ACCIÓN RÁPIDA */}
+        <div className="hidden md:block">
+          <button 
+            onClick={() => { setCurrentPage(Page.CONTACT); window.scrollTo(0,0); }}
+            className="text-[9px] font-black uppercase tracking-[0.3em] px-8 py-3 border border-stone-200 hover:border-stone-900 transition-all duration-500"
+          >
+            Preventivo
+          </button>
         </div>
-      )}
-    </div>
+
+      </div>
+    </nav>
   );
 };
 
