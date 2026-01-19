@@ -103,14 +103,22 @@ const Navbar: React.FC<NavbarProps> = ({ currentPage, setCurrentPage }) => {
                 {item.label}
               </button>
             ))}
-            <a 
-              href={EBAY_STORE_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-stone-900 text-white text-center py-5 rounded-sm font-black text-xs uppercase tracking-[0.2em] shadow-lg"
-            >
-              Visita eBay Store
-            </a>
+            {/* BOTÓN EBAY - REDISEÑADO PARA SER MÁS ELEGANTE */}
+<div className="hidden md:block">
+  <a 
+    href={EBAY_STORE_URL}
+    target="_blank" 
+    rel="noopener noreferrer"
+    className="group relative inline-flex items-center justify-center px-10 py-3.5 overflow-hidden border border-stone-900 bg-stone-900 transition-all duration-500 hover:bg-transparent"
+  >
+    {/* Efecto de fondo al hacer hover */}
+    <div className="absolute inset-0 w-0 bg-white transition-all duration-500 ease-out group-hover:w-full"></div>
+    
+    <span className="relative z-10 text-[10px] font-black uppercase tracking-[0.3em] text-white transition-colors duration-500 group-hover:text-stone-900">
+      VETRINA EBAY
+    </span>
+  </a>
+</div>
           </div>
         </div>
       )}
