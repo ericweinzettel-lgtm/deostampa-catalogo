@@ -215,33 +215,95 @@ const App: React.FC = () => {
 );
 
   const renderProductDetail = () => {
-    if (!selectedProduct) return null;
-    return (
-      <div className="max-w-7xl mx-auto px-6 py-24">
-        <button onClick={() => setCurrentPage(Page.PRODUCTS)} className="flex items-center gap-2 text-stone-400 hover:text-stone-900 mb-12 transition-colors uppercase text-xs font-bold tracking-widest">
-          ← Torna al Catalogo
-        </button>
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-20">
-          <div className="aspect-square rounded-[3rem] overflow-hidden bg-white shadow-2xl cursor-zoom-in border border-stone-100" onClick={() => setZoomedImage(`/${selectedProduct.image}`)}>
-            <img src={`/${selectedProduct.image}`} alt={selectedProduct.name} className="w-full h-full object-cover" />
+  if (!selectedProduct) return null;
+  const allImages = selectedProduct.images || [selectedProduct.image];
+
+  return (
+    <div className="max-w-7xl mx-auto px-6 py-12 md:py-24 animate-in fade-in duration-500">
+      <button 
+        onClick={() => { setCurrentPage(Page.PRODUCTS); window.scrollTo(0,0); }} 
+        className="flex items-center space-x-3 text-stone-400 hover:text-[#C5B08B] mb-12 transition-colors uppercase text-xs font-bold tracking-widest"
+      >
+        <span>← Torna al Catalogo</span>
+      </button>
+
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-20">
+        {/* LADO IZQUIERDO: CARRUSEL DE DETALLE */}
+        <div className="aspect-square rounded-[3.5rem] overflow-hidden shadow-2xl bg-white border-8 border-white cursor-zoom-in relative">
+          <Swiper
+            modules={[Navigation, Pagination, Autoplay]}
+            navigation={true}
+            pagination={{ clickable: true }}
+            autoplay={{ delay: 4000, disableOnInteraction: false }}
+            className="w-full h-full mySwiper"
+          >
+            {allImages.map((img, index) => (
+              <SwiperSlide key={index} onClick={() => setZoomedImage(`/${img}`)}>
+                <img 
+                  src={`/${img}`} 
+                  alt={`${selectedProduct.name} ${index}`} 
+                  className="w-full h-full object-cover" 
+                />
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </div>
+
+        {/* LADO DERECHO: INFORMACIÓN Y BOTONES */}
+        <div className="space-y-12">
+          <div className="space-y-4">
+            <h1 className="text-5xl md:text-7xl font-serif text-stone-900 font-bold leading-tight">
+              {selectedProduct.name}
+            </h1>
+            <div className="h-1 w-20 bg-[#C5B08B]"></div>
           </div>
-          <div className="space-y-8 py-4">
-            <h1 className="text-5xl md:text-6xl font-serif font-bold text-stone-900">{selectedProduct.name}</h1>
-            <p className="text-5xl text-[#C5B08B] font-black italic">€{selectedProduct.price.toFixed(2)}</p>
-            <div className="flex flex-col gap-4 pt-8">
-              <a href={selectedProduct.ebayUrl} target="_blank" rel="noopener noreferrer" className="bg-stone-900 text-white py-5 rounded-2xl text-center font-bold uppercase text-xs tracking-[0.2em] hover:bg-black transition-all">
-                Acquista su eBay Official Store
+
+          <div className="bg-white rounded-[3rem] p-10 shadow-xl border border-stone-50 space-y-8">
+            <span className="text-6xl font-serif text-[#C5B08B] font-black block">
+              €{selectedProduct.price.toFixed(2)}
+            </span>
+            
+            <div className="space-y-4">
+              <a 
+                href={selectedProduct.ebayUrl} 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="group relative flex items-center justify-center gap-3 bg-stone-900 text-white py-6 rounded-2xl font-bold uppercase text-xs tracking-[0.2em] transition-all hover:bg-black hover:shadow-2xl active:scale-95 w-full"
+              >
+                <span>Acquista su eBay Store</span>
+                <span className="transition-transform group-hover:translate-x-1">→</span>
               </a>
-              <a href={getWhatsAppLink(selectedProduct.name)} target="_blank" rel="noopener noreferrer" className="border-2 border-[#C5B08B] text-[#C5B08B] py-5 rounded-2xl text-center font-bold uppercase text-xs tracking-[0.2em] hover:bg-[#C5B08B] hover:text-white transition-all">
-                Personalizza via WhatsApp
+
+              <a 
+                href={getWhatsAppLink(selectedProduct.name)} 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="flex items-center justify-center gap-3 border-2 border-[#C5B08B] text-[#C5B08B] py-6 rounded-2xl font-bold uppercase text-xs tracking-[0.2em] transition-all hover:bg-[#C5B08B] hover:text-white active:scale-95 w-full"
+              >
+                <span>Personalizza via WhatsApp</span>
               </a>
-              <p className="text-[10px] text-stone-400 text-center uppercase tracking-widest mt-2">Anteprima gratuita inclusa</p>
+              
+              <div className="pt-6 flex items-center justify-center gap-8 border-t border-stone-100">
+                <div className="text-center">
+                  <p className="text-[10px] font-black uppercase tracking-widest text-stone-400">Spedizione</p>
+                  <p className="text-xs font-bold text-stone-900">Rapida</p>
+                </div>
+                <div className="text-center">
+                  <p className="text-[10px] font-black uppercase tracking-widest text-stone-400">Anteprima</p>
+                  <p className="text-xs font-bold text-stone-900">Gratuita</p>
+                </div>
+                <div className="text-center">
+                  <p className="text-[10px] font-black uppercase tracking-widest text-stone-400">Qualità</p>
+                  <p className="text-xs font-bold text-stone-900">Premium</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    );
-  };
+    </div>
+  );
+};
 
   const renderContactPage = () => (
     <div className="animate-fade-in">
