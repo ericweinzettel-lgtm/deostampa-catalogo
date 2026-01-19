@@ -129,28 +129,70 @@ const App: React.FC = () => {
   // --- RENDER DE PÁGINAS ---
 
   const renderHome = () => (
-    <div className="flex flex-col">
-      <section className="relative min-h-[90vh] flex items-center overflow-hidden py-20 bg-white">
-        <div className="relative z-10 max-w-7xl mx-auto px-6 w-full">
-          <div className="max-w-5xl space-y-10 animate-in fade-in slide-in-from-bottom-8 duration-1000">
-            <h1 className="text-5xl md:text-7xl lg:text-9xl font-serif text-stone-900 leading-[0.9] tracking-tighter"> 
-              DeoStampa: <br/>
-              <span className="italic text-[#C5B08B] font-normal tracking-tight">L'Emozione</span> <br/>
-              <span className="font-black uppercase">Personalizzata.</span>
-            </h1>
-            <p className="text-xl text-stone-500 max-w-xl border-l-4 border-[#C5B08B] pl-6">Qualità di stampa superiore per i tuoi momenti indimenticabili.</p>
-            <button onClick={() => { setCurrentPage(Page.PRODUCTS); window.scrollTo(0,0); }} className="bg-[#C5B08B] text-white px-10 py-5 rounded-2xl font-bold shadow-xl hover:scale-105 transition-transform">
-              Esplora Catalogo
-            </button>
+  <div className="flex flex-col">
+    {/* HERO SECTION: Texto + Imagen (Mantiene lógica de navegación) */}
+    <section className="relative min-h-[90vh] flex items-center overflow-hidden py-20 bg-white">
+      {/* Fondo decorativo sutil */}
+      <div className="absolute inset-0 z-0 opacity-30">
+        <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[60%] bg-[#C5B08B]/10 rounded-full blur-[120px]"></div>
+        <div className="absolute bottom-[-10%] right-[-10%] w-[50%] h-[70%] bg-[#C5B08B]/5 rounded-full blur-[150px]"></div>
+      </div>
+
+      <div className="relative z-10 max-w-7xl mx-auto px-6 w-full">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          
+          {/* LADO IZQUIERDO: TEXTO */}
+          <div className="max-w-2xl space-y-10 animate-in fade-in slide-in-from-bottom-8 duration-1000">
+            <div className="space-y-4">
+              <span className="text-[#C5B08B] font-bold uppercase tracking-[0.4em] text-xs">Eccellenza Italiana</span>
+              <h1 className="text-5xl md:text-7xl lg:text-8xl font-serif text-stone-900 leading-[0.9] tracking-tighter"> 
+                DeoStampa: <br/>
+                <span className="italic text-[#C5B08B] font-normal tracking-tight">L'Emozione</span> <br/>
+                <span className="font-black uppercase">Personalizzata.</span>
+              </h1>
+            </div>
+            
+            <p className="text-lg md:text-xl text-stone-600 border-l-4 border-[#C5B08B] pl-8 max-w-lg">
+              La nostra tecnologia al servizio delle tue emozioni. Design esclusivi e qualità di stampa superiore per oggetti unici.
+            </p>
+
+            <div className="flex flex-wrap gap-6">
+              <button 
+                onClick={() => { setCurrentPage(Page.PRODUCTS); window.scrollTo(0,0); }} 
+                className="bg-stone-900 text-white px-10 py-5 rounded-2xl font-bold shadow-xl hover:bg-[#C5B08B] transition-all hover:scale-105"
+              >
+                Esplora Catalogo
+              </button>
+            </div>
+          </div>
+
+          {/* LADO DERECHO: IMAGEN DE IMPACTO (Boccale o composición) */}
+          <div className="relative hidden lg:block animate-in fade-in zoom-in duration-1000 delay-200">
+            <div className="relative z-10 rounded-[4rem] overflow-hidden shadow-[0_50px_100px_-20px_rgba(0,0,0,0.15)] border-8 border-white">
+              {/* Usamos boccale1.jpg porque es tu producto más visual ahora mismo */}
+              <img 
+                src="/boccale1.jpg" 
+                alt="DeoStampa Premium" 
+                className="w-full h-[550px] object-cover hover:scale-105 transition-transform duration-1000"
+              />
+            </div>
+            {/* Sello flotante */}
+            <div className="absolute -bottom-6 -right-6 bg-white p-6 rounded-3xl shadow-2xl z-20 border border-stone-50">
+              <p className="text-3xl font-serif italic text-[#C5B08B]">HD</p>
+              <p className="text-[9px] uppercase font-black tracking-widest text-stone-400">Print Quality</p>
+            </div>
           </div>
         </div>
-      </section>
-      {renderTrustBar()}
-      {renderFeatures()}
-      {renderBusinessBanner()}
-      {renderReviews()}
-    </div>
-  );
+      </div>
+    </section>
+
+    {/* MANTENEMOS TODOS LOS LLAMADOS ORIGINALES PARA NO PERDER CONTENIDO */}
+    {renderTrustBar()}
+    {renderFeatures()}
+    {renderBusinessBanner()}
+    {renderReviews()}
+  </div>
+);
 
   const renderProducts = () => (
   <div className="flex flex-col">
