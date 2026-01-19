@@ -130,74 +130,86 @@ const App: React.FC = () => {
 
 const renderHome = () => (
   <div className="flex flex-col bg-white">
-    {/* HERO SECTION */}
-    <section className="relative min-h-[85vh] flex items-center justify-center px-6 py-20 overflow-hidden bg-[#FCFAF7]">
+    {/* HERO SECTION - REFINADA Y LUMINOSA */}
+    <section className="relative min-h-[90vh] flex items-center justify-center px-6 py-20 overflow-hidden bg-[#FCFAF7]">
       
-      {/* Sfondo decorativo sutil */}
-      <div className="absolute inset-0 z-0 opacity-30">
+      {/* Decoración de fondo minimalista */}
+      <div className="absolute inset-0 z-0 opacity-40">
         <div className="absolute top-0 right-0 w-1/2 h-full bg-stone-100 -skew-x-12 translate-x-24"></div>
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto w-full">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
           
-          {/* TESTO PRINCIPALE */}
-          <div className="space-y-10 text-center lg:text-left">
+          {/* TEXTO PRINCIPALE */}
+          <div className="space-y-12 text-center lg:text-left">
             <div className="space-y-6">
               <div className="flex items-center justify-center lg:justify-start gap-3">
                 <span className="w-10 h-[1px] bg-[#C5B08B]"></span>
-                <span className="text-[#C5B08B] text-[10px] font-black uppercase tracking-[0.4em]">Personalizzazione d'Eccellenza</span>
+                <span className="text-[#C5B08B] text-[10px] font-black uppercase tracking-[0.5em]">Atelier di Stampa</span>
               </div>
               
-              <h1 className="text-5xl md:text-7xl lg:text-8xl font-serif text-stone-900 leading-[1.1] lg:leading-[0.95] tracking-tighter">
-                Le tue foto <br />
-                <span className="italic font-light text-stone-400">prendono vita</span> <br />
-                <span className="font-black uppercase">su ogni oggetto.</span>
+              <h1 className="text-5xl md:text-7xl lg:text-8xl font-serif text-stone-900 leading-[1.1] tracking-tighter">
+                L'emozione di <br />
+                <span className="italic font-light text-stone-400">creare qualcosa</span> <br />
+                <span className="font-black uppercase text-stone-800">di unico.</span>
               </h1>
               
               <p className="text-stone-500 text-base md:text-lg max-w-md mx-auto lg:mx-0 font-light leading-relaxed">
-                Diamo valore ai tuoi ricordi stampandoli su ceramica, vetro, tessuti e gadget con la massima precisione cromatica.
+                Trasformiamo i tuoi ricordi in oggetti d'arte quotidiana. Qualità artigianale e precisione tecnologica su ogni materiale.
               </p>
             </div>
 
             <div className="flex justify-center lg:justify-start pt-4">
               <button 
                 onClick={() => { setCurrentPage(Page.PRODUCTS); window.scrollTo(0,0); }} 
-                className="w-full sm:w-auto bg-stone-900 text-white px-16 py-6 text-[10px] font-black uppercase tracking-[0.3em] hover:bg-[#C5B08B] transition-all duration-500 rounded-sm shadow-2xl active:scale-95"
+                className="group relative inline-flex items-center justify-center px-16 py-6 overflow-hidden border border-stone-900 bg-transparent transition-all duration-500 hover:text-white"
               >
-                Vai al Catalogo
+                {/* Efecto de llenado elegante al hacer hover */}
+                <div className="absolute inset-0 w-0 bg-stone-900 transition-all duration-500 ease-out group-hover:w-full"></div>
+                <span className="relative z-10 text-[10px] font-black uppercase tracking-[0.4em]">Vai al Catalogo</span>
               </button>
             </div>
           </div>
 
-          {/* BOX COSA FACCIAMO - Versione Soft Stone Corregida */}
+          {/* BOX COSA FACCIAMO - ESTETICA "SAND & GOLD" (Sin Negro) */}
           <div className="relative">
-            <div className="bg-stone-50 p-3 shadow-[0_50px_100px_-20px_rgba(0,0,0,0.08)] rounded-sm border border-stone-100">
-              <div className="bg-[#1C1917] text-white p-10 md:p-16 relative overflow-hidden">
-                <div className="absolute top-0 right-0 w-32 h-32 bg-[#C5B08B] opacity-10 rounded-full blur-3xl"></div>
+            <div className="bg-white p-4 shadow-[0_40px_100px_-20px_rgba(197,176,139,0.2)] rounded-sm border border-stone-100">
+              {/* Fondo color crema/arena suave */}
+              <div className="bg-[#F4F1EC] p-10 md:p-16 relative overflow-hidden border border-[#C5B08B]/20">
                 
-                <p className="text-[#C5B08B] text-[10px] font-black uppercase tracking-[0.4em] mb-10 border-b border-white/5 pb-5">
-                  Laboratorio Artigianale
+                <p className="text-[#C5B08B] text-[10px] font-black uppercase tracking-[0.4em] mb-12 border-b border-[#C5B08B]/20 pb-6 text-center lg:text-left">
+                  Cosa Personalizziamo
                 </p>
                 
-                <ul className="space-y-8">
+                <ul className="space-y-10">
                   {[
-                    { t: "Tazze & Boccali", d: "In ceramica e vetro satinato" },
-                    { t: "Abbigliamento", d: "T-shirt e tessuti di qualità" },
-                    { t: "Foto & Calendari", d: "Stampa professionale alta fedeltà" },
-                    { t: "Gadget & Regali", d: "Calamite, portachiavi e accessori" }
+                    { t: "Tazze & Boccali", d: "Collezioni in ceramica e vetro satinato" },
+                    { t: "Abbigliamento", d: "Tessuti selezionati e stampa morbida" },
+                    { t: "Foto & Calendari", d: "Ricordi stampati in alta definizione" },
+                    { t: "Idee Regalo", d: "Gadget esclusivi curati nei dettagli" }
                   ].map((item, i) => (
-                    <li key={i} className="group cursor-default">
-                      <p className="text-sm md:text-lg font-bold uppercase tracking-widest group-hover:text-[#C5B08B] transition-colors">
-                        {item.t}
-                      </p>
-                      <p className="text-[9px] text-stone-500 uppercase tracking-[0.1em] mt-1">
-                        {item.d}
-                      </p>
+                    <li key={i} className="group cursor-default flex flex-col lg:flex-row lg:items-center justify-between gap-2">
+                      <div>
+                        <p className="text-sm md:text-base font-bold uppercase tracking-[0.2em] text-stone-800 group-hover:text-[#C5B08B] transition-colors">
+                          {item.t}
+                        </p>
+                        <p className="text-[9px] text-stone-400 uppercase tracking-widest mt-1">
+                          {item.d}
+                        </p>
+                      </div>
+                      <span className="hidden lg:block text-[#C5B08B] opacity-0 group-hover:opacity-100 transition-all transform translate-x-[-10px] group-hover:translate-x-0">
+                        →
+                      </span>
                     </li>
                   ))}
                 </ul>
               </div>
+            </div>
+            {/* Sello de autenticidad sutil */}
+            <div className="absolute -bottom-8 -right-8 bg-white p-6 shadow-xl border border-stone-50 hidden md:block">
+              <p className="text-[24px] font-serif italic text-[#C5B08B]">100%</p>
+              <p className="text-[8px] font-black uppercase tracking-tighter text-stone-400">Qualità Garantita</p>
             </div>
           </div>
 
@@ -205,20 +217,24 @@ const renderHome = () => (
       </div>
     </section>
 
-    {/* BARRA DEI SERVIZI */}
-    <section className="py-20 bg-white border-y border-stone-100">
+    {/* BARRA DEI SERVIZI - MINIMALISMO TOTAL */}
+    <section className="py-24 bg-white border-y border-stone-50">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-16 text-center lg:text-left">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-20 text-center lg:text-left">
           {[
-            { t: "Pezzi Unici", d: "Nessun ordine minimo richiesto" },
-            { t: "Anteprima", d: "Revisione grafica gratuita inclusa" },
-            { t: "Spedizione", d: "Consegna rapida in tutta Italia" },
-            { t: "Supporto", d: "Consulenza diretta professionale" }
+            { t: "Pezzi Unici", d: "Diamo valore anche al singolo ordine" },
+            { t: "Design Preview", d: "Revisione grafica prima della stampa" },
+            { t: "Logistica", d: "Spedizioni rapide e imballi sicuri" },
+            { t: "Su Misura", d: "Soluzioni per privati e aziende" }
           ].map((item, i) => (
-            <div key={i} className="space-y-3">
-              <p className="text-[11px] font-black uppercase tracking-[0.2em] text-stone-900">{item.t}</p>
-              <div className="w-8 h-[1px] bg-[#C5B08B] mx-auto lg:mx-0"></div>
-              <p className="text-[10px] text-stone-400 uppercase tracking-tight leading-relaxed">{item.d}</p>
+            <div key={i} className="space-y-4 group">
+              <p className="text-[11px] font-black uppercase tracking-[0.3em] text-stone-900 group-hover:text-[#C5B08B] transition-colors">
+                {item.t}
+              </p>
+              <div className="w-6 h-[1px] bg-stone-200 mx-auto lg:mx-0 group-hover:w-12 group-hover:bg-[#C5B08B] transition-all"></div>
+              <p className="text-[10px] text-stone-400 uppercase tracking-widest leading-loose">
+                {item.d}
+              </p>
             </div>
           ))}
         </div>
