@@ -10,7 +10,7 @@ const Contact = () => {
     const data = new FormData(form);
 
     try {
-      const response = await fetch("https://formspree.io/f/TU_ID_AQUÍ", { // <--- PON TU ID AQUÍ
+      const response = await fetch("https://formspree.io/f/xgooylro", { // <--- PON TU ID AQUÍ
         method: "POST",
         body: data,
         headers: {
