@@ -5,7 +5,7 @@ import { EBAY_STORE_URL } from '../constants';
 
 interface NavbarProps {
   currentPage: Page;
-  setCurrentPage: (page: Page) => void; // Cambiado para coincidir con App.tsx
+  setCurrentPage: (page: Page) => void;
 }
 
 const Navbar: React.FC<NavbarProps> = ({ currentPage, setCurrentPage }) => {
@@ -17,7 +17,6 @@ const Navbar: React.FC<NavbarProps> = ({ currentPage, setCurrentPage }) => {
     window.scrollTo(0, 0);
   };
 
-  // Definimos los items del menú asegurándonos de que Page.CONTACT y Page.PRODUCTS existan
   const navItems = [
     { id: Page.HOME, label: 'Home' },
     { id: Page.PRODUCTS, label: 'Catalogo' },
@@ -27,36 +26,51 @@ const Navbar: React.FC<NavbarProps> = ({ currentPage, setCurrentPage }) => {
 
   return (
     <div className="sticky top-0 z-50">
-      <div className="bg-[#C5B08B] text-white text-[10px] md:text-xs py-2 text-center font-bold tracking-widest uppercase">
+      {/* BARRA SUPERIOR - Se queda igual porque es muy efectiva */}
+      <div className="bg-[#C5B08B] text-white text-[10px] md:text-[11px] py-2.5 text-center font-black tracking-[0.3em] uppercase">
         ✨ SCOPRI TUTTE LE NOSTRE CREAZIONI SU EBAY ✨
       </div>
-      <nav className="bg-white/90 backdrop-blur-md border-b border-stone-100 px-6 py-4 relative z-50">
+
+      <nav className="bg-white/95 backdrop-blur-md border-b border-stone-100 px-6 py-5 relative z-50">
         <div className="max-w-7xl mx-auto flex items-center justify-between">
           <div 
-            className="cursor-pointer transition-transform hover:scale-105"
+            className="cursor-pointer transition-transform hover:scale-105 active:scale-95"
             onClick={() => handleNavClick(Page.HOME)}
           >
             <Logo className="h-9" />
           </div>
           
-          {/* Desktop Menu */}
-          <div className="hidden md:flex items-center space-x-8 text-sm font-medium uppercase tracking-widest text-stone-600">
+          {/* MENU DESKTOP - Aquí es donde mejoramos las letras */}
+          <div className="hidden md:flex items-center space-x-10">
             {navItems.map((item) => (
               <button
                 key={item.id}
                 onClick={() => handleNavClick(item.id)}
-                className={`hover:text-[#C5B08B] transition-colors relative pb-1 ${
+                className={`text-[10px] font-black uppercase tracking-[0.25em] transition-all relative pb-1 group ${
                   currentPage === item.id 
-                  ? 'text-[#C5B08B] after:content-[""] after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-[#C5B08B]' 
-                  : ''
+                  ? 'text-[#C5B08B]' 
+                  : 'text-stone-500 hover:text-stone-900'
                 }`}
               >
                 {item.label}
+                {/* Línea decorativa más fina */}
+                <span className={`absolute bottom-0 left-0 h-[1.5px] bg-[#C5B08B] transition-all duration-300 ${
+                  currentPage === item.id ? 'w-full' : 'w-0 group-hover:w-full'
+                }`}></span>
               </button>
             ))}
           </div>
 
-          <div className="flex items-center">
+          <div className="flex items-center gap-4">
+            <a 
+              href={EBAY_STORE_URL}
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="hidden md:block bg-stone-900 text-white px-8 py-3 rounded-sm text-[9px] font-black uppercase tracking-[0.2em] hover:bg-[#C5B08B] transition-all shadow-sm active:scale-95"
+            >
+              Vetrina eBay
+            </a>
+
             {/* Hamburger Toggle */}
             <button 
               onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -70,29 +84,20 @@ const Navbar: React.FC<NavbarProps> = ({ currentPage, setCurrentPage }) => {
                 )}
               </svg>
             </button>
-            
-            <a 
-              href={EBAY_STORE_URL}
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="hidden md:block bg-stone-900 text-white px-6 py-2 rounded-full text-xs font-bold hover:bg-[#C5B08B] transition-colors"
-            >
-              VETRINA EBAY
-            </a>
           </div>
         </div>
       </nav>
 
       {/* Mobile Menu Dropdown */}
       {isMenuOpen && (
-        <div className="fixed inset-0 top-[104px] bg-white z-40 md:hidden animate-in fade-in slide-in-from-top duration-300 border-t border-stone-100 shadow-2xl">
-          <div className="flex flex-col p-8 space-y-6 text-xl font-serif text-stone-800">
+        <div className="fixed inset-0 top-[110px] bg-white z-40 md:hidden animate-in fade-in slide-in-from-top duration-300 border-t border-stone-100 shadow-2xl overflow-y-auto">
+          <div className="flex flex-col p-10 space-y-8">
             {navItems.map((item) => (
               <button
                 key={item.id}
                 onClick={() => handleNavClick(item.id)}
-                className={`text-left hover:text-[#C5B08B] transition-colors border-b border-stone-50 pb-4 ${
-                  currentPage === item.id ? 'text-[#C5B08B] font-bold italic' : ''
+                className={`text-left text-2xl font-serif tracking-tight transition-colors border-b border-stone-50 pb-4 ${
+                  currentPage === item.id ? 'text-[#C5B08B] italic' : 'text-stone-800'
                 }`}
               >
                 {item.label}
@@ -102,9 +107,9 @@ const Navbar: React.FC<NavbarProps> = ({ currentPage, setCurrentPage }) => {
               href={EBAY_STORE_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-stone-900 text-white text-center py-4 rounded-xl font-bold"
+              className="bg-stone-900 text-white text-center py-5 rounded-sm font-black text-xs uppercase tracking-[0.2em] shadow-lg"
             >
-              VISITA EBAY
+              Visita eBay Store
             </a>
           </div>
         </div>
