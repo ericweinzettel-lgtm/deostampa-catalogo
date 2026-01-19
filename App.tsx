@@ -4,6 +4,7 @@ import Footer from './components/Footer';
 import WhatsAppButton from './components/WhatsAppButton';
 import { Page, Product, VisitorInfo } from './types';
 import { PRODUCTS, ABOUT_TEXT } from './constants';
+import Contact from './components/Contact';
 
 // --- IMPORTACIONES DE SWIPER ---
 import { Swiper, SwiperSlide } from 'swiper/react';
