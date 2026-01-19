@@ -62,14 +62,21 @@ const Navbar: React.FC<NavbarProps> = ({ currentPage, setCurrentPage }) => {
           </div>
 
           <div className="flex items-center gap-4">
-            <a 
-              href={EBAY_STORE_URL}
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="hidden md:block bg-stone-900 text-white px-8 py-3 rounded-sm text-[9px] font-black uppercase tracking-[0.2em] hover:bg-[#C5B08B] transition-all shadow-sm active:scale-95"
-            >
-              Vetrina eBay
-            </a>
+            <div className="hidden md:block">
+              <a 
+                href={EBAY_STORE_URL}
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="group relative inline-flex items-center justify-center px-10 py-3.5 overflow-hidden border border-stone-900 bg-stone-900 transition-all duration-500 hover:bg-transparent"
+              >
+                {/* Efecto de fondo blanco al pasar el mouse */}
+                <div className="absolute inset-0 w-0 bg-white transition-all duration-500 ease-out group-hover:w-full"></div>
+                
+                <span className="relative z-10 text-[10px] font-black uppercase tracking-[0.3em] text-white transition-colors duration-500 group-hover:text-stone-900">
+                  VETRINA EBAY
+                </span>
+              </a>
+            </div>
 
             {/* Hamburger Toggle */}
             <button 
