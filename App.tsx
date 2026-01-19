@@ -129,90 +129,95 @@ const App: React.FC = () => {
   // --- RENDER DE PÁGINAS ---
 
 const renderHome = () => (
-  <div className="flex flex-col bg-[#FCFAF7]">
-    {/* SEZIONE HERO: ESTETICA MINIMALISTA E PROFESSIONALE */}
-    <section className="relative min-h-[90vh] flex items-center justify-center px-6 overflow-hidden">
+  <div className="flex flex-col bg-white">
+    {/* HERO: CHIARO, ELEGANTE E PROFESSIONALE */}
+    <section className="relative min-h-[85vh] flex items-center px-6 md:px-16 overflow-hidden bg-[#fafafa]">
       
-      {/* Background Decorativo: Gradiente radial sutil para dar profundidad */}
-      <div className="absolute inset-0 z-0">
-        <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-[#C5B08B]/5 rounded-full blur-[120px]"></div>
-      </div>
+      {/* Elemento decorativo di sfondo */}
+      <div className="absolute top-0 right-0 w-1/3 h-full bg-stone-100 -skew-x-12 translate-x-24 z-0"></div>
 
-      <div className="relative z-10 max-w-7xl w-full grid grid-cols-1 lg:grid-cols-12 gap-20 items-center">
+      <div className="relative z-10 max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
         
-        {/* LADO IZQUIERDO: FILOSOFÍA DE MARCA */}
-        <div className="lg:col-span-6 space-y-12">
-          <div className="space-y-4">
-            <div className="flex items-center gap-4">
-              <div className="w-12 h-[1px] bg-[#C5B08B]"></div>
-              <span className="text-[#C5B08B] text-[10px] font-black uppercase tracking-[0.5em]">Studio Creativo</span>
+        {/* LADO IZQUIERDO: MESSAGGIO DI VALORE */}
+        <div className="space-y-10">
+          <div className="space-y-6">
+            <div className="flex items-center gap-3">
+              <span className="w-10 h-[1px] bg-[#C5B08B]"></span>
+              <span className="text-[#C5B08B] text-[10px] font-black uppercase tracking-[0.4em]">Laboratorio di Personalizzazione</span>
             </div>
-            <h1 className="text-5xl md:text-7xl font-serif text-stone-900 tracking-tighter leading-[1.1]">
-              L'eccellenza della <br /> 
-              <span className="italic font-light">stampa d'autore.</span>
+            
+            <h1 className="text-6xl md:text-7xl lg:text-8xl font-serif text-stone-900 leading-[0.95] tracking-tighter">
+              Le tue foto <br />
+              <span className="italic font-light text-stone-400 text-5xl md:text-6xl lg:text-7xl block mt-2">diventano realtà</span>
+              <span className="font-black uppercase">su ogni oggetto.</span>
             </h1>
-          </div>
-          
-          <div className="max-w-md">
-            <p className="text-stone-500 text-sm leading-[1.8] tracking-wide font-light border-l border-stone-200 pl-6">
-              Trasformiamo visioni estetiche in realtà tangibili attraverso processi tecnologici avanzati e rigore artigianale. Ogni progetto è un dialogo tra materia e precisione.
+            
+            <p className="text-stone-500 text-lg max-w-md font-light leading-relaxed">
+              Trasformiamo i tuoi ricordi più belli e le tue idee in oggetti unici. Dalle tazze ai calendari, stampiamo con qualità professionale su una vasta gamma di materiali.
             </p>
           </div>
 
-          <div className="pt-6">
+          <div className="flex flex-wrap items-center gap-6">
             <button 
               onClick={() => { setCurrentPage(Page.PRODUCTS); window.scrollTo(0,0); }} 
-              className="group relative inline-flex items-center gap-6 text-[10px] font-black uppercase tracking-[0.4em] text-stone-900 transition-all hover:gap-10"
+              className="bg-stone-900 text-white px-12 py-5 text-[10px] font-black uppercase tracking-[0.3em] hover:bg-[#C5B08B] transition-all duration-500 shadow-xl rounded-sm"
             >
-              <span>Vedi la Collezione</span>
-              <span className="w-12 h-[1px] bg-stone-900 transition-all group-hover:w-20"></span>
+              Scopri il Catalogo
+            </button>
+            <button 
+               onClick={() => { setCurrentPage(Page.CONTACT); window.scrollTo(0,0); }}
+               className="text-stone-900 text-[10px] font-black uppercase tracking-[0.3em] border-b border-stone-300 hover:border-stone-900 pb-2 transition-all"
+            >
+              Richiedi Info
             </button>
           </div>
         </div>
 
-        {/* LADO DERECHO: ARTE VISUAL (Sustituye el cuadro gris) */}
-        <div className="lg:col-span-6 relative">
-          <div className="relative aspect-[4/5] md:aspect-[3/4] overflow-hidden rounded-sm shadow-[0_30px_60px_-15px_rgba(0,0,0,0.1)]">
-            {/* Imagen de textura profesional: Sugiere papel, tinta o material premium */}
+        {/* LADO DERECHO: COMPOSIZIONE VISIVA (Variedad de productos) */}
+        <div className="relative">
+          <div className="relative z-10 aspect-[4/5] md:aspect-square overflow-hidden rounded-sm shadow-[0_40px_80px_-15px_rgba(0,0,0,0.1)] border-[12px] border-white">
+            {/* Imagen che evoca artigianalità e qualità */}
             <img 
-              src="https://images.unsplash.com/photo-1518133910546-b6c2fb7d79e3?q=80&w=2070&auto=format&fit=crop" 
-              alt="Artistic Texture" 
-              className="w-full h-full object-cover grayscale transition-all duration-1000 hover:grayscale-0 hover:scale-105"
+              src="https://images.unsplash.com/photo-1572044162444-ad60f128bde3?q=80&w=2070&auto=format&fit=crop" 
+              alt="Personalizzazione Professionale" 
+              className="w-full h-full object-cover"
             />
-            {/* Overlay sutil */}
-            <div className="absolute inset-0 bg-stone-900/5 pointer-events-none"></div>
+            {/* Badge informativo */}
+            <div className="absolute top-6 right-6 bg-white/90 backdrop-blur-md px-6 py-4 shadow-sm border border-stone-50">
+              <p className="text-[9px] font-black uppercase tracking-widest text-[#C5B08B]">Qualità di Stampa</p>
+              <p className="text-[11px] font-bold text-stone-900 italic">Sublimazione Ultra HD</p>
+            </div>
           </div>
           
-          {/* Sello de autenticidad flotante (Elegancia máxima) */}
-          <div className="absolute -bottom-10 -left-10 bg-white/80 backdrop-blur-md p-10 border border-stone-100 hidden md:block">
-            <p className="text-[40px] font-serif italic text-stone-200 leading-none mb-2">01</p>
-            <p className="text-[9px] font-black uppercase tracking-widest text-stone-900 leading-tight">
-              Standard <br /> Qualitativo <br /> Superiore
-            </p>
+          {/* Elenco Servizi (Per dare serietà e chiarezza) */}
+          <div className="absolute -bottom-6 -right-6 bg-stone-900 text-white p-10 hidden md:block shadow-2xl">
+            <p className="text-[10px] font-black uppercase tracking-[0.3em] text-[#C5B08B] mb-6 border-b border-[#C5B08B]/30 pb-2">Cosa Personalizziamo</p>
+            <ul className="text-[11px] font-bold uppercase tracking-[0.15em] space-y-3">
+              <li className="flex items-center gap-3"><span className="text-[#C5B08B] text-lg">•</span> Tazze & Boccali</li>
+              <li className="flex items-center gap-3"><span className="text-[#C5B08B] text-lg">•</span> Abbigliamento</li>
+              <li className="flex items-center gap-3"><span className="text-[#C5B08B] text-lg">•</span> Idee Regalo & Gadget</li>
+              <li className="flex items-center gap-3"><span className="text-[#C5B08B] text-lg">•</span> Foto & Calendari</li>
+            </ul>
           </div>
         </div>
-
-      </div>
-
-      {/* Indicador de Scroll Minimalista */}
-      <div className="absolute bottom-10 left-6 flex flex-col items-center gap-4">
-        <span className="text-[8px] font-black uppercase tracking-[0.5em] rotate-180 [writing-mode:vertical-lr] text-stone-300">Scroll</span>
-        <div className="w-[1px] h-16 bg-gradient-to-b from-stone-200 to-transparent"></div>
       </div>
     </section>
 
-    {/* SECCIÓN DE CIERRE (Mantenemos el footer visual que habiamos hecho) */}
-    <section className="py-24 border-t border-stone-50 bg-white">
-      <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-12 items-center">
-        <span className="text-[9px] text-stone-400 uppercase tracking-[0.4em] font-medium">DeoStampa Studio © 2026</span>
-        <div className="flex justify-center gap-2">
-          <div className="w-1.5 h-1.5 rounded-full bg-stone-200"></div>
-          <div className="w-1.5 h-1.5 rounded-full bg-[#C5B08B]"></div>
-          <div className="w-1.5 h-1.5 rounded-full bg-stone-200"></div>
-        </div>
-        <div className="flex justify-end gap-10">
-           <span className="text-[9px] text-stone-900 uppercase tracking-[0.4em] font-bold">Ingegno</span>
-           <span className="text-[9px] text-stone-900 uppercase tracking-[0.4em] font-bold">Materia</span>
+    {/* BARRA DEI SERVIZI (Serietà professionale) */}
+    <section className="py-16 bg-white border-y border-stone-100">
+      <div className="max-w-7xl mx-auto px-6">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-12 text-center md:text-left">
+          {[
+            { t: "Pezzi Unici", d: "Ordina anche una sola unità" },
+            { t: "Anteprima Gratuita", d: "Controlli il design prima di stampare" },
+            { t: "Spedizione Rapida", d: "Consegna in tutta Italia in 24/48 ore" },
+            { t: "Assistenza Diretta", d: "Parla subito con noi su WhatsApp" }
+          ].map((item, i) => (
+            <div key={i} className="space-y-2">
+              <p className="text-[11px] font-black uppercase tracking-[0.2em] text-stone-900">{item.t}</p>
+              <p className="text-[10px] text-stone-400 uppercase tracking-tight leading-relaxed">{item.d}</p>
+            </div>
+          ))}
         </div>
       </div>
     </section>
