@@ -229,11 +229,11 @@ Scuole e associazioni
     name: 'Cuscino Nascita Personalizzato',
     price: 19.90,
     category: 'Casa',
-    image: 'images/cuscinobb-01',
-    images: ["images/cuscinobb-01",
-      "images/cuscinobb-02",
-      "images/cuscinobb-03",
-      "images/cuscinobb-04"],
+    image: 'images/cuscinobb-01.jpg',
+    images: ["images/cuscinobb-01.jpg",
+      "images/cuscinobb-02.jpg",
+      "images/cuscinobb-03.jpg",
+      "images/cuscinobb-04.jpg"],
     description: `🛏️ Cuscino Nascita Personalizzato – Nome e Dati del Neonato
 
 Celebra l’arrivo di una nuova vita con un regalo unico, delicato ed emozionante ✨
