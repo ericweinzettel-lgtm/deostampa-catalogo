@@ -344,19 +344,23 @@ const renderHome = () => (
     {selectedProduct.description}
   </p>
 </div>
-            {/* Bloque de Personalización Elegante */}
-<div className="mt-8 p-6 bg-[#fdfcfb] rounded-2xl border border-stone-100 shadow-sm">
-  <div className="flex items-start gap-4">
-    <span className="text-xl">📩</span>
-    <div>
-      <h4 className="text-[11px] font-black uppercase tracking-[0.2em] text-[#C5B08B] mb-1">
-        NOTA BENE...
-      </h4>
-      <p className="text-stone-500 text-sm leading-relaxed italic">
-        Dopo aver completato l'acquisto, inviaci i tuoi file o le tue istruzioni tramite messaggio. 
-        Il nostro team si occuperà di elaborare il tuo design con la massima cura e precisione.
-      </p>
+            
+{/* Bloque de Personalización que rellena el espacio */}
+<div className="flex-grow flex flex-col justify-center"> 
+  <div className="p-8 bg-[#fdfcfb] rounded-[2rem] border border-stone-100 shadow-sm my-4">
+    <div className="flex items-start gap-5">
+      <span className="text-2xl">📩</span>
+      <div>
+        <h4 className="text-[11px] font-black uppercase tracking-[0.3em] text-[#C5B08B] mb-2">
+          NOTA BENE
+        </h4>
+        <p className="text-stone-500 text-sm md:text-base leading-relaxed italic font-light">
+          Per garantirti un risultato impeccabile, dopo l'acquisto ricordati di inviarci l'immagine o il testo tramite messaggio eBay. La nostra cura artigianale inizia dalla tua idea.
+        </p>
+      </div>
     </div>
+  </div>
+</div>
   </div>
 </div>
             <div className="space-y-4">
