@@ -350,7 +350,7 @@ const renderHome = () => (
     <span className="text-xl">📩</span>
     <div>
       <h4 className="text-[11px] font-black uppercase tracking-[0.2em] text-[#C5B08B] mb-1">
-        Personalizzazione Artigianale
+        NOTA BENE...
       </h4>
       <p className="text-stone-500 text-sm leading-relaxed italic">
         Dopo aver completato l'acquisto, inviaci i tuoi file o le tue istruzioni tramite messaggio. 
