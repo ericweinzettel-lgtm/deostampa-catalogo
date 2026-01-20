@@ -332,7 +332,7 @@ const renderHome = () => (
             <div className="h-1 w-20 bg-[#C5B08B]"></div>
           </div>
 
-          <div className="bg-white rounded-[3rem] p-10 shadow-xl border border-stone-50 space-y-8">
+          <div className="bg-white rounded-[3rem] p-10 shadow-xl border border-stone-50 flex flex-col min-h-full">
             <span className="text-6xl font-serif text-[#C5B08B] font-black block">
               €{selectedProduct.price.toFixed(2)}
             </span>
@@ -345,21 +345,23 @@ const renderHome = () => (
   </p>
 </div>
             
-{/* Bloque de Personalización que rellena el espacio */}
-<div className="flex-grow flex flex-col justify-center"> 
-  <div className="p-8 bg-[#fdfcfb] rounded-[2rem] border border-stone-100 shadow-sm my-4">
-    <div className="flex items-start gap-5">
-      <span className="text-2xl">📩</span>
+{/* Bloque que rellena el espacio en blanco */}
+<div className="flex-grow flex flex-col justify-center my-6">
+  <div className="p-8 bg-[#fdfcfb] rounded-[2rem] border border-stone-100 shadow-sm">
+    <div className="flex items-start gap-4">
+      <span className="text-xl">📩</span>
       <div>
         <h4 className="text-[11px] font-black uppercase tracking-[0.3em] text-[#C5B08B] mb-2">
           NOTA BENE
         </h4>
-        <p className="text-stone-500 text-sm md:text-base leading-relaxed italic font-light">
-          Per garantirti un risultato impeccabile, dopo l'acquisto ricordati di inviarci l'immagine o il testo tramite messaggio eBay. La nostra cura artigianale inizia dalla tua idea.
+        <p className="text-stone-500 text-sm leading-relaxed italic">
+          Dopo l'acquisto, inviaci l'immagine o il testo tramite messaggio eBay. 
+          Realizzeremo il tuo prodotto con la massima cura.
         </p>
       </div>
     </div>
   </div>
+</div>
 </div>
   </div>
 </div>
