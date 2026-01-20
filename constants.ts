@@ -12,6 +12,20 @@ export const PRODUCTS: Product[] = [
   {
     id: 'ds-casa-beer-mug',
     name: 'Boccale da Birra Personalizatto',
+    price: 19.90,
+    category: 'Casa',
+    image: 'images/boccale-01.jpg',
+    images: [
+      "images/boccale-01.jpg",
+      "images/boccale-02.jpg",
+      "images/boccale-03.jpg",
+      "images/boccale-04.jpg",
+      "images/boccale-05.jpg",
+      "images/boccale-06.jpg",
+      "images/boccale-07.jpg",
+      "images/boccale-08.jpg",
+      "images/boccale-09.jpg",
+      "images/boccale-10.jpg"],
     description: `🍺 Il tuo boccale, il tuo stile!
 
 Dai carattere ai tuoi brindisi con un boccale da birra satinato da 500 ml.
@@ -36,21 +50,6 @@ Perfetto per:
 
 👉 Scegli il tuo design preferito o crea il tuo boccale personalizzato e brinda con personalità!. Perfetto per regali originali. 
 Venduto e protetto tramite eBay.`,
-    price: 19.90,
-    category: 'Casa',
-    image: 'images/boccale-01.jpg',
-    images: [
-      "images/boccale-01.jpg",
-      "images/boccale-02.jpg",
-      "images/boccale-03.jpg",
-      "images/boccale-04.jpg",
-      "images/boccale-05.jpg",
-      "images/boccale-06.jpg",
-      "images/boccale-07.jpg",
-      "images/boccale-08.jpg",
-      "images/boccale-09.jpg",
-      "images/boccale-10.jpg"
-    ],
     ebayUrl: `https://www.ebay.it/sch/i.html?_ssn=${SELLER_ID}&_nkw=boccale`,
     isCustomizable: true
   },
