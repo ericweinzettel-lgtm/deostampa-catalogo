@@ -287,13 +287,12 @@ const renderHome = () => (
     </div>
   </div>
 );
-
-  const renderProductDetail = () => {
+const renderProductDetail = () => {
   if (!selectedProduct) return null;
   const allImages = selectedProduct.images || [selectedProduct.image];
 
   return (
-    <div className="max-w-7xl mx-auto px-6 py-12 md:py-24 animate-in fade-in duration-500">
+    <div className="max-w-7xl mx-auto px-6 py-12 md:py-20 animate-in fade-in duration-500">
       <button 
         onClick={() => { setCurrentPage(Page.PRODUCTS); window.scrollTo(0,0); }} 
         className="flex items-center space-x-3 text-stone-400 hover:text-[#C5B08B] mb-12 transition-colors uppercase text-xs font-bold tracking-widest"
@@ -301,9 +300,11 @@ const renderHome = () => (
         <span>← Torna al Catalogo</span>
       </button>
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-start">
+      {/* items-stretch es la clave para que las dos columnas midan lo mismo */}
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-stretch">
+        
         {/* LADO IZQUIERDO: CARRUSEL */}
-        <div className="aspect-square rounded-[3.5rem] overflow-hidden shadow-2xl bg-white border-8 border-white cursor-zoom-in relative">
+        <div className="h-full min-h-[400px] md:min-h-[600px] rounded-[3rem] overflow-hidden shadow-2xl bg-white border-8 border-white relative">
           <Swiper
             modules={[Navigation, Pagination, Autoplay]}
             navigation={true}
@@ -316,7 +317,7 @@ const renderHome = () => (
                 <img 
                   src={`/${img}`} 
                   alt={`${selectedProduct.name} ${index}`} 
-                  className="w-full h-full object-cover" 
+                  className="w-full h-full object-contain bg-stone-50" 
                 />
               </SwiperSlide>
             ))}
@@ -325,38 +326,38 @@ const renderHome = () => (
 
         {/* LADO DERECHO: INFO */}
         <div className="flex flex-col">
-          <div className="space-y-4 mb-8">
-            <h1 className="text-4xl md:text-6xl font-serif text-stone-900 font-bold leading-tight">
+          <div className="mb-6">
+            <h1 className="text-4xl md:text-5xl font-serif text-stone-900 font-bold leading-tight mb-4">
               {selectedProduct.name}
             </h1>
             <div className="h-1 w-20 bg-[#C5B08B]"></div>
           </div>
 
-          {/* CAJA BLANCA PRINCIPAL */}
-          <div className="bg-white rounded-[3rem] p-10 shadow-xl border border-stone-50 flex flex-col min-h-[500px]">
-            <span className="text-6xl font-serif text-[#C5B08B] font-black block">
+          {/* Esta caja blanca ahora se estira (flex-grow) para ocupar todo el alto disponible */}
+          <div className="bg-white rounded-[2.5rem] p-8 md:p-10 shadow-xl border border-stone-50 flex flex-col flex-grow">
+            <span className="text-5xl font-serif text-[#C5B08B] font-black block mb-6">
               €{selectedProduct.price.toFixed(2)}
             </span>
             
-            <div className="pt-6 mt-6 border-t border-stone-100">
-              <h4 className="text-[10px] font-black uppercase tracking-[0.3em] text-[#C5B08B] mb-4">
+            <div className="pt-6 border-t border-stone-100 mb-6">
+              <h4 className="text-[10px] font-black uppercase tracking-[0.3em] text-[#C5B08B] mb-3">
                 Specifiche Tecniche
               </h4>
-              <p className="text-stone-600 text-sm md:text-base font-light leading-loose whitespace-pre-line">
+              <p className="text-stone-600 text-sm md:text-base font-light leading-relaxed whitespace-pre-line">
                 {selectedProduct.description}
               </p>
             </div>
 
-            {/* Este bloque flex-grow empuja los botones hacia abajo */}
-            <div className="flex-grow flex flex-col justify-center my-8">
-              <div className="p-6 bg-[#fdfcfb] rounded-2xl border border-stone-100 shadow-sm">
+            {/* Este div con flex-grow empuja los botones al final de la caja blanca */}
+            <div className="flex-grow flex flex-col justify-center mb-8">
+              <div className="p-6 bg-[#fdfcfb] rounded-2xl border border-stone-100">
                 <div className="flex items-start gap-4">
                   <span className="text-xl">📩</span>
                   <div>
-                    <h4 className="text-[11px] font-black uppercase tracking-[0.3em] text-[#C5B08B] mb-2">
+                    <h4 className="text-[11px] font-black uppercase tracking-[0.3em] text-[#C5B08B] mb-1">
                       NOTA BENE
                     </h4>
-                    <p className="text-stone-500 text-sm leading-relaxed italic">
+                    <p className="text-stone-500 text-xs md:text-sm leading-relaxed italic">
                       Dopo l'acquisto, inviaci l'immagine o il testo tramite messaggio eBay. 
                       Realizzeremo il tuo prodotto con la massima cura.
                     </p>
@@ -365,13 +366,13 @@ const renderHome = () => (
               </div>
             </div>
 
-            {/* BOTONES: Ahora siempre estarán al final de la caja blanca */}
+            {/* Los botones siempre estarán abajo gracias al flex-grow anterior */}
             <div className="space-y-4">
               <a 
                 href={selectedProduct.ebayUrl} 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="group relative flex items-center justify-center gap-3 bg-stone-900 text-white py-6 rounded-2xl font-bold uppercase text-xs tracking-[0.2em] transition-all hover:bg-black hover:shadow-2xl active:scale-95 w-full"
+                className="group relative flex items-center justify-center gap-3 bg-stone-900 text-white py-5 rounded-2xl font-bold uppercase text-xs tracking-[0.2em] transition-all hover:bg-black hover:shadow-2xl active:scale-95 w-full text-center"
               >
                 <span>Acquista su eBay Store</span>
                 <span className="transition-transform group-hover:translate-x-1">→</span>
@@ -381,28 +382,13 @@ const renderHome = () => (
                 href={getWhatsAppLink(selectedProduct.name)} 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="flex items-center justify-center gap-3 border-2 border-[#C5B08B] text-[#C5B08B] py-6 rounded-2xl font-bold uppercase text-xs tracking-[0.2em] transition-all hover:bg-[#C5B08B] hover:text-white active:scale-95 w-full"
+                className="flex items-center justify-center gap-3 border-2 border-[#C5B08B] text-[#C5B08B] py-5 rounded-2xl font-bold uppercase text-xs tracking-[0.2em] transition-all hover:bg-[#C5B08B] hover:text-white active:scale-95 w-full text-center"
               >
                 <span>Personalizza via WhatsApp</span>
               </a>
-
-              <div className="pt-6 flex items-center justify-center gap-8 border-t border-stone-100">
-                <div className="text-center">
-                  <p className="text-[10px] font-black uppercase tracking-widest text-stone-400">Spedizione</p>
-                  <p className="text-xs font-bold text-stone-900">Rapida</p>
-                </div>
-                <div className="text-center">
-                  <p className="text-[10px] font-black uppercase tracking-widest text-stone-400">Anteprima</p>
-                  <p className="text-xs font-bold text-stone-900">Gratuita</p>
-                </div>
-                <div className="text-center">
-                  <p className="text-[10px] font-black uppercase tracking-widest text-stone-400">Qualità</p>
-                  <p className="text-xs font-bold text-stone-900">Premium</p>
-                </div>
-              </div>
-            </div> {/* Fin de botones */}
-          </div> {/* Fin de caja blanca */}
-        </div> {/* Fin lado derecho */}
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
