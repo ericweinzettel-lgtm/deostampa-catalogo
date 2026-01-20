@@ -143,7 +143,9 @@ Non adatta a microonde e lavastoviglie.
     image: 'images/portachiavi10-01.jpg',
     images: ["images/portachiavi10-01.jpg",
       "images/portachiavi10-02.jpg",
-      "images/portachiavi10-03.jpg"],
+      "images/portachiavi10-03.jpg",
+      "images/portachiavi-01.jpg",
+      "images/portachiavi-02.jpg"],
     description: `Rendi unico ogni dettaglio 🔑✨
 
 Con questo Pack da 10 portachiavi rotondi in MDF personalizzati, puoi creare un prodotto speciale per:
@@ -163,7 +165,6 @@ Un articolo utile, leggero e sempre apprezzato.
 ✔ Realizzati artigianalmente su richiesta
 
 🎯 IDEALI PER
-
 Gadget aziendali
 Eventi e fiere
 Compleanni
@@ -177,6 +178,50 @@ Scuole e associazioni
 
 ✨ DeoStampa – una piccola azienda, grandi emozioni.`,
     ebayUrl: `https://www.ebay.it/itm/236575131978`,
+    isCustomizable: true
+  },
+  {
+    id: 'PACK 5 PORTACHIAVI ROTONDI',
+    name: '🔑 PACK 5 PORTACHIAVI ROTONDI MDF PERSONALIZZATI CON LOGO',
+    price: 15.90,
+    category: 'Casa',
+    image: 'images/portachiavi5-01.jpg',
+    images: ["images/portachiavi5-01.jpg",
+      "images/portachiavi5-02.jpg",
+      "images/portachiavi-01.jpg",
+      "images/portachiavi-02.jpg"],
+    description: `Rendi unico ogni dettaglio 🔑✨
+
+Con questo Pack da 5 portachiavi rotondi in MDF personalizzati, puoi creare un prodotto speciale per:
+
+Aziende (logo aziendale)
+Famiglie (foto e nomi)
+Eventi e ricorrenze
+
+Un articolo utile, leggero e sempre apprezzato.
+
+✅ CARATTERISTICHE
+✔ Set da 5 portachiavi rotondi in MDF
+✔ Personalizzazione con foto, testo o logo
+✔ Stampa brillante e resistente
+✔ Anello in metallo robusto
+✔ Diametro circa 5 cm
+✔ Realizzati artigianalmente su richiesta
+
+🎯 IDEALI PER
+Gadget aziendali
+Eventi e fiere
+Compleanni
+Natale
+Regali per famiglie
+Squadre sportive
+Scuole e associazioni
+
+📦 Imballaggio sicuro
+🚚 Spedizione in tutta Italia
+
+✨ DeoStampa – una piccola azienda, grandi emozioni.`,
+    ebayUrl: `https://www.ebay.it/itm/236575110077`,
     isCustomizable: true
   },
   {
