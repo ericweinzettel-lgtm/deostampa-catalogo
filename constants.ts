@@ -10,13 +10,12 @@ export const EBAY_STORE_URL = `https://www.ebay.it/usr/${SELLER_ID}`;
 
 export const PRODUCTS: Product[] = [
   {
-    id: 'ds-casa-beer-mug',
+    id: 'boccale',
     name: 'Boccale da Birra Personalizatto',
     price: 19.90,
     category: 'Casa',
     image: 'images/boccale-01.jpg',
-    images: [
-      "images/boccale-01.jpg",
+    images: ["images/boccale-01.jpg",
       "images/boccale-02.jpg",
       "images/boccale-03.jpg",
       "images/boccale-04.jpg",
@@ -54,13 +53,66 @@ Venduto e protetto tramite eBay.`,
     isCustomizable: true
   },
   {
-    id: 'ds-casa-mug-standard',
+    id: 'tazza',
     name: 'Tazza Classica Personalizzata',
-    description: `☕ Trasforma la colazione in un ricordo. Ceramica premium resistente. Colori brillanti. Acquista in totale sicurezza su eBay dal venditore ${SELLER_ID}.`,
     price: 14.90,
     category: 'Casa',
-    image: 'https://images.unsplash.com/photo-1514228742587-6b1558fbed20?auto=format&fit=crop&w=800&q=80',
-    images: ['https://images.unsplash.com/photo-1514228742587-6b1558fbed20?auto=format&fit=crop&w=800&q=80'],
+    image: 'images/tazza-01.jpg',
+    images: ["images/tazza-01.jpg",
+      "images/tazza-02.jpg",
+      "images/tazza-03.jpg",
+      "images/tazza-04.jpg",
+      "images/tazza-05.jpg",
+      "images/tazza-06.jpg",
+      "images/tazza-07.jpg",
+      "images/tazza-08.jpg",
+      "images/tazza-09.jpg"],
+    description: `☕ Tazza Personalizzata
+
+
+🎁 Cerchi un regalo utile ma davvero speciale?
+
+
+La tazza personalizzata DeoStampa è l’idea perfetta per trasformare un oggetto di uso quotidiano in un ricordo unico.
+
+Personalizza con foto, nome, frase o logo e rendi ogni colazione o pausa caffè un momento speciale.
+
+
+🔥 Caratteristiche:
+
+✔ Tazza in ceramica di alta qualità
+
+✔ Capacità circa 330 ml
+
+✔ Colore bianco
+
+✔ Personalizzazione completa (foto, testo o logo)
+
+✔ Stampa nitida e dai colori brillanti
+
+✔ Ideale per uso quotidiano
+
+
+🎉 Perfetta per: Compleanni • Anniversari • Natale • Festa della mamma/papà • Regali aziendali • Uso personale
+
+
+📩 Dopo l’acquisto, inviaci l’immagine o il testo tramite messaggio e realizzeremo la tua tazza con la massima cura.
+
+
+⚠️ Consigli d’uso:
+
+Per una maggiore durata della stampa, si consiglia lavaggio a mano
+
+(Utilizzabile in lavastoviglie e microonde, ma il lavaggio a mano preserva meglio i colori)
+
+
+📦 Imballaggio sicuro
+
+
+🚚 Spedizione in tutta Italia
+
+
+✨ DeoStampa – una piccola azienda, grandi emozioni.`,
     ebayUrl: `https://www.ebay.it/sch/i.html?_ssn=${SELLER_ID}&_nkw=tazza`,
     isCustomizable: true
   },
