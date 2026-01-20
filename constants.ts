@@ -225,6 +225,49 @@ Scuole e associazioni
     isCustomizable: true
   },
   {
+    id: 'cuscinobb',
+    name: 'Cuscino Nascita Personalizzato',
+    price: 19.90,
+    category: 'Casa',
+    image: 'images/cuscinobb-01',
+    images: ["images/cuscinobb-01",
+      "images/cuscinobb-02",
+      "images/cuscinobb-03",
+      "images/cuscinobb-04"],
+    description: `🛏️ Cuscino Nascita Personalizzato – Nome e Dati del Neonato
+
+Celebra l’arrivo di una nuova vita con un regalo unico, delicato ed emozionante ✨
+Un ricordo speciale da conservare per sempre.
+
+🎨 Personalizzazione completa
+Il cuscino è sempre bianco, elegante e luminoso.
+
+Puoi scegliere il colore dei testi e il colore del riquadro con i dettagli, per abbinarlo perfettamente alla cameretta.
+
+📏 Caratteristiche:
+✔ Dimensione: 40 x 40 cm
+✔ Tessuto morbido e piacevole al tatto
+✔ Imbottitura inclusa – cuscino completo, soffice e confortevole
+✔ Stampa sublimatica ad alta qualità
+✔ Colori brillanti e resistenti nel tempo
+
+🎁 Perfetto come regalo nascita o battesimo, ideale per decorare la cameretta del tuo piccolo.
+
+Dopo l’acquisto inviaci via messaggio:
+👶 Nome del bambino
+📅 Data di nascita
+⏰ Ora
+⚖️ Peso
+📏 Altezza
+🏙️ Città
+💖 Nomi dei genitori
+🎨 Colore desiderato per testi e riquadro
+
+DeoStampa – Piccolo Brand, Grandi Emozioni`,
+    ebayUrl: `https://www.ebay.it/itm/236576593922`,
+    isCustomizable: true
+  },
+  {
     id: 'ds-app-tshirt-custom',
     name: 'Maglietta in Cotone Premium',
     description: `👕 Indossa le tue parole. Cotone 100% morbido. Stampa di alta qualità. Consulta le taglie disponibili su eBay.`,
