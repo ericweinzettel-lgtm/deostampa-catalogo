@@ -95,13 +95,43 @@ Per una maggiore durata della stampa, si consiglia lavaggio a mano
     isCustomizable: true
   },
   {
-    id: 'ds-casa-mug-magic',
-    name: 'Tazza Magica Termosensibile',
-    description: `✨ Appare il design solo con il calore! Un effetto wow assicurato. Scopri la magia sulla nostra vetrina eBay.`,
+    id: 'tazza-magica',
+    name: 'Tazza Magica',
     price: 17.90,
     category: 'Casa',
-    image: 'https://images.unsplash.com/photo-1577937927133-66ef06acdf18?auto=format&fit=crop&w=800&q=80',
-    images: ['https://images.unsplash.com/photo-1577937927133-66ef06acdf18?auto=format&fit=crop&w=800&q=80'],
+    image: 'images/tazzam-01.jpg',
+    images: ["images/tazzam-01.jpg",
+      "images/tazzam-02.jpg",
+      "images/tazzam-03.jpg",
+      "images/tazzam-04.jpg",
+      "images/tazzam-05.jpg",
+      "images/tazzam-06.jpg",
+      "images/tazzam-07.jpg"],
+    description: `☕ Tazza Magica Personalizzata
+
+🎁 Cerchi un regalo che sorprende davvero?
+
+Questa tazza magica personalizzata sembra nera a freddo, ma con una bevanda calda rivela la tua foto, frase o logo come per magia!
+Un’idea regalo originale ed emozionante, perfetta per stupire chi ami o per valorizzare il tuo brand.
+
+🔥 Caratteristiche:
+✔ Tazza in ceramica di alta qualità
+✔ Effetto termico magico
+✔ Capacità circa 330 ml
+✔ Colore a freddo: nero
+✔ Personalizzazione totale (foto, testo o logo)
+✔ Stampa brillante e resistente
+
+🎉 Ideale per: Compleanni • Anniversari • Natale • San Valentino • Festa della mamma/papà • Regali aziendali
+
+⚠️ Consigli d’uso:
+Per mantenere l’effetto magico si consiglia lavaggio a mano.
+Non adatta a microonde e lavastoviglie.
+
+📦 Imballaggio sicuro
+🚚 Spedizione in tutta Italia
+
+✨ DeoStampa – una piccola azienda, grandi emozioni.`,
     ebayUrl: `https://www.ebay.it/sch/i.html?_ssn=${SELLER_ID}&_nkw=magica`,
     isCustomizable: true
   },
