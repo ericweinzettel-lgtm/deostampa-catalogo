@@ -344,6 +344,21 @@ const renderHome = () => (
     {selectedProduct.description}
   </p>
 </div>
+            {/* Bloque de Personalización Elegante */}
+<div className="mt-8 p-6 bg-[#fdfcfb] rounded-2xl border border-stone-100 shadow-sm">
+  <div className="flex items-start gap-4">
+    <span className="text-xl">📩</span>
+    <div>
+      <h4 className="text-[11px] font-black uppercase tracking-[0.2em] text-[#C5B08B] mb-1">
+        Personalizzazione Artigianale
+      </h4>
+      <p className="text-stone-500 text-sm leading-relaxed italic">
+        Dopo aver completato l'acquisto, inviaci i tuoi file o le tue istruzioni tramite messaggio. 
+        Il nostro team si occuperà di elaborare il tuo design con la massima cura e precisione.
+      </p>
+    </div>
+  </div>
+</div>
             <div className="space-y-4">
               <a 
                 href={selectedProduct.ebayUrl} 
