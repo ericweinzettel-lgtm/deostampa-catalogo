@@ -132,7 +132,7 @@ Non adatta a microonde e lavastoviglie.
 🚚 Spedizione in tutta Italia
 
 ✨ DeoStampa – una piccola azienda, grandi emozioni.`,
-    ebayUrl: `https://www.ebay.it/sch/i.html?_ssn=${SELLER_ID}&_nkw=magica`,
+    ebayUrl: `https://www.ebay.it/itm/236535493787`,
     isCustomizable: true
   },
   {
