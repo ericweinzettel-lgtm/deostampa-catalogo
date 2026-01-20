@@ -336,7 +336,14 @@ const renderHome = () => (
             <span className="text-6xl font-serif text-[#C5B08B] font-black block">
               €{selectedProduct.price.toFixed(2)}
             </span>
-            
+            <div className="pt-2">
+    <h4 className="text-[10px] font-black uppercase tracking-[0.3em] text-stone-400 mb-3">
+      Informazioni sul prodotto
+    </h4>
+    <p className="text-stone-600 text-sm md:text-base font-light leading-relaxed">
+      {selectedProduct.description}
+    </p>
+  </div>
             <div className="space-y-4">
               <a 
                 href={selectedProduct.ebayUrl} 
