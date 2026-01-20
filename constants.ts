@@ -48,7 +48,7 @@ Perfetto per:
 
 👉 Scegli il tuo design preferito o crea il tuo boccale personalizzato e brinda con personalità!. Perfetto per regali originali. 
 Venduto e protetto tramite eBay.`,
-    ebayUrl: `https://www.ebay.it/sch/i.html?_ssn=${SELLER_ID}&_nkw=boccale`,
+    ebayUrl: `https://www.ebay.it/itm/236457259237`,
     isCustomizable: true
   },
   {
@@ -91,7 +91,7 @@ Per una maggiore durata della stampa, si consiglia lavaggio a mano
 🚚 Spedizione in tutta Italia
 
 ✨ DeoStampa – una piccola azienda, grandi emozioni.`,
-    ebayUrl: `https://www.ebay.it/sch/i.html?_ssn=${SELLER_ID}&_nkw=tazza`,
+    ebayUrl: `https://www.ebay.it/itm/236529692336`,
     isCustomizable: true
   },
   {
