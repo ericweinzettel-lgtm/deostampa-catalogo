@@ -301,8 +301,8 @@ const renderHome = () => (
         <span>← Torna al Catalogo</span>
       </button>
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-20">
-        {/* LADO IZQUIERDO: CARRUSEL DE DETALLE */}
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-start">
+        {/* LADO IZQUIERDO: CARRUSEL */}
         <div className="aspect-square rounded-[3.5rem] overflow-hidden shadow-2xl bg-white border-8 border-white cursor-zoom-in relative">
           <Swiper
             modules={[Navigation, Pagination, Autoplay]}
@@ -323,48 +323,49 @@ const renderHome = () => (
           </Swiper>
         </div>
 
-        {/* LADO DERECHO: INFORMACIÓN Y BOTONES */}
-        <div className="space-y-12">
-          <div className="space-y-4">
-            <h1 className="text-5xl md:text-7xl font-serif text-stone-900 font-bold leading-tight">
+        {/* LADO DERECHO: INFO */}
+        <div className="flex flex-col">
+          <div className="space-y-4 mb-8">
+            <h1 className="text-4xl md:text-6xl font-serif text-stone-900 font-bold leading-tight">
               {selectedProduct.name}
             </h1>
             <div className="h-1 w-20 bg-[#C5B08B]"></div>
           </div>
 
-          <div className="bg-white rounded-[3rem] p-10 shadow-xl border border-stone-50 flex flex-col min-h-full">
+          {/* CAJA BLANCA PRINCIPAL */}
+          <div className="bg-white rounded-[3rem] p-10 shadow-xl border border-stone-50 flex flex-col min-h-[500px]">
             <span className="text-6xl font-serif text-[#C5B08B] font-black block">
               €{selectedProduct.price.toFixed(2)}
             </span>
-            <div className="pt-4 mt-4 border-t border-stone-100">
-  <h4 className="text-[10px] font-black uppercase tracking-[0.3em] text-[#C5B08B] mb-4">
-    Specifiche Tecniche
-  </h4>
-  <p className="text-stone-600 text-sm md:text-base font-light leading-loose whitespace-pre-line">
-    {selectedProduct.description}
-  </p>
-</div>
             
-{/* Bloque que rellena el espacio en blanco */}
-<div className="flex-grow flex flex-col justify-center my-6">
-  <div className="p-8 bg-[#fdfcfb] rounded-[2rem] border border-stone-100 shadow-sm">
-    <div className="flex items-start gap-4">
-      <span className="text-xl">📩</span>
-      <div>
-        <h4 className="text-[11px] font-black uppercase tracking-[0.3em] text-[#C5B08B] mb-2">
-          NOTA BENE
-        </h4>
-        <p className="text-stone-500 text-sm leading-relaxed italic">
-          Dopo l'acquisto, inviaci l'immagine o il testo tramite messaggio eBay. 
-          Realizzeremo il tuo prodotto con la massima cura.
-        </p>
-      </div>
-    </div>
-  </div>
-</div>
-</div>
-  </div>
-</div>
+            <div className="pt-6 mt-6 border-t border-stone-100">
+              <h4 className="text-[10px] font-black uppercase tracking-[0.3em] text-[#C5B08B] mb-4">
+                Specifiche Tecniche
+              </h4>
+              <p className="text-stone-600 text-sm md:text-base font-light leading-loose whitespace-pre-line">
+                {selectedProduct.description}
+              </p>
+            </div>
+
+            {/* Este bloque flex-grow empuja los botones hacia abajo */}
+            <div className="flex-grow flex flex-col justify-center my-8">
+              <div className="p-6 bg-[#fdfcfb] rounded-2xl border border-stone-100 shadow-sm">
+                <div className="flex items-start gap-4">
+                  <span className="text-xl">📩</span>
+                  <div>
+                    <h4 className="text-[11px] font-black uppercase tracking-[0.3em] text-[#C5B08B] mb-2">
+                      NOTA BENE
+                    </h4>
+                    <p className="text-stone-500 text-sm leading-relaxed italic">
+                      Dopo l'acquisto, inviaci l'immagine o il testo tramite messaggio eBay. 
+                      Realizzeremo il tuo prodotto con la massima cura.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* BOTONES: Ahora siempre estarán al final de la caja blanca */}
             <div className="space-y-4">
               <a 
                 href={selectedProduct.ebayUrl} 
@@ -384,7 +385,7 @@ const renderHome = () => (
               >
                 <span>Personalizza via WhatsApp</span>
               </a>
-              
+
               <div className="pt-6 flex items-center justify-center gap-8 border-t border-stone-100">
                 <div className="text-center">
                   <p className="text-[10px] font-black uppercase tracking-widest text-stone-400">Spedizione</p>
@@ -399,9 +400,9 @@ const renderHome = () => (
                   <p className="text-xs font-bold text-stone-900">Premium</p>
                 </div>
               </div>
-            </div>
-          </div>
-        </div>
+            </div> {/* Fin de botones */}
+          </div> {/* Fin de caja blanca */}
+        </div> {/* Fin lado derecho */}
       </div>
     </div>
   );
