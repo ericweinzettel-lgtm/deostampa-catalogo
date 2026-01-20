@@ -136,6 +136,50 @@ Non adatta a microonde e lavastoviglie.
     isCustomizable: true
   },
   {
+    id: 'PACK 10 PORTACHIAVI ROTONDI',
+    name: '🔑 PACK 10 PORTACHIAVI ROTONDI MDF PERSONALIZZATI CON LOGO',
+    price: 19.90,
+    category: 'Casa',
+    image: 'images/portachiavi10-01.jpg',
+    images: ["images/portachiavi10-01.jpg",
+      "images/portachiavi10-02.jpg",
+      "images/portachiavi10-03.jpg"],
+    description: `Rendi unico ogni dettaglio 🔑✨
+
+Con questo Pack da 10 portachiavi rotondi in MDF personalizzati, puoi creare un prodotto speciale per:
+
+Aziende (logo aziendale)
+Famiglie (foto e nomi)
+Eventi e ricorrenze
+
+Un articolo utile, leggero e sempre apprezzato.
+
+✅ CARATTERISTICHE
+✔ Set da 10 portachiavi rotondi in MDF
+✔ Personalizzazione con foto, testo o logo
+✔ Stampa brillante e resistente
+✔ Anello in metallo robusto
+✔ Diametro circa 5 cm
+✔ Realizzati artigianalmente su richiesta
+
+🎯 IDEALI PER
+
+Gadget aziendali
+Eventi e fiere
+Compleanni
+Natale
+Regali per famiglie
+Squadre sportive
+Scuole e associazioni
+
+📦 Imballaggio sicuro
+🚚 Spedizione in tutta Italia
+
+✨ DeoStampa – una piccola azienda, grandi emozioni.`,
+    ebayUrl: `https://www.ebay.it/itm/236575131978`,
+    isCustomizable: true
+  },
+  {
     id: 'ds-app-tshirt-custom',
     name: 'Maglietta in Cotone Premium',
     description: `👕 Indossa le tue parole. Cotone 100% morbido. Stampa di alta qualità. Consulta le taglie disponibili su eBay.`,
