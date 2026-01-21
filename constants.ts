@@ -382,6 +382,85 @@ Puoi scegliere il colore dei testi e il colore del riquadro con i dettagli, per 
     isCustomizable: true
   },
   {
+    id: 'agenda-personalizzata-340-pag',
+    name: 'Agenda Personalizzata 340 Pag',
+    price: 24.90,
+    category: 'Casa',
+    image: 'images/agenda340-01.jpg',
+    images: ["images/agenda340-01.jpg",
+      "images/agenda340-02.jpg",
+      "images/agenda340-03.jpg",
+      "images/agenda340-04.jpg",
+      "images/agenda340-05.jpg",
+      "images/agenda340-06.jpg",
+      "images/agenda340-07.jpg",
+      "images/agenda340-08.jpg"],
+    description: `✨ Agenda Personalizzata – Con foto, frase oppure la versione in foto
+Rendi unica la tua nuova agenda!
+Personalizzala con una foto, un logo o una frase a tua scelta e trasforma ogni giorno in un momento di ispirazione.
+Un prodotto artigianale curato nei dettagli, perfetto come regalo o compagna di lavoro e studio.
+
+📔 Dettagli del prodotto:
+📚 Contenuto: 170 fogli (340 pagine) tra planner giornaliero, note, Sudoku e mappe mentali
+🖼️ Copertina rigida personalizzata con immagine, logo o testo fornito dal cliente
+🔄 Rilegatura a spirale nera con elastico di chiusura
+📄 Carta di alta qualità (100–120 gr)
+🎁 Confezionata con cura, pronta per essere regalata
+
+💝 Perfetta per:
+Regali aziendali o di Natale
+Planner personale con frase o dedica
+Agenda per professionisti, studenti o creativi
+
+💫 Ogni agenda è unica, realizzata con passione e attenzione ai dettagli.
+📩 Per ordini multipli o richieste speciali, contattaci direttamente.
+📦 Imballaggio sicuro
+🚚 Spedizione in tutta Italia
+
+✨ DeoStampa – una piccola azienda, grandi emozioni.`,
+    ebayUrl: `https://www.ebay.it/itm/236410905598`,
+    isCustomizable: true
+  },
+  {
+    id: 'agenda-personalizzata-440-pag',
+    name: 'Agenda Personalizzata 440 Pag',
+    price: 32.90,
+    category: 'Casa',
+    image: 'images/agenda440-01.jpg',
+    images: ["images/agenda440-01.jpg",
+      "images/agenda440-02.jpg",
+      "images/agenda440-03.jpg",
+      "images/agenda440-04.jpg",
+      "images/agenda440-05.jpg",
+      "images/agenda440-06.jpg",
+      "images/agenda440-07.jpg"],
+    description: `✨ Agenda Personalizzata – Con foto, frase oppure la versione in foto
+Rendi unica la tua nuova agenda!
+Personalizzala con una foto, un logo o una frase a tua scelta e trasforma ogni giorno in un momento di ispirazione.
+Un prodotto artigianale curato nei dettagli, perfetto come regalo o compagna di lavoro e studio.
+
+📔 Dettagli del prodotto:
+📚 Contenuto: 220 fogli (440 pagine) tra planner giornaliero, note, Sudoku e mappe mentali
+🖼️ Copertina rigida personalizzata con immagine, logo o testo fornito dal cliente
+🔄 Rilegatura a spirale nera con elastico di chiusura
+📄 Carta di alta qualità (100–120 gr)
+🎁 Confezionata con cura, pronta per essere regalata
+
+💝 Perfetta per:
+Regali aziendali o di Natale
+Planner personale con frase o dedica
+Agenda per professionisti, studenti o creativi
+
+💫 Ogni agenda è unica, realizzata con passione e attenzione ai dettagli.
+📩 Per ordini multipli o richieste speciali, contattaci direttamente.
+📦 Imballaggio sicuro
+🚚 Spedizione in tutta Italia
+
+✨ DeoStampa – una piccola azienda, grandi emozioni.`,
+    ebayUrl: `https://www.ebay.it/itm/236457203499`,
+    isCustomizable: true
+  },
+  {
     id: 'ds-app-tshirt-custom',
     name: 'Maglietta in Cotone Premium',
     description: `👕 Indossa le tue parole. Cotone 100% morbido. Stampa di alta qualità. Consulta le taglie disponibili su eBay.`,
