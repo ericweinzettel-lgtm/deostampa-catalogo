@@ -303,6 +303,85 @@ Dopo l’acquisto inviaci via messaggio eBay:
     isCustomizable: true
   },
   {
+    id: 'cuscino-personalizzato',
+    name: 'Cuscino Personalizzato con Foto e Nomi',
+    price: 19.90,
+    category: 'Casa',
+    image: 'images/cuscino-01.jpg',
+    images: ["images/cuscino-01.jpg",
+      "images/cuscino-02.jpg",
+      "images/cuscino-03.jpg",
+      "images/cuscino-04.jpg",
+      "images/cuscino-05.jpg"],
+    description: `🛏️ Cuscino Personalizzato 40x40 cm – Foto, Nomi e Testi su Richiesta
+
+Rendi speciale ogni momento con un cuscino unico, creato su misura per te.
+Personalizziamo il tuo cuscino con foto, nomi, frasi o dediche, per trasformarlo in un regalo emozionante e originale.
+
+✨ Scegli il tuo modello preferito:
+
+❤️ Tema San Valentino – perfetto per coppie innamorate
+📸 Modello con 1, 2 o 3 foto – racconta i tuoi ricordi più belli
+
+🎁 Ideale come regalo per:
+San Valentino • Compleanni • Anniversari • Natale • Festa della mamma/papà
+
+📏 Caratteristiche:
+✔ Dimensione: 40 x 40 cm
+✔ Tessuto morbido e piacevole al tatto
+✔ Imbottitura inclusa – cuscino completo, soffice e confortevole
+✔ Stampa sublimatica ad alta qualità
+✔ Colori brillanti e durevoli nel tempo
+✔ Federa con zip nascosta
+
+💝 Un regalo unico, fatto con amore artigianale.
+
+✨ DeoStampa – una piccola azienda, grandi emozioni.`,
+    ebayUrl: `https://www.ebay.it/itm/236576621284`,
+    isCustomizable: true
+  },
+   {
+    id: 'cuscinobb-personalizzato',
+    name: 'Cuscino Nascita Personalizzato con Nome e Dati ',
+    price: 19.90,
+    category: 'Casa',
+    image: 'images/cuscinobb-01.jpg',
+    images: ["images/cuscinobb-01.jpg",
+      "images/cuscinobb-02.jpg",
+      "images/cuscinobb-03.jpg",
+      "images/cuscinobb-04.jpg"],
+    description: `🛏️ Cuscino Nascita Personalizzato – Nome e Dati del Neonato
+
+Celebra l’arrivo di una nuova vita con un regalo unico, delicato ed emozionante ✨
+Un ricordo speciale da conservare per sempre.
+
+Il nostro cuscino nascita personalizzato viene realizzato su misura con:
+✔ Nome del neonato
+✔ Data e ora di nascita
+✔ Peso e altezza
+✔ Città di nascita
+✔ Nomi dei genitori
+
+🎨 Personalizzazione completa
+Il cuscino è sempre bianco, elegante e luminoso.
+
+Puoi scegliere il colore dei testi e il colore del riquadro con i dettagli, per abbinarlo perfettamente alla cameretta.
+
+📏 Caratteristiche:
+✔ Dimensione: 40 x 40 cm
+✔ Tessuto morbido e piacevole al tatto
+✔ Imbottitura inclusa – cuscino completo, soffice e confortevole
+✔ Stampa sublimatica ad alta qualità
+✔ Colori brillanti e resistenti nel tempo
+
+🎁 Perfetto come regalo nascita o battesimo, ideale per decorare la cameretta del bebè.
+💝 Un regalo unico, fatto con amore artigianale.
+
+✨ DeoStampa – una piccola azienda, grandi emozioni.`,
+    ebayUrl: `https://www.ebay.it/itm/236576593922`,
+    isCustomizable: true
+  },
+  {
     id: 'ds-app-tshirt-custom',
     name: 'Maglietta in Cotone Premium',
     description: `👕 Indossa le tue parole. Cotone 100% morbido. Stampa di alta qualità. Consulta le taglie disponibili su eBay.`,
