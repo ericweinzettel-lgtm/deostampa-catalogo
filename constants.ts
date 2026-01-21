@@ -461,14 +461,36 @@ Agenda per professionisti, studenti o creativi
     isCustomizable: true
   },
   {
-    id: 'ds-app-tshirt-custom',
-    name: 'Maglietta in Cotone Premium',
-    description: `👕 Indossa le tue parole. Cotone 100% morbido. Stampa di alta qualità. Consulta le taglie disponibili su eBay.`,
-    price: 16.90,
-    category: 'Abbigliamento',
-    image: 'https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=800&q=80',
-    images: ['https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=800&q=80'],
-    ebayUrl: `https://www.ebay.it/sch/i.html?_ssn=${SELLER_ID}&_nkw=maglietta`,
+    id: 'tazza-coopia',
+    name: 'Coppia Tazze San Valentino Personalizzate ',
+    price: 24.90,
+    category: 'Casa',
+    image: 'images/tazzacoppia-01.jpg',
+    images: ["images/tazzacoppia-01.jpg",
+      "images/tazzacoppia-02.jpg",
+      "images/tazzacoppia-03.jpg",
+      "images/tazzacoppia-04.jpg"],
+    description: `Sorprendi chi ami con una coppia di tazze personalizzate per San Valentino, pensate per condividere ogni giorno un momento speciale insieme.
+
+Le tazze sono identiche (tazze copia) e vengono personalizzate secondo le tue indicazioni:
+puoi scegliere una foto, una frase romantica o aggiungere nomi e una data speciale.
+
+Un’idea regalo semplice, utile e piena di significato, perfetta per lui e lei ❤️
+
+☕ Dettagli del prodotto
+Set composto da 2 tazze uguali
+Materiale: ceramica di qualità
+Capacità: 330 ml
+Stampa resistente e duratura
+Adatte a lavastoviglie e microonde
+
+🎁 Ideali per San Valentino - Coppie - Anniversari - Regalo romantico - personalizzato
+
+📦 Imballaggio sicuro
+🚚 Spedizione in tutta Italia
+
+✨ DeoStampa – una piccola azienda, grandi emozioni.`,
+    ebayUrl: `https://www.ebay.it/itm/236562923770`,
     isCustomizable: true
   },
   {
