@@ -494,6 +494,44 @@ Adatte a lavastoviglie e microonde
     isCustomizable: true
   },
   {
+    id: 'cappellini-personalizzati',
+    name: 'Cappellini con Stampa Personalizzata',
+    price: 12.90,
+    category: 'Casa',
+    image: 'images/gorro-01.jpg',
+    images: ["images/gorro-01.jpg",
+      "images/gorro-02.jpg",
+      "images/gorro-03.jpg",
+      "images/gorro-04.jpg",
+      "images/gorro-05.jpg",
+      "images/gorro-06.jpg",
+      "images/gorro-07.jpg",
+      "images/gorro-08.jpg",
+      "images/gorro-09.jpg",
+      "images/gorro-10.jpg",
+      "images/gorro-11.jpg",
+      "images/gorro-12.jpg"],
+    description: `🧢 Il tuo cappellino, la tua identità!
+Distinguiti con i nostri cappellini personalizzati, perfetti per ogni occasione.
+Con logo, frasi o grafiche su misura, sono ideali per:
+🎁 Regali originali
+🎉 Eventi e feste
+🏢 Promozione aziendale o divise
+🏟️ Squadre, gruppi o merchandising
+
+✅ Stampa di alta qualità
+✅ Modelli unisex, regolabili e comodi da indossare
+✅ Resistenti e pensati per l’uso quotidiano
+✅ Spedizione gratuita in tutta Italia
+
+💡 Anche per un solo pezzo o grandi quantità con prezzi personalizzati!
+👉 Ordina ora il tuo cappellino personalizzato e porta il tuo stile ovunque!
+
+✨ DeoStampa – una piccola azienda, grandi emozioni.`,
+    ebayUrl: `https://www.ebay.it/itm/236457263621`,
+    isCustomizable: true
+  },
+  {
     id: 'ds-acc-agenda-daily',
     name: 'Agenda Daily 2025/2026',
     description: `📔 Organizza la tua giornata con eleganza. Copertina rigida personalizzata. Disponibile ora su eBay.`,
