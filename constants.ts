@@ -532,6 +532,36 @@ Con logo, frasi o grafiche su misura, sono ideali per:
     isCustomizable: true
   },
   {
+    id: 'palline-natale',
+    name: 'Set di 3 Palline di Natale Personalizzate',
+    price: 19.90,
+    category: 'Casa',
+    image: 'images/bolanav-01.jpg',
+    images: ["images/bolanav-01.jpg",
+      "images/bolanav-02.jpg",
+      "images/bolanav-03.jpg",
+      "images/bolanav-04.jpg",
+      "images/bolanav-05.jpg",
+      "images/bolanav-06.jpg",
+      "images/bolanav-07.jpg",
+      "images/bolanav-08.jpg"],
+    description: `Set di 3 Palline di Natale Personalizzate con Foto – Decorazione Unica e Originale – Spedizione Gratis!
+
+Rendi il tuo albero di Natale davvero speciale con questo set di 3 palline personalizzate con le tue foto preferite. Perfette come idea regalo o per decorare la tua casa con un tocco personale ed emozionante.
+
+✅ Personalizzabili con qualsiasi immagine o design
+✅ Materiale resistente e finitura lucida
+✅ Ideali come regalo per famiglia, coppie o amanti degli animali
+✅ Dimensione standard (circa 8 cm di diametro)
+✅ Spedizione gratuita in tutta Italia!
+
+🎁 Trasforma i tuoi ricordi in una decorazione natalizia indimenticabile!
+
+✨ DeoStampa – una piccola azienda, grandi emozioni.`,
+    ebayUrl: `https://www.ebay.it/itm/236411154579`,
+    isCustomizable: true
+  },
+  {
     id: 'ds-acc-agenda-daily',
     name: 'Agenda Daily 2025/2026',
     description: `📔 Organizza la tua giornata con eleganza. Copertina rigida personalizzata. Disponibile ora su eBay.`,
