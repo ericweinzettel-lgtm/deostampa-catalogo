@@ -136,7 +136,7 @@ Non adatta a microonde e lavastoviglie.
     isCustomizable: true
   },
   {
-    id: 'PACK 10 PORTACHIAVI ROTONDI',
+    id: 'pack-10-portachiavi-rotondi',
     name: '🔑 PACK 10 PORTACHIAVI ROTONDI MDF PERSONALIZZATI CON LOGO',
     price: 19.90,
     category: 'Casa',
@@ -181,7 +181,7 @@ Scuole e associazioni
     isCustomizable: true
   },
   {
-    id: 'PACK 5 PORTACHIAVI ROTONDI',
+    id: 'pack-5-portachiavi-rotondi',
     name: '🔑 PACK 5 PORTACHIAVI ROTONDI MDF PERSONALIZZATI CON LOGO',
     price: 15.90,
     category: 'Casa',
@@ -225,46 +225,45 @@ Scuole e associazioni
     isCustomizable: true
   },
   {
-    id: 'cuscinobb',
-    name: 'Cuscino Nascita Personalizzato',
-    price: 19.90,
+    id: 'portachiavi-maglia-calcio',
+    name: 'Pack 15 Portachiavi Maglia Calcio Personalizzati',
+    price: 29.90,
     category: 'Casa',
-    image: 'images/cuscinobb-01.jpg',
-    images: ["images/cuscinobb-01.jpg",
-      "images/cuscinobb-02.jpg",
-      "images/cuscinobb-03.jpg",
-      "images/cuscinobb-04.jpg"],
-    description: `🛏️ Cuscino Nascita Personalizzato – Nome e Dati del Neonato
+    image: 'images/portachiavicamiseta-01.jpg',
+    images: ["images/portachiavicamiseta-01.jpg",
+      "images/portachiavicamiseta-02.jpg",
+      "images/portachiavicamiseta-03.jpg",
+      "images/portachiavicamiseta-04.jpg",
+      "images/portachiavicamiseta-05.jpg",
+      "images/portachiavicamiseta-06.jpg"],
+    description: `Pack 15 Portachiavi Maglia Calcio Personalizzati – Nome, Numero e Logo Squadra
 
-Celebra l’arrivo di una nuova vita con un regalo unico, delicato ed emozionante ✨
-Un ricordo speciale da conservare per sempre.
+✔ Set da 15 portachiavi forma maglia
+✔ Materiale: MDF sublimabile
+✔ Personalizzazione completa
+✔ Stampa brillante e resistente
+✔ Anello portachiavi in metallo
+✔ Dimensione circa 6 cm
+✔ Realizzati artigianalmente su richiesta
 
-🎨 Personalizzazione completa
-Il cuscino è sempre bianco, elegante e luminoso.
+🎯 IDEALI PER
+Squadre di calcio giovanili
+Scuole calcio
+Tornei sportivi
+Regalo di fine stagione
+Ricordo per allenatori e staff
 
-Puoi scegliere il colore dei testi e il colore del riquadro con i dettagli, per abbinarlo perfettamente alla cameretta.
-
-📏 Caratteristiche:
-✔ Dimensione: 40 x 40 cm
-✔ Tessuto morbido e piacevole al tatto
-✔ Imbottitura inclusa – cuscino completo, soffice e confortevole
-✔ Stampa sublimatica ad alta qualità
-✔ Colori brillanti e resistenti nel tempo
-
-🎁 Perfetto come regalo nascita o battesimo, ideale per decorare la cameretta del tuo piccolo.
-
-Dopo l’acquisto inviaci via messaggio:
-👶 Nome del bambino
-📅 Data di nascita
-⏰ Ora
-⚖️ Peso
-📏 Altezza
-🏙️ Città
-💖 Nomi dei genitori
-🎨 Colore desiderato per testi e riquadro
+📩 COME ORDINARE
+Dopo l’acquisto inviaci via messaggio eBay:
+📋 Nome della squadra
+📸 Logo del club (se disponibile)
+🔢 Lista numeri giocatori
+🧒 Lista nomi giocatori
+🗓️ Anno della stagione
+🎨 Riceverai bozza grafica gratuita prima della stampa.
 
 DeoStampa – Piccolo Brand, Grandi Emozioni`,
-    ebayUrl: `https://www.ebay.it/itm/236576593922`,
+    ebayUrl: `https://www.ebay.it/itm/236575154662`,
     isCustomizable: true
   },
   {
