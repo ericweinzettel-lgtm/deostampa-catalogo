@@ -45,9 +45,8 @@ Perfetto per:
 ✅ Spedizione gratuita in tutta Italia
 
 💡 Ordini singoli o grandi quantità con prezzi personalizzati!
-
 👉 Scegli il tuo design preferito o crea il tuo boccale personalizzato e brinda con personalità!. Perfetto per regali originali. 
-Venduto e protetto tramite eBay.`,
+✨ DeoStampa – una piccola azienda, grandi emozioni.`,
     ebayUrl: `https://www.ebay.it/itm/236457259237`,
     isCustomizable: true
   },
@@ -225,6 +224,43 @@ Scuole e associazioni
     isCustomizable: true
   },
   {
+    id: 'portachiavi-personalizzati',
+    name: '🔑 Portachiavi Personalizzati con Foto, Logo o Testo',
+    price: 8.90,
+    category: 'Casa',
+    image: 'images/portachiavi-06.jpg',
+    images: ["images/portachiavi-06.jpg",
+      "images/portachiavi-05.jpg",
+      "images/portachiavi-01.jpg",
+      "images/portachiavi-02.jpg",
+      "images/portachiavi-03.jpg"],
+    description: `🔑 Il dettaglio che parla di te!
+I nostri portachiavi personalizzati sono il mix perfetto tra utilità e stile.
+Disponibili in forma rotonda, quadrata o a cuore, puoi renderli unici con:
+📸 Foto
+💬 Frasi speciali o nomi
+🏢 Loghi aziendali o grafiche promozionali
+
+Perfetti per:
+🎁 Regali originali
+🎉 Eventi, bomboniere, fiere
+🏢 Gadget aziendali o merchandising
+
+✅ Materiali resistenti e leggeri
+✅ Stampa brillante e durevole
+✅ Design su misura per ogni occasione
+✅ Spedizione gratuita in tutta Italia
+
+💡 Ordini singoli o in quantità, con prezzi personalizzati!
+👉 Crea ora il tuo portachiavi personalizzato e porta con te un ricordo ovunque!
+📦 Imballaggio sicuro
+🚚 Spedizione in tutta Italia
+
+✨ DeoStampa – una piccola azienda, grandi emozioni.`,
+    ebayUrl: `https://www.ebay.it/itm/236457241126`,
+    isCustomizable: true
+  },
+  {
     id: 'portachiavi-maglia-calcio',
     name: 'Pack 15 Portachiavi Maglia Calcio Personalizzati',
     price: 29.90,
@@ -262,7 +298,7 @@ Dopo l’acquisto inviaci via messaggio eBay:
 🗓️ Anno della stagione
 🎨 Riceverai bozza grafica gratuita prima della stampa.
 
-DeoStampa – Piccolo Brand, Grandi Emozioni`,
+✨ DeoStampa – Piccolo Brand, Grandi Emozioni`,
     ebayUrl: `https://www.ebay.it/itm/236575154662`,
     isCustomizable: true
   },
