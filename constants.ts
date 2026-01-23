@@ -177,47 +177,7 @@ Riceverai un’anteprima grafica gratuita prima della stampa, per approvare il d
     ebayUrl: `https://www.ebay.it/itm/236574727301`,
     isCustomizable: true
   },
-  {
-    id: 'tazzax10',
-    name: 'Pack 10 Tazze Personalizzate con Logo',
-    price: 109.90,
-    category: 'Casa',
-    image: 'images/tazzex10-01.jpg',
-    images: ["images/tazzex10-01.jpg",
-      "images/tazzex10-02.jpg",
-      "images/tazzex10-03.jpg",
-      "images/tazza-05.jpg",
-      "images/tazza-06.jpg",
-      "images/tazza-07.jpg",
-      "images/tazza-08.jpg"],
-    description: `☕ Pack 10 Tazze Personalizzate Aziendali
-🎁 Cerchi un gadget aziendale utile, elegante e sempre apprezzato?
-
-Questo pack da 10 tazze personalizzate uguali è la soluzione ideale per aziende, uffici ed eventi, perfetto per promuovere il tuo brand o fare un regalo aziendale pratico e di qualità.
-Realizzate in ceramica resistente, con stampa professionale brillante, queste tazze sono pensate per l’uso quotidiano.
-
-🔥 Caratteristiche
-✔ Pack da 10 tazze identiche
-✔ Tazze in ceramica bianca di alta qualità
-✔ Capacità circa 330 ml
-✔ Personalizzazione completa (logo, testo o grafica)
-✔ Stampa nitida e resistente nel tempo
-✔ Adatte a microonde e lavastoviglie
-
-🎉 Ideali per
-• Aziende e uffici
-• Regali aziendali e gadget promozionali
-• Eventi, fiere e congressi
-• Studi professionali e attività commerciali
-• Omaggi per clienti e dipendenti
-
-📦 Imballaggio sicuro
-🚚 Spedizione in tutta Italia
-
-✨ DeoStampa – una piccola azienda, grandi emozioni.`,
-    ebayUrl: `https://www.ebay.it/itm/236574271968`,
-    isCustomizable: true
-  },
+  
   {
   id: 'pack-12-calendari-magnetici',
   name: '12 Calendari Magnetici Personalizzati',
