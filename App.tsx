@@ -19,7 +19,8 @@ const App: React.FC = () => {
   const [visitorInfo, setVisitorInfo] = useState<VisitorInfo>({ ip: '...', count: 0, lastVisit: '' });
   const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
   const [zoomedImage, setZoomedImage] = useState<string | null>(null);
-
+  const [activePolicy, setActivePolicy] = useState<string | null>(null);
+  
   useEffect(() => {
     const storedStats = localStorage.getItem('deostampa_analytics');
     let stats = storedStats ? JSON.parse(storedStats) : { count: 0, lastVisit: '' };
@@ -408,10 +409,18 @@ const renderProductDetail = () => {
   return (
     <div className="min-h-screen bg-white font-sans text-stone-900 selection:bg-[#C5B08B] selection:text-white">
       <Navbar currentPage={currentPage} setCurrentPage={setCurrentPage} Page={Page} />
+      
       <main className="pt-20">
         {renderContent()}
       </main>
-      <Footer setCurrentPage={setCurrentPage} Page={Page} />
+
+      {/* Le pasamos setActivePolicy al Footer para que los botones funcionen */}
+      <Footer 
+        setCurrentPage={setCurrentPage} 
+        Page={Page} 
+        onPolicyClick={(type: string) => setActivePolicy(type)} 
+      />
+      
       <WhatsAppButton />
       
       {/* Modal de Zoom */}
@@ -421,6 +430,44 @@ const renderProductDetail = () => {
           <button className="absolute top-10 right-10 text-white text-5xl">&times;</button>
         </div>
       )}
+
+      {/* Modal de Políticas */}
+      {activePolicy && <PolicyModal type={activePolicy} onClose={() => setActivePolicy(null)} />}
+    </div>
+  );
+};
+
+// COMPONENTE DEL MODAL (FUERA DE APP)
+const PolicyModal = ({ type, onClose }: { type: string, onClose: () => void }) => {
+  const content: any = {
+    privacy: {
+      title: "Privacy Policy",
+      text: `In conformità al RGPD (UE 2016/679), i dati personali forniti (nome, indirizzo, email) verranno utilizzati esclusivamente per l'elaborazione dell'ordine e la spedizione tramite eBay. Non cediamo dati a terzi.`
+    },
+    termini: {
+      title: "Termini e Condizioni",
+      text: `L'acquisto dei prodotti avviene tramite la piattaforma eBay. DeoStampa si impegna a fornire prodotti di alta qualità conformi alle anteprime approvate dal cliente.`
+    },
+    rimborsi: {
+      title: "Resi e Rimborsi",
+      text: `Ai sensi dell'art. 59 del Codice del Consumo, il diritto di recesso è ESCLUSO per i prodotti personalizzati su misura. Se il prodotto arriva danneggiato, offriamo la sostituzione gratuita previa prova fotografica entro 48h dal ricevimento.`
+    },
+    spedizione: {
+      title: "Spedizione e Consegna",
+      text: `Spediamo in tutta Italia tramite corriere espresso (SDA/BRT/Poste/GLS). I tempi di produzione sono di 1-2 giorni lavorativi, a cui si aggiungono 24/48h per la consegna a domicilio.`
+    }
+  };
+
+  const policy = content[type];
+
+  return (
+    <div className="fixed inset-0 bg-black/60 backdrop-blur-sm z-[100] flex items-center justify-center p-6" onClick={onClose}>
+      <div className="bg-white rounded-[2.5rem] max-w-2xl w-full p-10 relative shadow-2xl animate-in zoom-in-95 duration-300" onClick={e => e.stopPropagation()}>
+        <button onClick={onClose} className="absolute top-6 right-8 text-3xl text-stone-400 hover:text-black">×</button>
+        <h2 className="text-3xl font-serif font-bold text-stone-900 mb-6">{policy.title}</h2>
+        <p className="text-stone-600 leading-relaxed whitespace-pre-line">{policy.text}</p>
+        <button onClick={onClose} className="mt-8 bg-stone-900 text-white px-8 py-3 rounded-xl font-bold uppercase text-xs tracking-widest hover:bg-[#C5B08B] transition-colors">Chiudi</button>
+      </div>
     </div>
   );
 };
