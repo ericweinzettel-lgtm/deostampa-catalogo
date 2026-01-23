@@ -178,6 +178,36 @@ Riceverai un’anteprima grafica gratuita prima della stampa, per approvare il d
     isCustomizable: true
   },
   {
+    id: 'pack-12-calendari-magnetici',
+    name: '12 Calendari Magnetici Personalizzati ',
+    price: 29.90,
+    category: 'Casa',
+    image: 'images/minicalendario_01.jpg',
+    images: ["images/minicalendario_01.jpg",
+      "images/minicalendario_02.jpg",
+      "images/minicalendario_03.jpg",
+      "images/minicalendario_04.jpg",
+      "images/minicalendario_05.jpg"],
+    description: `📅 Calendario Magnetico 2026 – Personalizzabile con Logo o Foto
+Un modo semplice ed efficace per promuovere la tua attività tutto l’anno!
+Ideale per pizzerie, panifici, idraulici, elettricisti, parrucchieri, negozi e uffici che vogliono restare sempre sotto gli occhi dei clienti.
+
+✅ La vendita si riferisce alla confezione da 12 calendari magnetici personalizzati.
+Perfetti da distribuire ai clienti o da regalare come gadget promozionale.
+
+Il calendario si applica facilmente su qualsiasi superficie metallica (come il frigorifero) grazie al retro magnetico, ed è completamente personalizzabile con logo, foto o messaggio pubblicitario. Le misure sono 12 cm x 6 cm.
+
+💼 Vendita anche all’ingrosso!...Contattaci.
+I prezzi per quantità sono molto più vantaggiosi, ideali per chi desidera ordinare grandi lotti per la propria attività.
+
+📦 Imballaggio sicuro
+🚚 Spedizione in tutta Italia
+
+✨ DeoStampa – una piccola azienda, grandi emozioni.`,
+    ebayUrl: `https://www.ebay.it/itm/236457196065`,
+    isCustomizable: true
+  }
+  {
     id: 'pack-10-portachiavi-rotondi',
     name: '🔑 PACK 10 PORTACHIAVI ROTONDI MDF PERSONALIZZATI CON LOGO',
     price: 19.90,
