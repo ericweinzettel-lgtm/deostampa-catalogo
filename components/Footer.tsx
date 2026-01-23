@@ -4,9 +4,10 @@ import Logo from './Logo';
 
 interface FooterProps {
   setCurrentPage: (page: Page) => void;
+  onPolicyClick: (type: string) => void; // <-- Nueva conexión añadida
 }
 
-const Footer: React.FC<FooterProps> = ({ setCurrentPage }) => {
+const Footer: React.FC<FooterProps> = ({ setCurrentPage, onPolicyClick }) => {
   return (
     <footer className="bg-[#F5F2EA] text-stone-600 py-16 px-6 border-t border-stone-200">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
@@ -41,7 +42,7 @@ const Footer: React.FC<FooterProps> = ({ setCurrentPage }) => {
           </div>
         </div>
 
-        {/* CONTENEDOR DE LISTAS: Aquí aplicamos el truco de 2 columnas en móvil */}
+        {/* CONTENEDOR DE LISTAS */}
         <div className="grid grid-cols-2 md:grid-cols-3 col-span-1 md:col-span-3 gap-12">
           
           {/* Menu */}
@@ -70,16 +71,16 @@ const Footer: React.FC<FooterProps> = ({ setCurrentPage }) => {
             </ul>
           </div>
 
-          {/* Note Legali: Ocupa 2 columnas en móvil para que no se vea cortado */}
+          {/* Note Legali: Ahora conectadas con el Modal */}
           <div className="col-span-2 md:col-span-1">
             <h4 className="text-stone-800 font-bold mb-6 text-sm uppercase tracking-widest border-l-2 border-[#C5B08B] pl-3">Note Legali</h4>
             <ul className="grid grid-cols-2 md:grid-cols-1 gap-2 text-xs font-light mb-8">
-              <li><button className="hover:text-[#C5B08B] text-left">Privacy</button></li>
-              <li><button className="hover:text-[#C5B08B] text-left">Termini</button></li>
-              <li><button className="hover:text-[#C5B08B] text-left">Rimborsi</button></li>
-              <li><button className="hover:text-[#C5B08B] text-left">Spedizioni</button></li>
+              <li><button onClick={() => onPolicyClick('privacy')} className="hover:text-[#C5B08B] text-left">Privacy</button></li>
+              <li><button onClick={() => onPolicyClick('termini')} className="hover:text-[#C5B08B] text-left">Termini</button></li>
+              <li><button onClick={() => onPolicyClick('rimborsi')} className="hover:text-[#C5B08B] text-left">Rimborsi</button></li>
+              <li><button onClick={() => onPolicyClick('spedizione')} className="hover:text-[#C5B08B] text-left">Spedizioni</button></li>
             </ul>
-            <p className="text-[10px] mt-6 opacity-60 font-mono text-stone-400">© 2024 DEOSTAMPA. TUTTI I DIRITTI RISERVATI.</p>
+            <p className="text-[10px] mt-6 opacity-60 font-mono text-stone-400">© 2026 DEOSTAMPA. TUTTI I DIRITTI RISERVATI.</p>
           </div>
 
         </div>
