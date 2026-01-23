@@ -251,6 +251,47 @@ I prezzi per quantità sono molto più vantaggiosi, ideali per chi desidera ordi
   isCustomizable: true
 },
   {
+    id: 'cartelli-da-porta',
+    name: 'Cartelli da Porta Personalizzati in Legno',
+    price: 29.90,
+    category: 'Casa',
+    image: 'images/cartelpuerta-01.jpg',
+    images: ["images/cartelpuerta-01.jpg",
+      "images/cartelpuerta-02.jpg",
+      "images/cartelpuerta-03.jpg",
+      "images/cartelpuerta-04.jpg",
+      "images/cartelpuerta-05.jpg",
+      "images/cartelpuerta-06.jpg",
+      "images/cartelpuerta-07.jpg",
+      "images/cartelpuerta-08.jpg"],
+    description: `🚪 Eleganza e cura dei dettagli per ogni porta – Pack da 10 pezzi
+
+Dai carattere e professionalità ai tuoi ambienti con i nostri cartelli da porta personalizzati, pensati per hotel, B&B, case vacanza e strutture ricettive che vogliono distinguersi.
+
+Ogni cartello è realizzato su misura per comunicare con stile e funzionalità.
+Disponibili con le diciture classiche:
+🛑 “Non disturbare”
+🧼 “Si prega di pulire la camera”
+oppure con testi personalizzati su richiesta.
+
+✨ Perché sceglierli
+✔️ Design elegante e professionale
+✔️ Personalizzazione completa secondo lo stile della tua struttura
+✔️ Comunicazione chiara e immediata per i tuoi ospiti
+✔️ Un dettaglio che valorizza ogni stanza
+
+📦 Ordini flessibili
+🔹 Pack da 10 pezzi
+🔹 Possibilità di grandi quantità con prezzi dedicati per strutture e rivenditori
+🔹 Spedizione gratuita in tutta Italia
+
+👉 Rendi ogni porta parte dell’esperienza del tuo ospite
+
+✨ DeoStampa – una piccola azienda, grandi emozioni.`,
+    ebayUrl: `https://www.ebay.it/itm/236457233830`,
+    isCustomizable: true
+  },
+  {
     id: 'pack-10-portachiavi-rotondi',
     name: '🔑 PACK 10 PORTACHIAVI ROTONDI MDF PERSONALIZZATI CON LOGO',
     price: 19.90,
