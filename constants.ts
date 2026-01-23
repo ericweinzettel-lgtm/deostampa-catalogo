@@ -625,7 +625,7 @@ La tua maglietta parlerà per te.
     isCustomizable: true
   },
   {
-    id: 'magliette-polo-ersonalizzat',
+    id: 'magliette-polo-personalizzate',
     name: 'Magliette Polo Personalizzate con Logo o Frase',
     price: 19.90,
     category: 'Casa',
