@@ -875,17 +875,6 @@ Hai un negozio, un’attività o devi fare molte polo?
     ebayUrl: `https://www.ebay.it/itm/236457222959`,
     isCustomizable: true
   },
-  {
-    id: 'ds-acc-agenda-daily',
-    name: 'Agenda Daily 2025/2026',
-    description: `📔 Organizza la tua giornata con eleganza. Copertina rigida personalizzata. Disponibile ora su eBay.`,
-    price: 24.90,
-    category: 'Accessori',
-    image: 'https://images.unsplash.com/photo-1517842645767-c639042777db?auto=format&fit=crop&w=800&q=80',
-    images: ['https://images.unsplash.com/photo-1517842645767-c639042777db?auto=format&fit=crop&w=800&q=80'],
-    ebayUrl: `https://www.ebay.it/sch/i.html?_ssn=${SELLER_ID}&_nkw=agenda`,
-    isCustomizable: true
-  }
 ];
 
 export const ABOUT_TEXT = `In DeoStampa crediamo che ogni oggetto debba raccontare una story. 
