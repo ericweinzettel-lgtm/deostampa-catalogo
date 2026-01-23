@@ -619,10 +619,56 @@ Hai un negozio, un’attività o devi fare molte magliette?
 ✨ **Esprimi il tuo brand. Racconta chi sei.
 
 La tua maglietta parlerà per te.
-💡 Ordini singoli o grandi quantità con prezzi personalizzati!
-👉 Scegli il tuo design preferito o crea il tuo boccale personalizzato e brinda con personalità!. Perfetto per regali originali. 
+💡 Ordini singoli o grandi quantità con prezzi personalizzati! 
 ✨ DeoStampa – una piccola azienda, grandi emozioni.`,
     ebayUrl: `https://www.ebay.it/itm/236457215233`,
+    isCustomizable: true
+  },
+  {
+    id: 'magliette-polo-ersonalizzat',
+    name: 'Magliette Polo Personalizzate con Logo o Frase',
+    price: 19.90,
+    category: 'Casa',
+    image: 'images/polo-01.jpg',
+    images: ["images/polo-01.jpg",
+      "images/polo-02.jpg",
+      "images/polo-03.jpg",
+      "images/polo-04.jpg",
+      "images/polo-05.jpg",
+      "images/polo-06.jpg",
+      "images/polo-07.jpg"],
+    description: `📌 PUOI SCEGLIERE I MODELLI CON LE FRASI DELLE FOTO
+OPPURE CREARE LA TUA POLO PERSONALIZZATA DA ZERO!
+
+💫 Indossa eleganza e identità, crea il tuo stile
+Trasforma un’idea, un logo o una frase in una polo unica, pensata su misura per te o per il tuo business.
+
+Le nostre polo personalizzate con colletto sono perfette sia per uso personale che per:
+attività commerciali, eventi, team, hotel, B&B, ristoranti, negozi e aziende.
+
+🛍️ COSA INCLUDE QUESTO ANNUNCIO
+✔️ Il prezzo dell’inserzione si riferisce a UNA sola stampa / UN solo logo
+✔️ Se desideri aggiungere più loghi o stampe, il prezzo varia
+📩 Contattaci prima o dopo l’acquisto per un preventivo personalizzato
+
+🎨 COME FUNZIONA DOPO L’ACQUISTO
+1️⃣ Dopo aver acquistato, ci contatti via messaggio
+2️⃣ Scegliamo insieme colore della polo
+3️⃣ Ci invii logo, immagine o frase da stampare
+4️⃣ Ti mandiamo una ANTEPRIMA GRAFICA del risultato
+5️⃣ Solo dopo la tua conferma realizziamo il prodotto finale
+➡️ Così sai esattamente come verrà prima della produzione!
+
+💼 ORDINI ALL’INGROSSO E PER AZIENDE
+Hai un negozio, un’attività o devi fare molte polo?
+🔥 Super prezzi per ordini in quantità
+📩 Scrivici per ricevere un preventivo su misura con sconti dedicati per rivenditori e aziende.
+
+✨ Esprimi il tuo brand. Racconta chi sei.
+
+💡 Ordini singoli o grandi quantità con prezzi personalizzati!
+✨ DeoStampa – una piccola azienda, grandi emozioni.`,
+    ebayUrl: `https://www.ebay.it/itm/236457222959`,
     isCustomizable: true
   },
   {
