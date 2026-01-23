@@ -251,6 +251,53 @@ I prezzi per quantità sono molto più vantaggiosi, ideali per chi desidera ordi
   isCustomizable: true
 },
   {
+    id: 'calamite-personalizzate',
+    name: '10 Calamite Personalizzate con Foto o Logo',
+    price: 17.90,
+    category: 'Casa',
+    image: 'images/iman-01.jpg',
+    images: ["images/iman-01.jpg",
+      "images/iman-02.jpg",
+      "images/iman-03.jpg",
+      "images/iman-04.jpg",
+      "images/iman-05.jpg",
+      "images/iman-06.jpg",
+      "images/iman-07.jpg"],
+    description: `🧲 KIT 10 MAGNETI PERSONALIZZATI – FOTO, NOMI O LOGO
+
+Piccoli dettagli che lasciano il segno ✨
+I nostri magneti personalizzati sono perfetti per decorare il frigorifero, creare ricordi speciali o realizzare gadget aziendali originali.
+
+Con questo kit da 10 magneti, puoi personalizzare ogni pezzo con ciò che preferisci.
+
+✨ Personalizzazione totale:
+📸 Foto
+💬 Nomi o frasi
+🏢 Loghi aziendali o grafiche promozionali
+
+📏 Caratteristiche:
+✔ Set da 10 magneti personalizzati
+✔ Forme disponibili: rotonda, quadrata o cuore
+✔ Stampa sublimatica brillante e resistente nel tempo
+✔ Materiale durevole
+✔ Retro magnetico potente
+✔ Colori vivi e dettagli nitidi
+✔ Realizzati artigianalmente su richiesta
+
+🎯 Ideali per:
+Bomboniere • Eventi • Compleanni • Matrimoni • Gadget aziendali • Regali originali • Ricordi di viaggio
+
+
+❤️ La forma scelta (rotonda / quadrata / cuore)
+💝 Trasforma ogni superficie in un ricordo speciale.
+📦 Imballaggio sicuro
+🚚 Spedizione in tutta Italia
+
+✨ DeoStampa – una piccola azienda, grandi emozioni.`,
+    ebayUrl: `https://www.ebay.it/itm/236457246481`,
+    isCustomizable: true
+  },
+  {
     id: 'cartelli-da-porta',
     name: 'Cartelli da Porta Personalizzati in Legno',
     price: 29.90,
