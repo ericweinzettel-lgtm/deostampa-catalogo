@@ -562,6 +562,70 @@ Rendi il tuo albero di Natale davvero speciale con questo set di 3 palline perso
     isCustomizable: true
   },
   {
+    id: 'magliette-personalizzate',
+    name: 'Magliette personalizzate con frasi o foto',
+    price: 16.90,
+    category: 'Casa',
+    image: 'images/maglia-01.jpg',
+    images: ["images/maglia-01.jpg",
+      "images/maglia-02.jpg",
+      "images/maglia-03.jpg",
+      "images/maglia-04.jpg",
+      "images/maglia-05.jpg",
+      "images/maglia-06.jpg",
+      "images/maglia-07.jpg",
+      "images/maglia-08.jpg",
+      "images/maglia-09.jpg",
+      "images/maglia-10.jpg",
+      "images/maglia-11.jpg",
+      "images/maglia-12.jpg",
+      "images/maglia-13.jpg",
+      "images/maglia-14.jpg",
+      "images/maglia-15.jpg",
+      "images/maglia-16.jpg",
+      "images/maglia-17.jpg",
+      "images/maglia-18.jpg",
+      "images/maglia-19.jpg",
+      "images/maglia-20.jpg",
+      "images/maglia-21.jpg",
+      "images/maglia-22.jpg",
+      "images/maglia-23.jpg"],
+    description: `📌 PUOI SCEGLIERE I MODELLI CON LE FRASI DELLE FOTO
+OPPURE CREARE LA TUA MAGLIETTA PERSONALIZZATA DA ZERO!
+
+💫 Indossa le tue parole, crea il tuo stile
+Trasforma un’idea, un logo o una frase in una maglietta unica, pensata su misura per te o per il tuo business.
+
+Le nostre magliette personalizzate sono perfette sia per uso personale che per attività commerciali, eventi, team, hotel, B&B, negozi e aziende.
+
+🛍️ COSA INCLUDE QUESTO ANNUNCIO
+✔️ Il prezzo dell’inserzione si riferisce a UNA sola stampa / UN solo logo
+✔️ Se desideri aggiungere più loghi o stampe, il prezzo varia
+📩 Contattaci prima o dopo l’acquisto per un preventivo personalizzato
+
+🎨 COME FUNZIONA DOPO L’ACQUISTO
+1️⃣ Dopo aver acquistato, ci contatti via messaggio
+2️⃣ Scegliamo insieme colore della maglietta
+3️⃣ Ci invii logo, immagine o frase da stampare
+4️⃣ Ti mandiamo una ANTEPRIMA GRAFICA del risultato
+5️⃣ Solo dopo la tua conferma realizziamo il prodotto finale
+➡️ Così sai esattamente come verrà prima della produzione!
+
+💼 ORDINI ALL’INGROSSO E PER AZIENDE
+Hai un negozio, un’attività o devi fare molte magliette?
+🔥 Super prezzi per ordini in quantità
+📩 Scrivici per ricevere un preventivo su misura con sconti dedicati per rivenditori e aziende.
+
+✨ **Esprimi il tuo brand. Racconta chi sei.
+
+La tua maglietta parlerà per te.
+💡 Ordini singoli o grandi quantità con prezzi personalizzati!
+👉 Scegli il tuo design preferito o crea il tuo boccale personalizzato e brinda con personalità!. Perfetto per regali originali. 
+✨ DeoStampa – una piccola azienda, grandi emozioni.`,
+    ebayUrl: `https://www.ebay.it/itm/236457215233`,
+    isCustomizable: true
+  },
+  {
     id: 'ds-acc-agenda-daily',
     name: 'Agenda Daily 2025/2026',
     description: `📔 Organizza la tua giornata con eleganza. Copertina rigida personalizzata. Disponibile ora su eBay.`,
