@@ -209,7 +209,7 @@ I prezzi per quantità sono molto più vantaggiosi, ideali per chi desidera ordi
 ✨ DeoStampa – una piccola azienda, grandi emozioni.`,
   ebayUrl: 'https://www.ebay.it/itm/236457196065',
   isCustomizable: true
-}
+},
   {
     id: 'pack-10-portachiavi-rotondi',
     name: '🔑 PACK 10 PORTACHIAVI ROTONDI MDF PERSONALIZZATI CON LOGO',
