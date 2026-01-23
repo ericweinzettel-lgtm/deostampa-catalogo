@@ -63,8 +63,7 @@ Perfetto per:
       "images/tazza-05.jpg",
       "images/tazza-06.jpg",
       "images/tazza-07.jpg",
-      "images/tazza-08.jpg",
-      "images/tazza-09.jpg"],
+      "images/tazza-08.jpg"],
     description: `☕ Tazza Personalizzata
 
 🎁 Cerchi un regalo utile ma davvero speciale?
@@ -132,6 +131,50 @@ Non adatta a microonde e lavastoviglie.
 
 ✨ DeoStampa – una piccola azienda, grandi emozioni.`,
     ebayUrl: `https://www.ebay.it/itm/236535493787`,
+    isCustomizable: true
+  },
+  {
+    id: 'tazza-x4',
+    name: 'Pack Famiglia 4 Tazze Personalizzate',
+    price: 47.90,
+    category: 'Casa',
+    image: 'images/tazzax4-01.jpg',
+    images: ["images/tazzax4-01.jpg",
+      "images/tazzax4-02.jpg",
+      "images/tazzax4-03.jpg",
+      "images/tazzax4-04.jpg",
+      "images/tazza-05.jpg",
+      "images/tazza-06.jpg",
+      "images/tazza-07.jpg",
+      "images/tazza-01.jpg"],
+    description: `☕ Set da 4 Tazze Personalizzate in Ceramica Bianca – Foto, Nomi e Frasi
+
+Rendi speciali i tuoi momenti quotidiani con un set di tazze uniche, create su misura per te.
+Un’idea regalo originale che unisce emozione e qualità artigianale.
+
+✨ Personalizzazione totale:
+✔ Foto a tua scelta
+✔ Nomi personalizzati
+✔ Frasi o dediche speciali
+
+📏 Caratteristiche:
+✔ Ceramica bianca di alta qualità
+✔ Capacità: circa 330 ml ciascuna
+✔ Stampa sublimatica brillante e resistente nel tempo
+✔ Adatte a microonde e lavastoviglie
+✔ Realizzate artigianalmente su richiesta in Italia
+
+🎁 Ideale come regalo per:
+Famiglie • Compleanni • Natale • Festa della mamma e del papà • Regalo per nonni • Nuova casa
+Riceverai un’anteprima grafica gratuita prima della stampa, per approvare il design.
+
+💝 Un set unico, pensato per emozionare ogni giorno.
+
+📦 Imballaggio sicuro
+🚚 Spedizione in tutta Italia
+
+✨ DeoStampa – una piccola azienda, grandi emozioni.`,
+    ebayUrl: `https://www.ebay.it/itm/236574727301`,
     isCustomizable: true
   },
   {
